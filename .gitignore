@@ -12,3 +12,4 @@ gradlew.bat
 bin/
 .gradle/
 build.number
+.classpath
