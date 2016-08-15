@@ -106,12 +106,17 @@ public class Settings
 			}
 			
 			//Blocks
-			ironBricks = settings.get(new ConfigBlock("Iron Bricks", "Bricks").setHardness(15.0F).setResistance(20.F)
-					.setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
-			goldBricks = settings.get(new ConfigBlock("Gold Bricks", "Bricks").setHardness(15.0F).setResistance(20.0F)
-					.setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
-			diamondBricks = settings.get(new ConfigBlock("Diamond Bricks", "Bricks").setHardness(15.0F)
-					.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
+            ironBricks = settings.get(new ConfigBlock("Iron Bricks", "Bricks").setHardness(15.0F)
+                            .setResistance(20.F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+                            .asConfigBlock();
+            goldBricks = settings.get(new ConfigBlock("Gold Bricks", "Bricks").setHardness(15.0F)
+                            .setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+                            .asConfigBlock();
+            diamondBricks = settings
+                            .get(new ConfigBlock("Diamond Bricks", "Bricks").setHardness(15.0F)
+                                            .setResistance(20.0F).setLightValue(0.0F)
+                                            .setHarvestTool("pickaxe"))
+                            .asConfigBlock();
 			
 			if(Loader.isModLoaded("simpleores")) 
 			{
@@ -126,6 +131,10 @@ public class Settings
 				onyxBricks = settings.get(new ConfigBlock("Onyx Bricks", "SimpleOresBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
 
+                copperDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
+                                .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
+                tinDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
+                                .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
 				mythrilDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
 				adamantiumDoor = settings.get(new ConfigBlock("Adamantium Door", "SimpleOresBlocks").setHardness(7.0F)
@@ -218,7 +227,7 @@ public class Settings
 	
 	public static ConfigBlock ironBricks, goldBricks, diamondBricks;
 	public static ConfigBlock copperBricks, tinBricks, mythrilBricks, adamantiumBricks, onyxBricks;
-	public static ConfigBlock mythrilDoor, adamantiumDoor, onyxDoor;
+	public static ConfigBlock mythrilDoor, adamantiumDoor, onyxDoor, tinDoor, copperDoor;
 	public static ConfigBlock copperBars, tinBars, mythrilBars, adamantiumBars, onyxBars;
 	public static ConfigBlock steelBricks, bronzeBricks, thyriumBricks, sinisiteBricks;
 	public static ConfigBlock bronzeDoor;

@@ -14,15 +14,19 @@ import cpw.mods.fml.common.Loader;
 /**
  * @author AleXndrTheGr8st
  */
-public class ContentFusion {
-	public static void doItems() {
+public class ContentFusion 
+{
+	public static void doItems() 
+	{
 		if(Settings.FDoors.asBoolean()) {
 			bronze_door = new SimpleDoorItem().modId("aesthetics").setDoorBlockName("bronze_door_block").setUnlocalizedName("bronze_door");
 		}
-	}
+	} // end doItems()
 	
-	public static void doBlocks() {
-		if(Settings.FBricks.asBoolean()) {
+	public static void doBlocks() 
+	{
+		if(Settings.FBricks.asBoolean()) 
+		{
 			steel_bricks = new SimpleBlock(Material.iron).modId("aesthetics").setConfigValues(Settings.steelBricks).setBlockName("steel_bricks");
 			
 			if(Loader.isModLoaded("simpleores") && Settings.enableSimpleOres.asBoolean()){
@@ -52,7 +56,7 @@ public class ContentFusion {
 			thyrium_bars = new SimpleBars("aesthetics:thyrium_bars").modId("aesthetics").setConfigValues(Settings.thyriumBars).setBlockName("thyrium_bars");
 			sinisite_bars = new SimpleBars("aesthetics:sinisite_bars").modId("aesthetics").setConfigValues(Settings.sinisiteBars).setBlockName("sinisite_bars");
 		}
-	}
+	} // end doBlocks()
 	
 	public static void doAchievements() {
 		
@@ -60,10 +64,11 @@ public class ContentFusion {
 	
 	//Blocks
 	public static Block steel_bricks, bronze_bricks, thyrium_bricks, sinisite_bricks;
-	public static Block steel_brick_stairs, bronze_brick_stairs, thyrium_brick_stairs, sinisite_brick_stairs;
+    public static Block steel_brick_stairs, bronze_brick_stairs, thyrium_brick_stairs,
+                    sinisite_brick_stairs;
 	public static Block bronze_door_block;
 	public static Block steel_bars, bronze_bars, thyrium_bars, sinisite_bars;
 	
 	//Items
 	public static Item bronze_door;
-}
+} // end class

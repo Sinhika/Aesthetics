@@ -53,4 +53,4 @@ public class RecipesSimpleOres {
 		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(new ItemStack(ContentSimpleOres.onyx_bars, 16), true, new Object[]{
 			"XXX", "XXX", Character.valueOf('X'), "gemOnyx"}));
 	}
-}
+} // end class
