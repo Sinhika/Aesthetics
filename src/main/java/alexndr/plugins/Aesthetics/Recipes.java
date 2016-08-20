@@ -2,8 +2,8 @@ package alexndr.plugins.Aesthetics;
 
 import alexndr.api.logger.LogHelper;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 /**
@@ -42,31 +42,40 @@ public class Recipes
 			RecipesFusion.addRecipes();
 	}
 	
-	public static void doRecipes() {
-		//Bricks
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(Content.iron_bricks,
-                        true, new Object[]
-        { "XX", "XX", Character.valueOf('X'), "ingotIron" }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(Content.gold_bricks,
-                        true, new Object[]
-        { "XX", "XX", Character.valueOf('X'), "ingotGold" }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(
-                        Content.diamond_bricks, true,
-                        new Object[]
-                        { "XX", "XX", Character.valueOf('X'), "gemDiamond" }));
-		
-		//Brick Stairs
-        CraftingManager.getInstance().getRecipeList()
-                        .add(new ShapedOreRecipe(new ItemStack(Content.iron_brick_stairs, 4), true,
-                                        new Object[]
-        { "X  ", "XX ", "XXX", Character.valueOf('X'), Content.iron_bricks }));
-        CraftingManager.getInstance().getRecipeList()
-                        .add(new ShapedOreRecipe(new ItemStack(Content.gold_brick_stairs, 4), true,
-                                        new Object[]
-        { "X  ", "XX ", "XXX", Character.valueOf('X'), Content.gold_bricks }));
-        CraftingManager.getInstance().getRecipeList()
-                        .add(new ShapedOreRecipe(new ItemStack(Content.diamond_brick_stairs, 4),
-                                        true, new Object[]
-        { "X  ", "XX ", "XXX", Character.valueOf('X'), Content.diamond_bricks }));
-	}
+	public static void doRecipes() 
+	{
+        if (Settings.MCBricks.asBoolean()) 
+        {
+            // Bricks
+            GameRegistry.addRecipe(new ShapedOreRecipe(Content.iron_bricks, true,
+                            new Object[]
+                                            { "XX", "XX", Character.valueOf('X'), "ingotIron" }));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Content.gold_bricks, true,
+                            new Object[]
+                                            { "XX", "XX", Character.valueOf('X'), "ingotGold" }));
+            GameRegistry.addRecipe(new ShapedOreRecipe(Content.diamond_bricks, true,
+                            new Object[]
+                                            { "XX", "XX", Character.valueOf('X'), "gemDiamond" }));
+
+            if (Settings.MCBrickStairs.asBoolean()) 
+            {
+                // Brick Stairs
+                GameRegistry.addRecipe(new ShapedOreRecipe(
+                                                new ItemStack(Content.iron_brick_stairs, 4), true,
+                                                new Object[]
+                                                { "X  ", "XX ", "XXX",
+                                Character.valueOf('X'), Content.iron_bricks }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(
+                                                new ItemStack(Content.gold_brick_stairs, 4), true,
+                                                new Object[]
+                                                { "X  ", "XX ", "XXX",
+                                Character.valueOf('X'), Content.gold_bricks }));
+                GameRegistry.addRecipe(new ShapedOreRecipe(
+                                                new ItemStack(Content.diamond_brick_stairs, 4),
+                                                true, new Object[]
+                                                { "X  ", "XX ", "XXX",
+                                Character.valueOf('X'), Content.diamond_bricks }));
+            } // end-if MCBrickStairs
+        } // end-if MCBricks
+	} // end doRecipes()
 } // end class

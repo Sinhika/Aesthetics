@@ -51,9 +51,9 @@ public class ContentSimpleOres
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.mythrilBricks)
                                             .setStepSound(SoundType.METAL)
                                             .setUnlocalizedName("mythril_bricks");
-            onyx_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
+            onyx_bricks = new SimpleBlock(Aesthetics.plugin, Material.ROCK,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.onyxBricks)
-                                            .setStepSound(SoundType.METAL)
+                                            .setStepSound(SoundType.STONE)
                                             .setUnlocalizedName("onyx_bricks");
             adamantium_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL)
@@ -113,7 +113,7 @@ public class ContentSimpleOres
             mythril_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.mythrilBars)
                             .setUnlocalizedName("mythril_bars");
-            onyx_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
+            onyx_bars = new SimpleBars(Aesthetics.plugin, Material.ROCK, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.onyxBars)
                             .setUnlocalizedName("onyx_bars");
             adamantium_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,

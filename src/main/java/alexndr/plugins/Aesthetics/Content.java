@@ -73,9 +73,10 @@ public class Content
 		
 		if(netherrocks)
 			ContentNetherrocks.doItems();
-	}
+	} // end doItems()
 	
-	public static void doBlocks() {
+	public static void doBlocks() 
+	{
         if (Settings.MCBricks.asBoolean()) 
         {
             iron_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON, ContentCategories.Block.GENERAL)
@@ -110,24 +111,26 @@ public class Content
 			ContentFusion.doBlocks();
 		if(netherrocks)
 			ContentNetherrocks.doBlocks();
-	}
+	}  // end doblocks()
 	
-	public static void doAchievements() {
+	public static void doAchievements() 
+	{
 		if(simpleores) 
 			ContentSimpleOres.doAchievements();
 		if(fusion)
 			ContentFusion.doAchievements();
 		if(netherrocks)
 			ContentNetherrocks.doAchievements();
-	}
+	} // end()
 	
-	public static void setTabs() {
+	public static void setTabs() 
+	{
 		for(Block block : ContentRegistry.getPluginBlocks(Aesthetics.plugin.getName()))
 			if(!(block instanceof SimpleDoor))
 				block.setCreativeTab(TabHelper.decorationsTab());
 		for(Item item : ContentRegistry.getPluginItems(Aesthetics.plugin.getName()))
 			item.setCreativeTab(TabHelper.decorationsTab());
-	}
+	} // end setTabs()
 	
 	//Blocks
 	public static Block iron_bricks, gold_bricks, diamond_bricks;
