@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "aesthetics:blocks/dragonstone_bricks",
+        "top": "aesthetics:blocks/dragonstone_bricks",
+        "side": "aesthetics:blocks/dragonstone_bricks"
+    }
+}

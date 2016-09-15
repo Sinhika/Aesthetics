@@ -27,9 +27,11 @@ tile.adamantium_bars.name=Adamantium Bars
 tile.onyx_bars.name=Onyx Bars
 
 //SimpleOres Items
-item.mythril_door.name=Mythril Door
 item.adamantium_door.name=Adamantium Door
+item.copper_door.name=Copper Door
+item.mythril_door.name=Mythril Door
 item.onyx_door.name=Onyx Door
+item.tin_door.name=Tin Door
 
 //Fusion Blocks
 tile.steel_bricks.name=Steel Bricks
@@ -73,7 +75,12 @@ tile.dragonstone_bars.name=Dragonstone Bars
 tile.argonite_bars.name=Argonite Bars
 
 //Netherrocks Items
+item.argonite_door.name=Argonite Door
+item.ashstone_door.name=Ashstone Door
 item.dragonstone_door.name=Dragonstone Door
+item.fyrite_door.name=Fyrite Door
+item.illumenite_door.name=Illumenite Door
+item.malachite_door.name=Malachite Door
 
 //Update Messages
 aesthetics.updateMessage1=§3Aesthetics §ris out of date. The latest version is §c

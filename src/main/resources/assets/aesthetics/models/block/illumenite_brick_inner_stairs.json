@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "aesthetics:blocks/illumenite_bricks",
+        "top": "aesthetics:blocks/illumenite_bricks",
+        "side": "aesthetics:blocks/illumenite_bricks"
+    }
+}

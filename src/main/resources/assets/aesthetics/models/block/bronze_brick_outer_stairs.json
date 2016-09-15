@@ -1,0 +1,8 @@
+{
+    "parent": "block/outer_stairs",
+    "textures": {
+        "bottom": "aesthetics:blocks/bronze_bricks",
+        "top": "aesthetics:blocks/bronze_bricks",
+        "side": "aesthetics:blocks/bronze_bricks"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "aesthetics:blocks/thyrium_bricks",
+        "top": "aesthetics:blocks/thyrium_bricks",
+        "side": "aesthetics:blocks/thyrium_bricks"
+    }
+}
