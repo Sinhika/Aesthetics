@@ -71,21 +71,21 @@ public class RecipesSimpleOres
 		{
 		    //Doors
             GameRegistry.addRecipe(new ShapedOreRecipe(
-                            new ItemStack(ContentSimpleOres.copper_door, 1), true, new Object[]
+                            new ItemStack(ContentSimpleOres.copper_door, 3), true, new Object[]
             { "XX", "XX", "XX", Character.valueOf('X'), "ingotCopper" }));
             GameRegistry.addRecipe(new ShapedOreRecipe(
-                            new ItemStack(ContentSimpleOres.tin_door, 1), true, new Object[]
+                            new ItemStack(ContentSimpleOres.tin_door, 3), true, new Object[]
             { "XX", "XX", "XX", Character.valueOf('X'), "ingotTin" }));
             GameRegistry.addRecipe(new ShapedOreRecipe(
-                            new ItemStack(ContentSimpleOres.mythril_door, 1), true, new Object[]
+                            new ItemStack(ContentSimpleOres.mythril_door, 3), true, new Object[]
             { "XX", "XX", "XX", Character.valueOf('X'), "ingotMythril" }));
             GameRegistry.addRecipe(
-                            new ShapedOreRecipe(new ItemStack(ContentSimpleOres.adamantium_door, 1),
+                            new ShapedOreRecipe(new ItemStack(ContentSimpleOres.adamantium_door, 3),
                                             true, new Object[]
                             { "XX", "XX", "XX",
                             Character.valueOf('X'), "ingotAdamantium" }));
             GameRegistry.addRecipe(new ShapedOreRecipe(
-                            new ItemStack(ContentSimpleOres.onyx_door, 1), true,
+                            new ItemStack(ContentSimpleOres.onyx_door, 3), true,
                             new Object[]
                             { "XX", "XX", "XX", Character.valueOf('X'), "gemOnyx" }));
 		} // end-if SODoors

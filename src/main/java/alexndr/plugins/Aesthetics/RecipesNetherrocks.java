@@ -71,8 +71,18 @@ public class RecipesNetherrocks
 		//Doors
         if (Settings.NRDoors.asBoolean()) 
         {
-            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.dragonstone_door, 1), true, new Object[]{
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.dragonstone_door, 3), true, new Object[]{
                             "XX", "XX", "XX", Character.valueOf('X'), "gemDragonstone"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.argonite_door, 3), true, new Object[]{
+                            "XX", "XX", "XX", Character.valueOf('X'), "ingotArgonite"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.ashstone_door, 3), true, new Object[]{
+                            "XX", "XX", "XX", Character.valueOf('X'), "gemAshstone"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.fyrite_door, 3), true, new Object[]{
+                            "XX", "XX", "XX", Character.valueOf('X'), "ingotFyrite"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.illumenite_door, 3), true, new Object[]{
+                            "XX", "XX", "XX", Character.valueOf('X'), "ingotIllumenite"}));
+            GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.malachite_door, 3), true, new Object[]{
+                            "XX", "XX", "XX", Character.valueOf('X'), "ingotMalachite"}));
         } // end-if NRDoors
         
 		//Bars

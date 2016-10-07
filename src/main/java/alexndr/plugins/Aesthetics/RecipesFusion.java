@@ -61,9 +61,9 @@ public class RecipesFusion
         } // end-if FBricks
         
 		//Doors
-		if (Settings.FDoors.asBoolean()) 
+		if (Settings.FDoors.asBoolean() && simpleores) 
 		{
-		    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentFusion.bronze_door, 1), true, new Object[]{
+		    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentFusion.bronze_door, 3), true, new Object[]{
 		                    "XX", "XX", "XX", Character.valueOf('X'), "ingotBronze"}));
 		} // end-if FDoors
 	       

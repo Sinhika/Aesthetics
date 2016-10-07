@@ -139,8 +139,8 @@ public class Settings
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
 				adamantiumDoor = settings.get(new ConfigBlock("Adamantium Door", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
-				onyxDoor = settings.get(new ConfigBlock("Onyx Door", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
+				onyxDoor = settings.get(new ConfigBlock("Onyx Door", "SimpleOresBlocks").setHardness(20.0F)
+						.setResistance(29.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
 
 				copperBars = settings.get(new ConfigBlock("Copper Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
@@ -197,8 +197,23 @@ public class Settings
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
 
 				dragonstoneDoor = settings.get(new ConfigBlock("Dragonstone Door", "NetherrocksBlocks")
-						.setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+						.setHardness(10.0F).setResistance(44.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
 						.asConfigBlock();
+                ashstoneDoor = settings.get(new ConfigBlock("Ashstone Door", "NetherrocksBlocks")
+                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+                argoniteDoor = settings.get(new ConfigBlock("Argonite Door", "NetherrocksBlocks")
+                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+                fyriteDoor = settings.get(new ConfigBlock("Fyrite Door", "NetherrocksBlocks")
+                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+                illumeniteDoor = settings.get(new ConfigBlock("Illumenite Door", "NetherrocksBlocks")
+                                .setHardness(7.0F).setResistance(10.0F).setLightValue(1.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+//                malachiteDoor = settings.get(new ConfigBlock("Illumenite Door", "NetherrocksBlocks")
+//                                .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+//                                .asConfigBlock();
 
 				fyriteBars = settings.get(new ConfigBlock("Fyrite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")).asConfigBlock();
@@ -233,7 +248,8 @@ public class Settings
 	public static ConfigBlock bronzeDoor;
 	public static ConfigBlock steelBars, bronzeBars, thyriumBars, sinisiteBars;
 	public static ConfigBlock fyriteBricks, malachiteBricks, ashstoneBricks, illumeniteBricks, dragonstoneBricks, argoniteBricks;
-	public static ConfigBlock dragonstoneDoor;
+	public static ConfigBlock dragonstoneDoor, ashstoneDoor, argoniteDoor, fyriteDoor, illumeniteDoor,
+	                          malachiteDoor;
 	public static ConfigBlock fyriteBars, malachiteBars, ashstoneBars, illumeniteBars, dragonstoneBars, argoniteBars;
 	
 	public static ConfigValue updateChecker;

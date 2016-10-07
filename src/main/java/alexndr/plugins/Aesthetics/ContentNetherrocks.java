@@ -30,8 +30,8 @@ public class ContentNetherrocks
                             (SimpleDoor) fyrite_door_block).setUnlocalizedName("fyrite_door");
             illumenite_door = new SimpleDoorItem(Aesthetics.plugin, 
                             (SimpleDoor) illumenite_door_block).setUnlocalizedName("illumenite_door");
-            malachite_door = new SimpleDoorItem(Aesthetics.plugin, 
-                            (SimpleDoor) malachite_door_block).setUnlocalizedName("malachite_door");
+//            malachite_door = new SimpleDoorItem(Aesthetics.plugin, 
+//                            (SimpleDoor) malachite_door_block).setUnlocalizedName("malachite_door");
         }
     } // end doItems()
 
@@ -100,7 +100,27 @@ public class ContentNetherrocks
                                                    "dragonstone_door",ContentCategories.Block.OTHER)
                             .setConfigEntry(Settings.dragonstoneDoor)
                             .setUnlocalizedName("dragonstone_door_block");
-        } // end-if NRDoors
+            argonite_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON,
+                            "argonite_door", ContentCategories.Block.OTHER)
+                                            .setConfigEntry(Settings.argoniteDoor)
+                                            .setUnlocalizedName("argonite_door_block");
+            ashstone_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON,
+                            "ashstone_door", ContentCategories.Block.OTHER)
+                                            .setConfigEntry(Settings.ashstoneDoor)
+                                            .setUnlocalizedName("ashstone_door_block");
+            fyrite_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON,
+                            "fyrite_door", ContentCategories.Block.OTHER)
+                                            .setConfigEntry(Settings.fyriteDoor)
+                                            .setUnlocalizedName("fyrite_door_block");
+            illumenite_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON,
+                            "illumenite_door", ContentCategories.Block.OTHER)
+                                            .setConfigEntry(Settings.illumeniteDoor)
+                                            .setUnlocalizedName("illumenite_door_block");
+//            malachite_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON,
+//                            "malachite_door", ContentCategories.Block.OTHER)
+//                                            .setConfigEntry(Settings.malachiteDoor)
+//                                            .setUnlocalizedName("malachite_door_block");
+       } // end-if NRDoors
 
         if (Settings.NRBars.asBoolean()) 
         {
