@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "aesthetics:blocks/mythril_door_lower",
+        "top": "aesthetics:blocks/mythril_door_upper"
+    }
+}

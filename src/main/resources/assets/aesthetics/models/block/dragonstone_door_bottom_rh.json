@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom_rh",
+    "textures": {
+        "bottom": "aesthetics:blocks/dragonstone_door_lower",
+        "top": "aesthetics:blocks/dragonstone_door_upper"
+    }
+}
