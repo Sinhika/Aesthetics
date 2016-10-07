@@ -17,13 +17,13 @@ public class Aesthetics
 {
 	@Mod.Instance
 	public static Aesthetics INSTANCE;
-	
-	@SidedProxy(clientSide = "alexndr.plugins.Aesthetics.ProxyClient", 
-	    		serverSide = "alexndr.plugins.Aesthetics.ProxyCommon")
-	public static ProxyCommon proxy;
 
 	public static Plugin plugin = new Plugin(ModInfo.ID, ModInfo.NAME);
 
+	@SidedProxy(clientSide = "alexndr.plugins.Aesthetics.ProxyClient", 
+	    		serverSide = "alexndr.plugins.Aesthetics.ProxyCommon")
+	public static ProxyCommon proxy;
+	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) 
 	{

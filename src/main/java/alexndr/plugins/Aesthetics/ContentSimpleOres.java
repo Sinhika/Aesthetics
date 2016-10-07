@@ -51,7 +51,8 @@ public class ContentSimpleOres
                                             .setStepSound(SoundType.METAL)
                                             .setUnlocalizedName("mythril_bricks");
             onyx_bricks = new SimpleBlock(Aesthetics.plugin, Material.ROCK,
-                            ContentCategories.Block.GENERAL).setConfigEntry(Settings.onyxBricks)
+                            ContentCategories.Block.GENERAL)
+                                            .setConfigEntry(Settings.onyxBricks)
                                             .setStepSound(SoundType.STONE)
                                             .setUnlocalizedName("onyx_bricks");
             adamantium_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,

@@ -1,0 +1,17 @@
+[
+{
+"modid": "aesthetics",
+"name": "Aesthetics",
+"description": "A plugin for SimpleCore API that adds decorative blocks such as bricks, doors, stairs.",
+"version": "${version}",
+"credits": "Created by AleXndrTheGr8st, updated by Sinhika",
+"logoFile": "assets/aesthetics/logos/Aesthetics.png",
+"mcversion": "${mcversion}",
+"url": "http://minecraft.curseforge.com/projects/aesthetics",
+"updateUrl": "",
+"authorList": [ "AleXndrTheGr8st", "Sinhika" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [simplecore]
+}
+]
