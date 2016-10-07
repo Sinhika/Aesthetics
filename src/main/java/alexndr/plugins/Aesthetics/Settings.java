@@ -77,7 +77,7 @@ public class Settings
 						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
 				// .setDefaultValue("true").setComment("Enables Brick Stairs made from Fusion materials.")
 				FBrickStairs = FToggles.createNewValue("EnableBrickStairs").setActive()
-						.setDataType("@B").setCurrentValue("true");
+						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
 				// .setComment("Enables Doors made from Fusion materials.").setCommentIndentNumber(8);
 				FDoors = FToggles.createNewValue("EnableDoors").setActive()
 						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");

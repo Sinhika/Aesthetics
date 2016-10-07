@@ -26,9 +26,8 @@ public class ContentSimpleOres
                             .setUnlocalizedName("mythril_door");
             tin_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) tin_door_block)
                             .setUnlocalizedName("tin_door");
-            adamantium_door = new SimpleDoorItem(Aesthetics.plugin,
-                            (SimpleDoor) adamantium_door_block)
-                                            .setUnlocalizedName("adamantium_door");
+            adamantium_door = new SimpleDoorItem(Aesthetics.plugin,(SimpleDoor) adamantium_door_block)
+                             .setUnlocalizedName("adamantium_door");
             onyx_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) onyx_door_block)
                             .setUnlocalizedName("onyx_door");
         } // end-if SODoors
