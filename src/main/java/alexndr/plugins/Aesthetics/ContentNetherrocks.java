@@ -22,6 +22,16 @@ public class ContentNetherrocks
         {
             dragonstone_door = new SimpleDoorItem(Aesthetics.plugin, 
                             (SimpleDoor) dragonstone_door_block).setUnlocalizedName("dragonstone_door");
+            argonite_door = new SimpleDoorItem(Aesthetics.plugin, 
+                            (SimpleDoor) argonite_door_block).setUnlocalizedName("argonite_door");
+            ashstone_door = new SimpleDoorItem(Aesthetics.plugin, 
+                            (SimpleDoor) ashstone_door_block).setUnlocalizedName("ashstone_door");
+            fyrite_door = new SimpleDoorItem(Aesthetics.plugin, 
+                            (SimpleDoor) fyrite_door_block).setUnlocalizedName("fyrite_door");
+            illumenite_door = new SimpleDoorItem(Aesthetics.plugin, 
+                            (SimpleDoor) illumenite_door_block).setUnlocalizedName("illumenite_door");
+            malachite_door = new SimpleDoorItem(Aesthetics.plugin, 
+                            (SimpleDoor) malachite_door_block).setUnlocalizedName("malachite_door");
         }
     } // end doItems()
 
@@ -128,10 +138,12 @@ public class ContentNetherrocks
                     dragonstone_bricks, argonite_bricks;
     public static Block fyrite_brick_stairs, malachite_brick_stairs, ashstone_brick_stairs,
                     illumenite_brick_stairs, dragonstone_brick_stairs, argonite_brick_stairs;
-    public static Block dragonstone_door_block;
+    public static Block dragonstone_door_block, argonite_door_block, ashstone_door_block,
+                    fyrite_door_block, illumenite_door_block, malachite_door_block;
     public static Block fyrite_bars, malachite_bars, ashstone_bars, illumenite_bars,
                     dragonstone_bars, argonite_bars;
 
     // Items
-    public static Item dragonstone_door;
+    public static Item dragonstone_door, argonite_door, ashstone_door, fyrite_door,
+                    illumenite_door, malachite_door;
 } // end class
