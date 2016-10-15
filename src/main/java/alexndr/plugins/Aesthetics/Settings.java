@@ -23,7 +23,7 @@ public class Settings
 		File settingsFile = new File(configDir, "AestheticsSettings.xml");
 		settings.setFile(settingsFile);
 		
-		LogHelper.verbose("Aesthetics", "Loading Settings...");
+		LogHelper.verbose("Aesthetics: Loading Settings...");
 		try {
 			settings.load();
 			settings.createHelpEntry(ModInfo.URL);
@@ -211,7 +211,7 @@ public class Settings
                 illumeniteDoor = settings.get(new ConfigBlock("Illumenite Door", "NetherrocksBlocks")
                                 .setHardness(7.0F).setResistance(10.0F).setLightValue(1.0F).setHarvestTool("pickaxe"))
                                 .asConfigBlock();
-//                malachiteDoor = settings.get(new ConfigBlock("Illumenite Door", "NetherrocksBlocks")
+//                malachiteDoor = settings.get(new ConfigBlock("Malachite Door", "NetherrocksBlocks")
 //                                .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
 //                                .asConfigBlock();
 

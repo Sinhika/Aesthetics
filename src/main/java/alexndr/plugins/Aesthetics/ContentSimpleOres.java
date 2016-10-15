@@ -86,20 +86,22 @@ public class ContentSimpleOres
         {
             copper_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "copper_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.copperDoor)
-                            .setUnlocalizedName("copper_door_block");
+            				.setUnlocalizedName("copper_door");
+//                    		.setUnlocalizedName("copper_door_block");
             tin_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "tin_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.tinDoor)
-                            .setUnlocalizedName("tin_door_block");
+            				.setUnlocalizedName("tin_door");
+//                            .setUnlocalizedName("tin_door_block");
             mythril_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "mythril_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.mythrilDoor)
-                            .setUnlocalizedName("mythril_door_block");
+                            .setUnlocalizedName("mythril_door");
             adamantium_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON,
                             "adamantium_door", ContentCategories.Block.OTHER)
                              .setConfigEntry(Settings.adamantiumDoor)
-                             .setUnlocalizedName("adamantium_door_block");
+                             .setUnlocalizedName("adamantium_door");
             onyx_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "onyx_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.onyxDoor)
-                            .setUnlocalizedName("onyx_door_block");
+                            .setUnlocalizedName("onyx_door");
         } // end if SODoors
 
         if (Settings.SOBars.asBoolean()) 

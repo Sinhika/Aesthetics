@@ -11,20 +11,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.Loader;
 
 /**
  * @author AleXndrTheGr8st
  */
 public class Content 
 {
-	
-	private static boolean simpleores = Loader.isModLoaded("simpleores")
-					&& Settings.enableSimpleOres.asBoolean();
-	private static boolean fusion = Loader.isModLoaded("fusion")
-					&& Settings.enableFusion.asBoolean();
-	private static boolean netherrocks = Loader.isModLoaded("netherrocks")
-					&& Settings.enableNetherrocks.asBoolean();
 	
 	public static void preInitialize() 
 	{
@@ -65,13 +57,13 @@ public class Content
 	
 	public static void doItems() 
 	{
-		if(simpleores) 
+		if(ModSupport.use_simple_ores) 
 			ContentSimpleOres.doItems();
 		
-		if(fusion)
+		if(ModSupport.use_fusion)
 			ContentFusion.doItems();
 		
-		if(netherrocks)
+		if(ModSupport.use_netherrocks)
 			ContentNetherrocks.doItems();
 	} // end doItems()
 	
@@ -105,21 +97,21 @@ public class Content
             } // end if MCBrickStairs
         } // end-if MCBricks
 		
-		if(simpleores) 
+		if(ModSupport.use_simple_ores) 
 			ContentSimpleOres.doBlocks();
-		if(fusion)
+		if(ModSupport.use_fusion)
 			ContentFusion.doBlocks();
-		if(netherrocks)
+		if(ModSupport.use_netherrocks)
 			ContentNetherrocks.doBlocks();
 	}  // end doblocks()
 	
 	public static void doAchievements() 
 	{
-		if(simpleores) 
+		if(ModSupport.use_simple_ores) 
 			ContentSimpleOres.doAchievements();
-		if(fusion)
+		if(ModSupport.use_fusion)
 			ContentFusion.doAchievements();
-		if(netherrocks)
+		if(ModSupport.use_netherrocks)
 			ContentNetherrocks.doAchievements();
 	} // end()
 	

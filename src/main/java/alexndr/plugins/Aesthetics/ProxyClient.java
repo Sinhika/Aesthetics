@@ -16,6 +16,31 @@ public class ProxyClient extends alexndr.plugins.Aesthetics.ProxyCommon
 		super.preInit(event);
 		if(event.getSide() == Side.CLIENT) 
 		{
+			if (ModSupport.use_simple_ores && Settings.SODoors.asBoolean())
+			{
+				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentSimpleOres.copper_door_block, 
+												  ContentSimpleOres.copper_door);
+				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentSimpleOres.tin_door_block, 
+						  ContentSimpleOres.tin_door);
+				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentSimpleOres.adamantium_door_block, 
+						  ContentSimpleOres.adamantium_door);
+				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentSimpleOres.onyx_door_block, 
+						  ContentSimpleOres.onyx_door);
+				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentSimpleOres.mythril_door_block, 
+						  ContentSimpleOres.mythril_door);
+				
+			}
+			if (ModSupport.use_netherrocks && Settings.NRDoors.asBoolean()) 
+			{
+				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentNetherrocks.argonite_door_block, 
+						ContentNetherrocks.argonite_door);
+				
+			}
+			if (ModSupport.use_fusion && Settings.FDoors.asBoolean()) {
+				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentFusion.bronze_door_block, 
+						ContentFusion.bronze_door);
+				
+			}
 			renderHelper.renderItemsAndBlocks();
 			renderHelper.renderItemStuff(event);
 		}

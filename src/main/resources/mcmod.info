@@ -9,9 +9,6 @@
 "mcversion": "${mcversion}",
 "url": "http://minecraft.curseforge.com/projects/aesthetics",
 "updateUrl": "",
-"authorList": [ "AleXndrTheGr8st", "Sinhika" ],
-"parent":"",
-"screenshots": [],
-"dependencies": [simplecore]
+"authorList": [ "AleXndrTheGr8st", "Sinhika" ]
 }
 ]

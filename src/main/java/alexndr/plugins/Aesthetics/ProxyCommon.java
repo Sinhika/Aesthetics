@@ -12,6 +12,7 @@ public class ProxyCommon
 		//Configuration
         ContentRegistry.registerPlugin(Aesthetics.plugin);
 		Settings.createOrLoadSettings(event);
+		ModSupport.preInit();
 		Content.preInitialize();
 	} // end ()
 	

@@ -13,3 +13,4 @@ bin/
 .gradle/
 build.number
 .classpath
+.project
