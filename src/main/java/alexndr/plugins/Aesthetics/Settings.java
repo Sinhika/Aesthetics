@@ -7,7 +7,6 @@ import alexndr.api.config.types.ConfigBlock;
 import alexndr.api.config.types.ConfigEntry;
 import alexndr.api.config.types.ConfigValue;
 import alexndr.api.logger.LogHelper;
-import alexndr.plugins.SimpleOres.ModInfo;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -18,7 +17,7 @@ public class Settings
 	
 	public static void createOrLoadSettings(FMLPreInitializationEvent event) 
 	{
-		settings.setModName("Aesthetics");
+		settings.setModName(ModInfo.NAME);
 		File configDir = new File(event.getModConfigurationDirectory(), "AleXndr");
 		File settingsFile = new File(configDir, "AestheticsSettings.xml");
 		settings.setFile(settingsFile);
