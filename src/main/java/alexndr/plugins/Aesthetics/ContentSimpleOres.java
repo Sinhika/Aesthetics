@@ -21,15 +21,15 @@ public class ContentSimpleOres
         if (Settings.SODoors.asBoolean()) 
         {
             copper_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) copper_door_block)
-                            .setUnlocalizedName("copper_door");
+            		.setConfigEntry(Settings.copperDoor.asConfigItem()).setUnlocalizedName("copper_door");
             mythril_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) mythril_door_block)
                             .setUnlocalizedName("mythril_door");
             tin_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) tin_door_block)
-                            .setUnlocalizedName("tin_door");
+            		.setConfigEntry(Settings.tinDoor.asConfigItem()).setUnlocalizedName("tin_door");
             adamantium_door = new SimpleDoorItem(Aesthetics.plugin,(SimpleDoor) adamantium_door_block)
-                             .setUnlocalizedName("adamantium_door");
+            		.setConfigEntry(Settings.adamantiumDoor.asConfigItem()).setUnlocalizedName("adamantium_door");
             onyx_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) onyx_door_block)
-                            .setUnlocalizedName("onyx_door");
+            		.setConfigEntry(Settings.onyxDoor.asConfigItem()).setUnlocalizedName("onyx_door");
         } // end-if SODoors
     } // end doItems()
 
