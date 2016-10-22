@@ -75,22 +75,22 @@ public class ContentNetherrocks
             {
                 fyrite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 fyrite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("fyrite_brick_stairs");
+                		.setConfigEntry(Settings.fyriteBricks).setUnlocalizedName("fyrite_brick_stairs");
                 malachite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 malachite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("malachite_brick_stairs");
+                		.setConfigEntry(Settings.malachiteBricks).setUnlocalizedName("malachite_brick_stairs");
                 ashstone_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 ashstone_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("ashstone_brick_stairs");
+                		.setConfigEntry(Settings.ashstoneBricks).setUnlocalizedName("ashstone_brick_stairs");
                 illumenite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 illumenite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("illumenite_brick_stairs");
+                		.setConfigEntry(Settings.illumeniteBricks).setUnlocalizedName("illumenite_brick_stairs");
                 dragonstone_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 dragonstone_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("dragonstone_brick_stairs");
+                		.setConfigEntry(Settings.dragonstoneBricks).setUnlocalizedName("dragonstone_brick_stairs");
                 argonite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 argonite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("argonite_brick_stairs");
+                		.setConfigEntry(Settings.argoniteBricks).setUnlocalizedName("argonite_brick_stairs");
             }  // end-if 
         } // end-if NRBrickStairs
 

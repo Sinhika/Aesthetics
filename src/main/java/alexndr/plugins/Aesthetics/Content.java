@@ -45,7 +45,7 @@ public class Content
 	public static void initialize()
 	{
 		try {
-			setTabs();
+			//setTabs();
 			LogHelper.verbose(ModInfo.NAME, "Successfully set tabs for all blocks/items");
 		} 
 		catch (Exception e) {
@@ -87,13 +87,13 @@ public class Content
             {
                 iron_brick_stairs = new SimpleStairs(Aesthetics.plugin, iron_bricks.getDefaultState(),
                                                     ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("iron_brick_stairs");
+                		.setConfigEntry(Settings.ironBricks).setUnlocalizedName("iron_brick_stairs");
                 gold_brick_stairs = new SimpleStairs(Aesthetics.plugin, gold_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("gold_brick_stairs");
+                		.setConfigEntry(Settings.goldBricks).setUnlocalizedName("gold_brick_stairs");
                 diamond_brick_stairs = new SimpleStairs(Aesthetics.plugin, diamond_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("diamond_brick_stairs");
+                		.setConfigEntry(Settings.diamondBricks).setUnlocalizedName("diamond_brick_stairs");
             } // end if MCBrickStairs
         } // end-if MCBricks
 		

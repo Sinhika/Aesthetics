@@ -59,19 +59,19 @@ public class ContentFusion
             {
                 steel_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 steel_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                .setUnlocalizedName("steel_brick_stairs");
+                		.setConfigEntry(Settings.steelBricks).setUnlocalizedName("steel_brick_stairs");
 
                 if (simpleores) 
                 {
                     bronze_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                     bronze_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                    .setUnlocalizedName("bronze_brick_stairs");
+                    		.setConfigEntry(Settings.bronzeBricks).setUnlocalizedName("bronze_brick_stairs");
                     thyrium_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                     thyrium_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                    .setUnlocalizedName("thyrium_brick_stairs");
+                    		.setConfigEntry(Settings.thyriumBricks).setUnlocalizedName("thyrium_brick_stairs");
                     sinisite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                     sinisite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                    .setUnlocalizedName("sinisite_brick_stairs");
+                    		.setConfigEntry(Settings.sinisiteBricks).setUnlocalizedName("sinisite_brick_stairs");
                 }
             }
         } // end-if FBricks

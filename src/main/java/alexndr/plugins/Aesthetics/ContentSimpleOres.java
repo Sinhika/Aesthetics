@@ -65,20 +65,20 @@ public class ContentSimpleOres
             {
                 copper_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 copper_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                                .setUnlocalizedName("copper_brick_stairs");
+                		.setConfigEntry(Settings.copperBricks).setUnlocalizedName("copper_brick_stairs");
                 tin_brick_stairs = new SimpleStairs(Aesthetics.plugin, tin_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                                                .setUnlocalizedName("tin_brick_stairs");
+                		.setConfigEntry(Settings.tinBricks).setUnlocalizedName("tin_brick_stairs");
                 mythril_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 mythril_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                                .setUnlocalizedName("mythril_brick_stairs");
+                		.setConfigEntry(Settings.mythrilBricks).setUnlocalizedName("mythril_brick_stairs");
                 onyx_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 onyx_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                                                .setUnlocalizedName("onyx_brick_stairs");
+                		.setConfigEntry(Settings.onyxBricks).setUnlocalizedName("onyx_brick_stairs");
                 adamantium_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 adamantium_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                                                .setUnlocalizedName("adamantium_brick_stairs");
+                		.setConfigEntry(Settings.adamantiumBricks).setUnlocalizedName("adamantium_brick_stairs");
              } // end-if SOBrickStairs
         } // end if SOBricks
 
