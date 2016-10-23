@@ -20,18 +20,18 @@ public class ContentNetherrocks
     {
         if (Settings.NRDoors.asBoolean()) 
         {
-            dragonstone_door = new SimpleDoorItem(Aesthetics.plugin, 
-                            (SimpleDoor) dragonstone_door_block).setUnlocalizedName("dragonstone_door");
-            argonite_door = new SimpleDoorItem(Aesthetics.plugin, 
-                            (SimpleDoor) argonite_door_block).setUnlocalizedName("argonite_door");
-            ashstone_door = new SimpleDoorItem(Aesthetics.plugin, 
-                            (SimpleDoor) ashstone_door_block).setUnlocalizedName("ashstone_door");
-            fyrite_door = new SimpleDoorItem(Aesthetics.plugin, 
-                            (SimpleDoor) fyrite_door_block).setUnlocalizedName("fyrite_door");
-            illumenite_door = new SimpleDoorItem(Aesthetics.plugin, 
-                            (SimpleDoor) illumenite_door_block).setUnlocalizedName("illumenite_door");
-//            malachite_door = new SimpleDoorItem(Aesthetics.plugin, 
-//                            (SimpleDoor) malachite_door_block).setUnlocalizedName("malachite_door");
+            dragonstone_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) dragonstone_door_block)
+            		.setConfigEntry(Settings.dragonstoneDoor.asConfigItem()).setUnlocalizedName("dragonstone_door");
+            argonite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) argonite_door_block)
+            		.setConfigEntry(Settings.argoniteDoor.asConfigItem()).setUnlocalizedName("argonite_door");
+            ashstone_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) ashstone_door_block)
+            		.setConfigEntry(Settings.ashstoneDoor.asConfigItem()).setUnlocalizedName("ashstone_door");
+            fyrite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) fyrite_door_block)
+            		.setConfigEntry(Settings.fyriteDoor.asConfigItem()).setUnlocalizedName("fyrite_door");
+            illumenite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) illumenite_door_block)
+            		.setConfigEntry(Settings.illumeniteDoor.asConfigItem()).setUnlocalizedName("illumenite_door");
+//            malachite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) malachite_door_block)
+//            		.setConfigEntry(Settings.malachiteDoor.asConfigItem()).setUnlocalizedName("malachite_door");
         }
     } // end doItems()
 

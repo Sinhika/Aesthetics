@@ -25,7 +25,7 @@ public class ContentFusion
         if (Settings.FDoors.asBoolean()) 
         {
             bronze_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) bronze_door_block)
-                            .setUnlocalizedName("bronze_door");
+            		.setConfigEntry(Settings.bronzeDoor.asConfigItem()).setUnlocalizedName("bronze_door");
         }
     } // end doItems()
 
@@ -80,7 +80,7 @@ public class ContentFusion
         {
             bronze_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "bronze_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.bronzeDoor)
-                            .setUnlocalizedName("bronze_door_block");
+                            .setUnlocalizedName("bronze_door");
         }
 
         if (Settings.FBars.asBoolean()) 

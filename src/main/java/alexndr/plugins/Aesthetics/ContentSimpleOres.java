@@ -23,7 +23,7 @@ public class ContentSimpleOres
             copper_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) copper_door_block)
             		.setConfigEntry(Settings.copperDoor.asConfigItem()).setUnlocalizedName("copper_door");
             mythril_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) mythril_door_block)
-                            .setUnlocalizedName("mythril_door");
+            		.setConfigEntry(Settings.mythrilDoor.asConfigItem()).setUnlocalizedName("mythril_door");
             tin_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) tin_door_block)
             		.setConfigEntry(Settings.tinDoor.asConfigItem()).setUnlocalizedName("tin_door");
             adamantium_door = new SimpleDoorItem(Aesthetics.plugin,(SimpleDoor) adamantium_door_block)
@@ -87,11 +87,9 @@ public class ContentSimpleOres
             copper_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "copper_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.copperDoor)
             				.setUnlocalizedName("copper_door");
-//                    		.setUnlocalizedName("copper_door_block");
             tin_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "tin_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.tinDoor)
             				.setUnlocalizedName("tin_door");
-//                            .setUnlocalizedName("tin_door_block");
             mythril_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "mythril_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.mythrilDoor)
                             .setUnlocalizedName("mythril_door");
