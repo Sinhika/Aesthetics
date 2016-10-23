@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom",
+    "textures": {
+        "bottom": "aesthetics:blocks/ashstone_lower",
+        "top": "aesthetics:blocks/ashstone_upper"
+    }
+}
