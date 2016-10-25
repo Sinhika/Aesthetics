@@ -6,6 +6,7 @@ import alexndr.api.config.Configuration;
 import alexndr.api.config.types.ConfigBlock;
 import alexndr.api.config.types.ConfigEntry;
 import alexndr.api.config.types.ConfigValue;
+import alexndr.api.helpers.game.TabHelper;
 import alexndr.api.logger.LogHelper;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -30,221 +31,220 @@ public class Settings
 			//Toggles
 			ConfigEntry toggles = new ConfigEntry("Aesthetics Toggles", "Toggles");
 			// setComment("Enables SimpleOres-based content.").setCommentIndentNumber(5)
-			enableSimpleOres = toggles.createNewValue("EnableSimpleOres").setActive()
-					.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-			// .setComment("Enables Fusion-base content.").setCommentIndentNumber(7);
-			enableFusion = toggles.createNewValue("EnableFusion").setActive()
-					.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-			// .setComment("Enables Netherrocks-based content.").setCommentIndentNumber(5)
-			enableNetherrocks = toggles.createNewValue("EnableNetherrocks").setActive()
-					.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-			settings.get(toggles);
+			toggles.createNewValue("EnableSimpleOres").setActive().setDataType("@B").setCurrentValue("true")
+					.setDefaultValue("true");
+			toggles.createNewValue("EnableFusion").setActive().setDataType("@B").setCurrentValue("true")
+					.setDefaultValue("true");
+			toggles.createNewValue("EnableNetherrocks").setActive().setDataType("@B").setCurrentValue("true")
+					.setDefaultValue("true");
+			toggles = settings.get(toggles);
+			enableSimpleOres = toggles.getValueByName("EnableSimpleOres");
+			enableFusion = toggles.getValueByName("EnableFusion");
+			enableNetherrocks = toggles.getValueByName("EnableNetherrocks");
 			
 			ConfigEntry contentToggles = new ConfigEntry("Vanilla Content Toggles", "Toggles");
-			// .setComment("Enables Bricks made from vanilla Minecraft materials.")
-			MCBricks = contentToggles.createNewValue("EnableVanillaBricks").setActive()
-					.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-			// .setComment("Enables Brick Stairs made from vanilla Minecraft materials.").setCommentIndentNumber(1)
-			MCBrickStairs = contentToggles.createNewValue("EnableVanillaBrickStairs").setActive()
-					.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-			settings.get(contentToggles);
+			contentToggles.createNewValue("EnableVanillaBricks").setActive().setDataType("@B").setCurrentValue("true")
+					.setDefaultValue("true");
+			contentToggles.createNewValue("EnableVanillaBrickStairs").setActive().setDataType("@B")
+					.setCurrentValue("true").setDefaultValue("true");
+			contentToggles = settings.get(contentToggles);
+			MCBricks = contentToggles.getValueByName("EnableVanillaBricks");
+			MCBrickStairs = contentToggles.getValueByName("EnableVanillaBrickStairs");
 			
 			if(Loader.isModLoaded("simpleores") && enableSimpleOres.asBoolean()) 
 			{
 				ConfigEntry SOToggles = new ConfigEntry("SimpleOres Content Toggles", "Toggles");
 				
-				// .setComment("Enables Bricks made from SimpleOres materials.").setCommentIndentNumber(7)
-				SOBricks = SOToggles.createNewValue("EnableBricks").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				// .setComment("Enables Brick Stairs made from SimpleOres materials.")
-				SOBrickStairs = SOToggles.createNewValue("EnableBrickStairs").setActive()
-						.setDataType("@B").setCurrentValue("true")
+				SOToggles.createNewValue("EnableBricks").setActive().setDataType("@B").setCurrentValue("true")
 						.setDefaultValue("true");
-				// .setComment("Enables Doors made from SimpleOres materials.").setCommentIndentNumber(8);
-				SODoors = SOToggles.createNewValue("EnableDoors").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				// .setComment("Enables Doors made from SimpleOres materials.").setCommentIndentNumber(8);
-				SOBars = SOToggles.createNewValue("EnableBars").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				settings.get(SOToggles);
+				SOToggles.createNewValue("EnableBrickStairs").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				SOToggles.createNewValue("EnableDoors").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				SOToggles.createNewValue("EnableBars").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				SOToggles = settings.get(SOToggles);
+				SOBricks = SOToggles.getValueByName("EnableBricks");
+				SOBrickStairs = SOToggles.getValueByName("EnableBrickStairs");
+				SODoors = SOToggles.getValueByName("EnableDoors");
+				SOBars =  SOToggles.getValueByName("EnableBars");
 			}
 			if(Loader.isModLoaded("fusion") && enableFusion.asBoolean()) 
 			{
 				ConfigEntry FToggles = new ConfigEntry("Fusion Content Toggles", "Toggles");
-				// .setComment("Enables Bricks made from Fusion materials.").setCommentIndentNumber(7);
-				FBricks = FToggles.createNewValue("EnableBricks").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				// .setDefaultValue("true").setComment("Enables Brick Stairs made from Fusion materials.")
-				FBrickStairs = FToggles.createNewValue("EnableBrickStairs").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				// .setComment("Enables Doors made from Fusion materials.").setCommentIndentNumber(8);
-				FDoors = FToggles.createNewValue("EnableDoors").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-//				.setComment("Enables Doors made from Fusion materials.").setCommentIndentNumber(8);
-				FBars = FToggles.createNewValue("EnableBars").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				settings.get(FToggles);
+				FToggles.createNewValue("EnableBricks").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				FToggles.createNewValue("EnableBrickStairs").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				FToggles.createNewValue("EnableDoors").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				FToggles.createNewValue("EnableBars").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				FToggles = settings.get(FToggles);
+				FBricks = FToggles.getValueByName("EnableBricks");
+				FBrickStairs = FToggles.getValueByName("EnableBrickStairs");
+				FDoors = FToggles.getValueByName("EnableDoors");
+				FBars = FToggles.getValueByName("EnableBars");
 			}
 			if(Loader.isModLoaded("netherrocks") && enableNetherrocks.asBoolean()) 
 			{
 				ConfigEntry NRToggles = new ConfigEntry("Netherrocks Content Toggles", "Toggles");
-				//		.setComment("Enables Bricks made from Netherrocks materials.").setCommentIndentNumber(7);
-				NRBricks = NRToggles.createNewValue("EnableBricks").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				// .setComment("Enables Brick Stairs made from Netherrocks materials.")
-				NRBrickStairs = NRToggles.createNewValue("EnableBrickStairs").setActive()
-						.setDataType("@B").setCurrentValue("true")
+				NRToggles.createNewValue("EnableBricks").setActive().setDataType("@B").setCurrentValue("true")
 						.setDefaultValue("true");
-				//		.setComment("Enables Doors made from Netherrocks materials.").setCommentIndentNumber(8);
-				NRDoors = NRToggles.createNewValue("EnableDoors").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				//		.setComment("Enables Doors made from Netherrocks materials.").setCommentIndentNumber(8);
-				NRBars = NRToggles.createNewValue("EnableBars").setActive()
-						.setDataType("@B").setCurrentValue("true").setDefaultValue("true");
-				settings.get(NRToggles);
+				NRToggles.createNewValue("EnableBrickStairs").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				NRToggles.createNewValue("EnableDoors").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				NRToggles.createNewValue("EnableBars").setActive().setDataType("@B").setCurrentValue("true")
+						.setDefaultValue("true");
+				NRToggles = settings.get(NRToggles);
+				NRBricks =  NRToggles.getValueByName("EnableBricks");
+				NRBrickStairs = NRToggles.getValueByName("EnableBrickStairs");
+				NRDoors = NRToggles.getValueByName("EnableDoors");
+				NRBars = NRToggles.getValueByName("EnableBars");
 			}
 			
 			//Blocks
             ironBricks = settings.get(new ConfigBlock("Iron Bricks", "Bricks").setHardness(15.0F)
                             .setResistance(20.F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                            .setCreativeTab("SimpleBlocks"))
+                            .setCreativeTab(TabHelper.blocksTab().getTabLabel()))
                             .asConfigBlock();
             goldBricks = settings.get(new ConfigBlock("Gold Bricks", "Bricks").setHardness(15.0F)
                             .setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                            .setCreativeTab("SimpleBlocks"))                            .asConfigBlock();
+                            .setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
             diamondBricks = settings
                             .get(new ConfigBlock("Diamond Bricks", "Bricks").setHardness(15.0F)
                                             .setResistance(20.0F).setLightValue(0.0F)
-                                            .setHarvestTool("pickaxe").setCreativeTab("SimpleBlocks"))
+                                            .setHarvestTool("pickaxe").setCreativeTab(TabHelper.blocksTab().getTabLabel()))
                             .asConfigBlock();
 			
 			if(Loader.isModLoaded("simpleores")) 
 			{
 				copperBricks = settings.get(new ConfigBlock("Copper Bricks", "SimpleOresBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				tinBricks = settings.get(new ConfigBlock("Tin Bricks", "SimpleOresBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				mythrilBricks = settings.get(new ConfigBlock("Mythril Bricks", "SimpleOresBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				adamantiumBricks = settings.get(new ConfigBlock("Adamantium Bricks", "SimpleOresBlocks")
 						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				onyxBricks = settings.get(new ConfigBlock("Onyx Bricks", "SimpleOresBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 
                 copperDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
                                 .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab("SimpleMachines")).asConfigBlock();
+                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
                 tinDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
                                 .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab("SimpleMachines")).asConfigBlock();
+                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
 				mythrilDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleMachines")).asConfigBlock();
+						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
 				adamantiumDoor = settings.get(new ConfigBlock("Adamantium Door", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleMachines")).asConfigBlock();
+						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
 				onyxDoor = settings.get(new ConfigBlock("Onyx Door", "SimpleOresBlocks").setHardness(20.0F)
 						.setResistance(29.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleMachines")).asConfigBlock();
+						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
 
 				copperBars = settings.get(new ConfigBlock("Copper Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				tinBars = settings.get(new ConfigBlock("Tin Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				mythrilBars = settings.get(new ConfigBlock("Mythril Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				adamantiumBars = settings.get(new ConfigBlock("Adamantium Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				onyxBars = settings.get(new ConfigBlock("Onyx Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 			}
 			
 			if(Loader.isModLoaded("fusion")) 
 			{
 				steelBricks = settings.get(new ConfigBlock("Steel Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				bronzeBricks = settings.get(new ConfigBlock("Bronze Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				thyriumBricks = settings.get(new ConfigBlock("Thyrium Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				sinisiteBricks = settings.get(new ConfigBlock("Sinisite Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 
 				bronzeDoor = settings.get(new ConfigBlock("Bronze Door", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleMachines")).asConfigBlock();
+						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
 
 				steelBars = settings.get(new ConfigBlock("Steel Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				bronzeBars = settings.get(new ConfigBlock("Bronze Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				thyriumBars = settings.get(new ConfigBlock("Thyrium Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				sinisiteBars = settings.get(new ConfigBlock("Sinisite Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 			}
 			
 			if(Loader.isModLoaded("netherrocks")) 
 			{
 				fyriteBricks = settings.get(new ConfigBlock("Fyrite Bricks", "NetherrocksBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				malachiteBricks = settings.get(new ConfigBlock("Malachite Bricks", "NetherrocksBlocks")
 						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks"))
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel()))
 						.asConfigBlock();
 				ashstoneBricks = settings.get(new ConfigBlock("Ashstone Bricks", "NetherrocksBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				illumeniteBricks = settings.get(new ConfigBlock("Illumenite Bricks", "NetherrocksBlocks")
 						.setHardness(15.0F).setResistance(20.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks"))
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel()))
 						.asConfigBlock();
 				dragonstoneBricks = settings.get(new ConfigBlock("Dragonstone Bricks", "NetherrocksBlocks")
 						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks"))
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel()))
 						.asConfigBlock();
 				argoniteBricks = settings.get(new ConfigBlock("Argonite Bricks", "NetherrocksBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleBlocks")).asConfigBlock();
+						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 
 				dragonstoneDoor = settings.get(new ConfigBlock("Dragonstone Door", "NetherrocksBlocks")
 						.setHardness(10.0F).setResistance(44.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleMachines"))
+						.setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
 						.asConfigBlock();
                 ashstoneDoor = settings.get(new ConfigBlock("Ashstone Door", "NetherrocksBlocks")
                                 .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab("SimpleMachines"))
+                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
                                 .asConfigBlock();
                 argoniteDoor = settings.get(new ConfigBlock("Argonite Door", "NetherrocksBlocks")
                                 .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab("SimpleMachines"))
+                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
                                 .asConfigBlock();
                 fyriteDoor = settings.get(new ConfigBlock("Fyrite Door", "NetherrocksBlocks")
                                 .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab("SimpleMachines"))
+                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
                                 .asConfigBlock();
                 illumeniteDoor = settings.get(new ConfigBlock("Illumenite Door", "NetherrocksBlocks")
                                 .setHardness(7.0F).setResistance(10.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab("SimpleMachines"))
+                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
                                 .asConfigBlock();
 //                malachiteDoor = settings.get(new ConfigBlock("Malachite Door", "NetherrocksBlocks")
 //                                .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
@@ -253,23 +253,23 @@ public class Settings
 
 				fyriteBars = settings.get(new ConfigBlock("Fyrite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				malachiteBars = settings.get(new ConfigBlock("Malachite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				ashstoneBars = settings.get(new ConfigBlock("Ashstone Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				illumeniteBars = settings.get(new ConfigBlock("Illumenite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 				dragonstoneBars = settings.get(new ConfigBlock("Dragonstone Bars", "NetherrocksBlocks")
 						.setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations"))
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel()))
 						.asConfigBlock();
 				argoniteBars = settings.get(new ConfigBlock("Argonite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab("SimpleDecorations")).asConfigBlock();
+						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
 			}
 		} // end try
 		catch (Exception e) {
