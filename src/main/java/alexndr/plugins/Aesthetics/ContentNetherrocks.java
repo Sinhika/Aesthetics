@@ -5,6 +5,7 @@ import alexndr.api.content.blocks.SimpleBlock;
 import alexndr.api.content.blocks.SimpleDoor;
 import alexndr.api.content.blocks.SimpleStairs;
 import alexndr.api.content.items.SimpleDoorItem;
+import alexndr.api.helpers.game.TabHelper;
 import alexndr.api.registry.ContentCategories;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -20,18 +21,29 @@ public class ContentNetherrocks
     {
         if (Settings.NRDoors.asBoolean()) 
         {
-            dragonstone_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) dragonstone_door_block)
-            		.setConfigEntry(Settings.dragonstoneDoor.asConfigItem()).setUnlocalizedName("dragonstone_door");
+            dragonstone_door = new SimpleDoorItem(Aesthetics.plugin,
+                            (SimpleDoor) dragonstone_door_block)
+                                            .setConfigEntry(Settings.dragonstoneDoor.asConfigItem())
+                                            .setUnlocalizedName("dragonstone_door")
+                                            .setCreativeTab(TabHelper.redstoneTab());
             argonite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) argonite_door_block)
-            		.setConfigEntry(Settings.argoniteDoor.asConfigItem()).setUnlocalizedName("argonite_door");
+                            .setConfigEntry(Settings.argoniteDoor.asConfigItem())
+                            .setUnlocalizedName("argonite_door").setCreativeTab(TabHelper.redstoneTab());
             ashstone_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) ashstone_door_block)
-            		.setConfigEntry(Settings.ashstoneDoor.asConfigItem()).setUnlocalizedName("ashstone_door");
+                            .setConfigEntry(Settings.ashstoneDoor.asConfigItem())
+                            .setUnlocalizedName("ashstone_door").setCreativeTab(TabHelper.redstoneTab());
             fyrite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) fyrite_door_block)
-            		.setConfigEntry(Settings.fyriteDoor.asConfigItem()).setUnlocalizedName("fyrite_door");
-            illumenite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) illumenite_door_block)
-            		.setConfigEntry(Settings.illumeniteDoor.asConfigItem()).setUnlocalizedName("illumenite_door");
-//            malachite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) malachite_door_block)
-//            		.setConfigEntry(Settings.malachiteDoor.asConfigItem()).setUnlocalizedName("malachite_door");
+                            .setConfigEntry(Settings.fyriteDoor.asConfigItem())
+                            .setUnlocalizedName("fyrite_door").setCreativeTab(TabHelper.redstoneTab());
+            illumenite_door = new SimpleDoorItem(Aesthetics.plugin,
+                            (SimpleDoor) illumenite_door_block)
+                                            .setConfigEntry(Settings.illumeniteDoor.asConfigItem())
+                                            .setUnlocalizedName("illumenite_door")
+                                            .setCreativeTab(TabHelper.redstoneTab());
+            // malachite_door = new SimpleDoorItem(Aesthetics.plugin,
+            // (SimpleDoor) malachite_door_block)
+            // .setConfigEntry(Settings.malachiteDoor.asConfigItem())
+            // .setUnlocalizedName("malachite_door").setCreativeTab(TabHelper.redstoneTab());
         }
     } // end doItems()
 
@@ -44,53 +56,60 @@ public class ContentNetherrocks
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.fyriteBricks)
                             .setStepSound(SoundType.METAL)
-                            .setUnlocalizedName("fyrite_bricks");
+                            .setUnlocalizedName("fyrite_bricks").setCreativeTab(TabHelper.blocksTab());
             malachite_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.malachiteBricks)
                             .setStepSound(SoundType.METAL)
-                            .setUnlocalizedName("malachite_bricks");
+                            .setUnlocalizedName("malachite_bricks").setCreativeTab(TabHelper.blocksTab());
             ashstone_bricks = new SimpleBlock(Aesthetics.plugin, Material.ROCK,
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.ashstoneBricks)
                             .setStepSound(SoundType.STONE)
-                            .setUnlocalizedName("ashstone_bricks");
+                            .setUnlocalizedName("ashstone_bricks").setCreativeTab(TabHelper.blocksTab());
             illumenite_bricks = new SimpleBlock(Aesthetics.plugin, Material.GLASS,
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.illumeniteBricks)
                             .setStepSound(SoundType.GLASS)
-                            .setUnlocalizedName("illumenite_bricks");
+                            .setUnlocalizedName("illumenite_bricks").setCreativeTab(TabHelper.blocksTab());
             dragonstone_bricks = new SimpleBlock(Aesthetics.plugin, Material.ROCK,
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.dragonstoneBricks)
                             .setStepSound(SoundType.STONE)
-                            .setUnlocalizedName("dragonstone_bricks");
+                            .setUnlocalizedName("dragonstone_bricks").setCreativeTab(TabHelper.blocksTab());
             argonite_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.argoniteBricks)
                             .setStepSound(SoundType.METAL)
-                            .setUnlocalizedName("argonite_bricks");
+                            .setUnlocalizedName("argonite_bricks").setCreativeTab(TabHelper.blocksTab());
 
             if (Settings.NRBrickStairs.asBoolean()) 
             {
                 fyrite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 fyrite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.fyriteBricks).setUnlocalizedName("fyrite_brick_stairs");
+                		.setConfigEntry(Settings.fyriteBricks).setUnlocalizedName("fyrite_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 malachite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 malachite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.malachiteBricks).setUnlocalizedName("malachite_brick_stairs");
+                		.setConfigEntry(Settings.malachiteBricks).setUnlocalizedName("malachite_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 ashstone_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 ashstone_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.ashstoneBricks).setUnlocalizedName("ashstone_brick_stairs");
+                		.setConfigEntry(Settings.ashstoneBricks)
+                		.setUnlocalizedName("ashstone_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 illumenite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 illumenite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.illumeniteBricks).setUnlocalizedName("illumenite_brick_stairs");
+                		.setConfigEntry(Settings.illumeniteBricks).setUnlocalizedName("illumenite_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 dragonstone_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 dragonstone_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.dragonstoneBricks).setUnlocalizedName("dragonstone_brick_stairs");
+                		.setConfigEntry(Settings.dragonstoneBricks).setUnlocalizedName("dragonstone_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 argonite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 argonite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.argoniteBricks).setUnlocalizedName("argonite_brick_stairs");
+                		.setConfigEntry(Settings.argoniteBricks).setUnlocalizedName("argonite_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
             }  // end-if 
         } // end-if NRBrickStairs
 
@@ -126,24 +145,30 @@ public class ContentNetherrocks
         {
             fyrite_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL)
-                            .setConfigEntry(Settings.fyriteBars).setUnlocalizedName("fyrite_bars");
+                            .setConfigEntry(Settings.fyriteBars).setUnlocalizedName("fyrite_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             malachite_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL)
-                            .setConfigEntry(Settings.malachiteBars).setUnlocalizedName("malachite_bars");
+                            .setConfigEntry(Settings.malachiteBars).setUnlocalizedName("malachite_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             ashstone_bars = new SimpleBars(Aesthetics.plugin, Material.ROCK, true,
                             ContentCategories.Block.GENERAL)
-                            .setConfigEntry(Settings.ashstoneBars).setUnlocalizedName("ashstone_bars");
+                            .setConfigEntry(Settings.ashstoneBars).setUnlocalizedName("ashstone_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             illumenite_bars = new SimpleBars(Aesthetics.plugin, Material.GLASS, true,
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.illumeniteBars)
-                            .setUnlocalizedName("illumenite_bars");
+                            .setUnlocalizedName("illumenite_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             dragonstone_bars = new SimpleBars(Aesthetics.plugin, Material.ROCK, true,
                             ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.dragonstoneBars)
-                            .setUnlocalizedName("dragonstone_bars");
+                            .setUnlocalizedName("dragonstone_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             argonite_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL)
-                            .setConfigEntry(Settings.argoniteBars).setUnlocalizedName("argonite_bars");
+                            .setConfigEntry(Settings.argoniteBars).setUnlocalizedName("argonite_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
         } // end-if NRBars
     } // end doBlocks()
 

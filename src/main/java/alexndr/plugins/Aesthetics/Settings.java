@@ -30,7 +30,6 @@ public class Settings
 			
 			//Toggles
 			ConfigEntry toggles = new ConfigEntry("Aesthetics Toggles", "Toggles");
-			// setComment("Enables SimpleOres-based content.").setCommentIndentNumber(5)
 			toggles.createNewValue("EnableSimpleOres").setActive().setDataType("@B").setCurrentValue("true")
 					.setDefaultValue("true");
 			toggles.createNewValue("EnableFusion").setActive().setDataType("@B").setCurrentValue("true")
@@ -106,170 +105,173 @@ public class Settings
 			
 			//Blocks
             ironBricks = settings.get(new ConfigBlock("Iron Bricks", "Bricks").setHardness(15.0F)
-                            .setResistance(20.F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                            .setCreativeTab(TabHelper.blocksTab().getTabLabel()))
+                            .setResistance(20.F).setLightValue(0.0F).setHarvestTool("pickaxe"))
                             .asConfigBlock();
             goldBricks = settings.get(new ConfigBlock("Gold Bricks", "Bricks").setHardness(15.0F)
-                            .setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                            .setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+                            .setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+                            .asConfigBlock();
             diamondBricks = settings
                             .get(new ConfigBlock("Diamond Bricks", "Bricks").setHardness(15.0F)
                                             .setResistance(20.0F).setLightValue(0.0F)
-                                            .setHarvestTool("pickaxe").setCreativeTab(TabHelper.blocksTab().getTabLabel()))
+                                            .setHarvestTool("pickaxe"))
                             .asConfigBlock();
 			
 			if(Loader.isModLoaded("simpleores")) 
 			{
-				copperBricks = settings.get(new ConfigBlock("Copper Bricks", "SimpleOresBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
-				tinBricks = settings.get(new ConfigBlock("Tin Bricks", "SimpleOresBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
-				mythrilBricks = settings.get(new ConfigBlock("Mythril Bricks", "SimpleOresBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
-				adamantiumBricks = settings.get(new ConfigBlock("Adamantium Bricks", "SimpleOresBlocks")
-						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
-				onyxBricks = settings.get(new ConfigBlock("Onyx Bricks", "SimpleOresBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+                copperBricks = settings
+                                .get(new ConfigBlock("Copper Bricks", "SimpleOresBlocks")
+                                                .setHardness(15.0F).setResistance(20.0F)
+                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+                tinBricks = settings
+                                .get(new ConfigBlock("Tin Bricks", "SimpleOresBlocks")
+                                                .setHardness(15.0F).setResistance(20.0F)
+                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+                mythrilBricks = settings
+                                .get(new ConfigBlock("Mythril Bricks", "SimpleOresBlocks")
+                                                .setHardness(15.0F).setResistance(20.0F)
+                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+                adamantiumBricks = settings
+                                .get(new ConfigBlock("Adamantium Bricks", "SimpleOresBlocks")
+                                                .setHardness(15.0F).setResistance(20.0F)
+                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
+                onyxBricks = settings
+                                .get(new ConfigBlock("Onyx Bricks", "SimpleOresBlocks")
+                                                .setHardness(15.0F).setResistance(20.0F)
+                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
+                                .asConfigBlock();
 
                 copperDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
                                 .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
+                                ).asConfigBlock();
                 tinDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
                                 .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
+                                ).asConfigBlock();
 				mythrilDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				adamantiumDoor = settings.get(new ConfigBlock("Adamantium Door", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				onyxDoor = settings.get(new ConfigBlock("Onyx Door", "SimpleOresBlocks").setHardness(20.0F)
 						.setResistance(29.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 
 				copperBars = settings.get(new ConfigBlock("Copper Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				tinBars = settings.get(new ConfigBlock("Tin Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				mythrilBars = settings.get(new ConfigBlock("Mythril Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				adamantiumBars = settings.get(new ConfigBlock("Adamantium Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				onyxBars = settings.get(new ConfigBlock("Onyx Bars", "SimpleOresBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
-			}
+						).asConfigBlock();
+			} // end if simple ores
 			
 			if(Loader.isModLoaded("fusion")) 
 			{
 				steelBricks = settings.get(new ConfigBlock("Steel Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				bronzeBricks = settings.get(new ConfigBlock("Bronze Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				thyriumBricks = settings.get(new ConfigBlock("Thyrium Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
 						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
 				sinisiteBricks = settings.get(new ConfigBlock("Sinisite Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 
 				bronzeDoor = settings.get(new ConfigBlock("Bronze Door", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.redstoneTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 
 				steelBars = settings.get(new ConfigBlock("Steel Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				bronzeBars = settings.get(new ConfigBlock("Bronze Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				thyriumBars = settings.get(new ConfigBlock("Thyrium Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				sinisiteBars = settings.get(new ConfigBlock("Sinisite Bars", "FusionBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
-			}
+						).asConfigBlock();
+			} // end if fusion
 			
 			if(Loader.isModLoaded("netherrocks")) 
 			{
 				fyriteBricks = settings.get(new ConfigBlock("Fyrite Bricks", "NetherrocksBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				malachiteBricks = settings.get(new ConfigBlock("Malachite Bricks", "NetherrocksBlocks")
 						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel()))
+						)
 						.asConfigBlock();
 				ashstoneBricks = settings.get(new ConfigBlock("Ashstone Bricks", "NetherrocksBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				illumeniteBricks = settings.get(new ConfigBlock("Illumenite Bricks", "NetherrocksBlocks")
 						.setHardness(15.0F).setResistance(20.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel()))
+						)
 						.asConfigBlock();
 				dragonstoneBricks = settings.get(new ConfigBlock("Dragonstone Bricks", "NetherrocksBlocks")
 						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel()))
+						)
 						.asConfigBlock();
 				argoniteBricks = settings.get(new ConfigBlock("Argonite Bricks", "NetherrocksBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 
 				dragonstoneDoor = settings.get(new ConfigBlock("Dragonstone Door", "NetherrocksBlocks")
 						.setHardness(10.0F).setResistance(44.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
-						.asConfigBlock();
+						).asConfigBlock();
                 ashstoneDoor = settings.get(new ConfigBlock("Ashstone Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
+                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
                                 .asConfigBlock();
                 argoniteDoor = settings.get(new ConfigBlock("Argonite Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
+                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
                                 .asConfigBlock();
                 fyriteDoor = settings.get(new ConfigBlock("Fyrite Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
+                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
                                 .asConfigBlock();
                 illumeniteDoor = settings.get(new ConfigBlock("Illumenite Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(10.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-                                .setCreativeTab(TabHelper.redstoneTab().getTabLabel()))
+                                .setHardness(7.0F).setResistance(10.0F).setLightValue(1.0F).setHarvestTool("pickaxe"))
                                 .asConfigBlock();
 //                malachiteDoor = settings.get(new ConfigBlock("Malachite Door", "NetherrocksBlocks")
-//                                .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-//                					.setCreativeTab("SimpleMachines"))
+//                                .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
 //                                .asConfigBlock();
 
 				fyriteBars = settings.get(new ConfigBlock("Fyrite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				malachiteBars = settings.get(new ConfigBlock("Malachite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				ashstoneBars = settings.get(new ConfigBlock("Ashstone Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				illumeniteBars = settings.get(new ConfigBlock("Illumenite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 				dragonstoneBars = settings.get(new ConfigBlock("Dragonstone Bars", "NetherrocksBlocks")
 						.setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel()))
+						)
 						.asConfigBlock();
 				argoniteBars = settings.get(new ConfigBlock("Argonite Bars", "NetherrocksBlocks").setHardness(7.0F)
 						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.decorationsTab().getTabLabel())).asConfigBlock();
+						).asConfigBlock();
 			}
 		} // end try
 		catch (Exception e) {

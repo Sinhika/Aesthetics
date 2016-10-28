@@ -73,27 +73,32 @@ public class Content
         {
             iron_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON, ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.ironBricks).setStepSound(SoundType.METAL)
-                            .setUnlocalizedName("iron_bricks");
+                            .setUnlocalizedName("iron_bricks").setCreativeTab(TabHelper.blocksTab());
             gold_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.goldBricks)
                                             .setStepSound(SoundType.METAL)
-                                            .setUnlocalizedName("gold_bricks");
+                                            .setUnlocalizedName("gold_bricks")
+                                            .setCreativeTab(TabHelper.blocksTab());
             diamond_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.diamondBricks)
                                             .setStepSound(SoundType.METAL)
-                                            .setUnlocalizedName("diamond_bricks");
+                                            .setUnlocalizedName("diamond_bricks")
+                                            .setCreativeTab(TabHelper.blocksTab());
 
             if (Settings.MCBrickStairs.asBoolean()) 
             {
                 iron_brick_stairs = new SimpleStairs(Aesthetics.plugin, iron_bricks.getDefaultState(),
                                                     ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.ironBricks).setUnlocalizedName("iron_brick_stairs");
+                		.setConfigEntry(Settings.ironBricks).setUnlocalizedName("iron_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 gold_brick_stairs = new SimpleStairs(Aesthetics.plugin, gold_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.goldBricks).setUnlocalizedName("gold_brick_stairs");
+                		.setConfigEntry(Settings.goldBricks).setUnlocalizedName("gold_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 diamond_brick_stairs = new SimpleStairs(Aesthetics.plugin, diamond_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.diamondBricks).setUnlocalizedName("diamond_brick_stairs");
+                		.setConfigEntry(Settings.diamondBricks).setUnlocalizedName("diamond_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
             } // end if MCBrickStairs
         } // end-if MCBricks
 		

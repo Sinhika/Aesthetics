@@ -5,6 +5,7 @@ import alexndr.api.content.blocks.SimpleBlock;
 import alexndr.api.content.blocks.SimpleDoor;
 import alexndr.api.content.blocks.SimpleStairs;
 import alexndr.api.content.items.SimpleDoorItem;
+import alexndr.api.helpers.game.TabHelper;
 import alexndr.api.registry.ContentCategories;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -25,7 +26,8 @@ public class ContentFusion
         if (Settings.FDoors.asBoolean()) 
         {
             bronze_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) bronze_door_block)
-            		.setConfigEntry(Settings.bronzeDoor.asConfigItem()).setUnlocalizedName("bronze_door");
+            		.setConfigEntry(Settings.bronzeDoor.asConfigItem())
+            		.setUnlocalizedName("bronze_door").setCreativeTab(TabHelper.redstoneTab());
         }
     } // end doItems()
 
@@ -37,41 +39,47 @@ public class ContentFusion
             steel_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                                            ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.steelBricks).setStepSound(SoundType.METAL)
-                            .setUnlocalizedName("steel_bricks");
+                            .setUnlocalizedName("steel_bricks").setCreativeTab(TabHelper.blocksTab());
 
             if (simpleores) 
             {
                 bronze_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                                 ContentCategories.Block.GENERAL)
                                 .setConfigEntry(Settings.bronzeBricks).setStepSound(SoundType.METAL)
-                                .setUnlocalizedName("bronze_bricks");
+                                .setUnlocalizedName("bronze_bricks").setCreativeTab(TabHelper.blocksTab());
                 thyrium_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                                 ContentCategories.Block.GENERAL)
                                 .setConfigEntry(Settings.thyriumBricks).setStepSound(SoundType.METAL)
-                                .setUnlocalizedName("thyrium_bricks");
+                                .setUnlocalizedName("thyrium_bricks")
+                                .setCreativeTab(TabHelper.blocksTab());
                 sinisite_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                                 ContentCategories.Block.GENERAL)
                                 .setConfigEntry(Settings.sinisiteBricks).setStepSound(SoundType.METAL)
-                                .setUnlocalizedName("sinisite_bricks");
+                                .setUnlocalizedName("sinisite_bricks")
+                                .setCreativeTab(TabHelper.blocksTab());
             }
 
             if (Settings.FBrickStairs.asBoolean()) 
             {
                 steel_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 steel_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.steelBricks).setUnlocalizedName("steel_brick_stairs");
+                		.setConfigEntry(Settings.steelBricks).setUnlocalizedName("steel_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
 
                 if (simpleores) 
                 {
                     bronze_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                     bronze_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                    		.setConfigEntry(Settings.bronzeBricks).setUnlocalizedName("bronze_brick_stairs");
+                    		.setConfigEntry(Settings.bronzeBricks).setUnlocalizedName("bronze_brick_stairs")
+                    		.setCreativeTab(TabHelper.blocksTab());
                     thyrium_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                     thyrium_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                    		.setConfigEntry(Settings.thyriumBricks).setUnlocalizedName("thyrium_brick_stairs");
+                    		.setConfigEntry(Settings.thyriumBricks).setUnlocalizedName("thyrium_brick_stairs")
+                    		.setCreativeTab(TabHelper.blocksTab());
                     sinisite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                     sinisite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                    		.setConfigEntry(Settings.sinisiteBricks).setUnlocalizedName("sinisite_brick_stairs");
+                    		.setConfigEntry(Settings.sinisiteBricks).setUnlocalizedName("sinisite_brick_stairs")
+                    		.setCreativeTab(TabHelper.blocksTab());
                 }
             }
         } // end-if FBricks
@@ -87,18 +95,22 @@ public class ContentFusion
         {
             steel_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                                         ContentCategories.Block.GENERAL)
-                            .setConfigEntry(Settings.steelBars).setUnlocalizedName("steel_bars");
+                            .setConfigEntry(Settings.steelBars).setUnlocalizedName("steel_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             if (simpleores) 
             {
                 bronze_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                                 ContentCategories.Block.GENERAL)
-                                .setConfigEntry(Settings.bronzeBars).setUnlocalizedName("bronze_bars");
+                                .setConfigEntry(Settings.bronzeBars).setUnlocalizedName("bronze_bars")
+                                .setCreativeTab(TabHelper.decorationsTab());
                 thyrium_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                                 ContentCategories.Block.GENERAL)
-                                .setConfigEntry(Settings.thyriumBars).setUnlocalizedName("thyrium_bars");
+                                .setConfigEntry(Settings.thyriumBars).setUnlocalizedName("thyrium_bars")
+                                .setCreativeTab(TabHelper.decorationsTab());
                 sinisite_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                                 ContentCategories.Block.GENERAL)
-                                .setConfigEntry(Settings.sinisiteBars).setUnlocalizedName("sinisite_bars");
+                                .setConfigEntry(Settings.sinisiteBars).setUnlocalizedName("sinisite_bars")
+                                .setCreativeTab(TabHelper.decorationsTab());
             } // end-if simpleores
         } // end-if FBars
     } // end doBlocks()

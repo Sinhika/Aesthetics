@@ -5,6 +5,7 @@ import alexndr.api.content.blocks.SimpleBlock;
 import alexndr.api.content.blocks.SimpleDoor;
 import alexndr.api.content.blocks.SimpleStairs;
 import alexndr.api.content.items.SimpleDoorItem;
+import alexndr.api.helpers.game.TabHelper;
 import alexndr.api.registry.ContentCategories;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -21,15 +22,20 @@ public class ContentSimpleOres
         if (Settings.SODoors.asBoolean()) 
         {
             copper_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) copper_door_block)
-            		.setConfigEntry(Settings.copperDoor.asConfigItem()).setUnlocalizedName("copper_door");
+            		.setConfigEntry(Settings.copperDoor.asConfigItem())
+            		.setUnlocalizedName("copper_door").setCreativeTab(TabHelper.redstoneTab());
             mythril_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) mythril_door_block)
-            		.setConfigEntry(Settings.mythrilDoor.asConfigItem()).setUnlocalizedName("mythril_door");
+            		.setConfigEntry(Settings.mythrilDoor.asConfigItem())
+            		.setUnlocalizedName("mythril_door").setCreativeTab(TabHelper.redstoneTab());
             tin_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) tin_door_block)
-            		.setConfigEntry(Settings.tinDoor.asConfigItem()).setUnlocalizedName("tin_door");
+            		.setConfigEntry(Settings.tinDoor.asConfigItem())
+            		.setUnlocalizedName("tin_door").setCreativeTab(TabHelper.redstoneTab());
             adamantium_door = new SimpleDoorItem(Aesthetics.plugin,(SimpleDoor) adamantium_door_block)
-            		.setConfigEntry(Settings.adamantiumDoor.asConfigItem()).setUnlocalizedName("adamantium_door");
+            		.setConfigEntry(Settings.adamantiumDoor.asConfigItem())
+            		.setUnlocalizedName("adamantium_door").setCreativeTab(TabHelper.redstoneTab());
             onyx_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) onyx_door_block)
-            		.setConfigEntry(Settings.onyxDoor.asConfigItem()).setUnlocalizedName("onyx_door");
+            		.setConfigEntry(Settings.onyxDoor.asConfigItem())
+            		.setUnlocalizedName("onyx_door").setCreativeTab(TabHelper.redstoneTab());
         } // end-if SODoors
     } // end doItems()
 
@@ -41,44 +47,55 @@ public class ContentSimpleOres
             copper_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.copperBricks)
                                             .setStepSound(SoundType.METAL)
-                                            .setUnlocalizedName("copper_bricks");
+                                            .setUnlocalizedName("copper_bricks")
+                                            .setCreativeTab(TabHelper.blocksTab());
             tin_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.tinBricks)
                                             .setStepSound(SoundType.METAL)
-                                            .setUnlocalizedName("tin_bricks");
+                                            .setUnlocalizedName("tin_bricks")
+                                            .setCreativeTab(TabHelper.blocksTab());
             mythril_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.mythrilBricks)
                                             .setStepSound(SoundType.METAL)
-                                            .setUnlocalizedName("mythril_bricks");
+                                            .setUnlocalizedName("mythril_bricks")
+                                            .setCreativeTab(TabHelper.blocksTab());
             onyx_bricks = new SimpleBlock(Aesthetics.plugin, Material.ROCK,
                             ContentCategories.Block.GENERAL)
                                             .setConfigEntry(Settings.onyxBricks)
                                             .setStepSound(SoundType.STONE)
-                                            .setUnlocalizedName("onyx_bricks");
+                                            .setUnlocalizedName("onyx_bricks")
+                                            .setCreativeTab(TabHelper.blocksTab());
             adamantium_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL)
                                             .setConfigEntry(Settings.adamantiumBricks)
                                             .setStepSound(SoundType.METAL)
-                                            .setUnlocalizedName("adamantium_bricks");
+                                            .setUnlocalizedName("adamantium_bricks")
+                                            .setCreativeTab(TabHelper.blocksTab());
   
             if (Settings.SOBrickStairs.asBoolean()) 
             {
                 copper_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 copper_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.copperBricks).setUnlocalizedName("copper_brick_stairs");
+                		.setConfigEntry(Settings.copperBricks).setUnlocalizedName("copper_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 tin_brick_stairs = new SimpleStairs(Aesthetics.plugin, tin_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.tinBricks).setUnlocalizedName("tin_brick_stairs");
+                		.setConfigEntry(Settings.tinBricks).setUnlocalizedName("tin_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 mythril_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 mythril_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.mythrilBricks).setUnlocalizedName("mythril_brick_stairs");
+                		.setConfigEntry(Settings.mythrilBricks).setUnlocalizedName("mythril_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 onyx_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 onyx_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.onyxBricks).setUnlocalizedName("onyx_brick_stairs");
+                		.setConfigEntry(Settings.onyxBricks).setUnlocalizedName("onyx_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
                 adamantium_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 adamantium_bricks.getDefaultState(),
                                 ContentCategories.Block.GENERAL)
-                		.setConfigEntry(Settings.adamantiumBricks).setUnlocalizedName("adamantium_brick_stairs");
+                		.setConfigEntry(Settings.adamantiumBricks)
+                		.setUnlocalizedName("adamantium_brick_stairs")
+                		.setCreativeTab(TabHelper.blocksTab());
              } // end-if SOBrickStairs
         } // end if SOBricks
 
@@ -106,19 +123,24 @@ public class ContentSimpleOres
         {
             copper_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.copperBars)
-                            .setUnlocalizedName("copper_bars");
+                            .setUnlocalizedName("copper_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             tin_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.tinBars)
-                            .setUnlocalizedName("tin_bars");
+                            .setUnlocalizedName("tin_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             mythril_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.mythrilBars)
-                            .setUnlocalizedName("mythril_bars");
+                            .setUnlocalizedName("mythril_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             onyx_bars = new SimpleBars(Aesthetics.plugin, Material.ROCK, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.onyxBars)
-                            .setUnlocalizedName("onyx_bars");
+                            .setUnlocalizedName("onyx_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
             adamantium_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.adamantiumBars)
-                            .setUnlocalizedName("adamantium_bars");
+                            .setUnlocalizedName("adamantium_bars")
+                            .setCreativeTab(TabHelper.decorationsTab());
         } // end SOBars
     } // end doBlocks()
 
