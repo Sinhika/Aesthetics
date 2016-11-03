@@ -186,8 +186,8 @@ public class Settings
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
 						).asConfigBlock();
 				thyriumBricks = settings.get(new ConfigBlock("Thyrium Bricks", "FusionBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						.setCreativeTab(TabHelper.blocksTab().getTabLabel())).asConfigBlock();
+						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
+				                .asConfigBlock();
 				sinisiteBricks = settings.get(new ConfigBlock("Sinisite Bricks", "FusionBlocks").setHardness(15.0F)
 						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
 						).asConfigBlock();
