@@ -6,7 +6,6 @@ import alexndr.api.config.Configuration;
 import alexndr.api.config.types.ConfigBlock;
 import alexndr.api.config.types.ConfigEntry;
 import alexndr.api.config.types.ConfigValue;
-import alexndr.api.helpers.game.TabHelper;
 import alexndr.api.logger.LogHelper;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
