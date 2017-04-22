@@ -11,7 +11,7 @@ public class ModInfo {
 	public static final String ID = "aesthetics";
 	public static final String NAME = "Aesthetics";
 	public static final String VERSION = "@MODVERSION@";
-	public static final String DEPENDENCIES = "required-after:simplecore@[1.4.5.1,);after:netherrocks;after:fusion;after:simpleores";
+	public static final String DEPENDENCIES = "required-after:simplecore@[1.4.6.1,);after:netherrocks;after:fusion;after:simpleores";
 	public static final String ACCEPTED_VERSIONS = "[1.10.2,1.11.2]";
 	public static final String DESCRIPTION = "A plugin for SimpleCore API that adds new decoration blocks for other plugins.";
 	public static final String URL = "http://minecraft.curseforge.com/projects/aesthetics";
