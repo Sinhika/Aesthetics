@@ -12,7 +12,7 @@ public class RecipesSimpleOres
 
     public static void addRecipes()
     {
-        if (Settings.SOBricks.asBoolean()) 
+        if (Settings.SOBricks) 
         {
             //Bricks
             GameRegistry.addRecipe(new ShapedOreRecipe(
@@ -37,7 +37,7 @@ public class RecipesSimpleOres
                                             { "XX", "XX", Character.valueOf('X'), "gemOnyx" }));
 
             //Brick Stairs
-            if (Settings.SOBrickStairs.asBoolean()) 
+            if (Settings.SOBrickStairs) 
             {
                 GameRegistry.addRecipe(new ShapedOreRecipe(
                                 new ItemStack(ContentSimpleOres.copper_brick_stairs, 4), true,
@@ -67,7 +67,7 @@ public class RecipesSimpleOres
             } // end-if SOBrickStairs
         } // end-if SOBricks
         
-		if (Settings.SODoors.asBoolean()) 
+		if (Settings.SODoors) 
 		{
 		    //Doors
             GameRegistry.addRecipe(new ShapedOreRecipe(
@@ -91,7 +91,7 @@ public class RecipesSimpleOres
 		} // end-if SODoors
 		
 		//Bars
-        if (Settings.SOBars.asBoolean()) 
+        if (Settings.SOBars) 
         {
             GameRegistry.addRecipe(new ShapedOreRecipe(
                             new ItemStack(ContentSimpleOres.copper_bars, 16), true,

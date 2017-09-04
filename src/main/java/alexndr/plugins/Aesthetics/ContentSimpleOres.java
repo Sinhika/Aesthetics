@@ -20,30 +20,29 @@ public class ContentSimpleOres
 {
     public static void doItems()
     {
-        if (Settings.SODoors.asBoolean()) 
+        if (Settings.SODoors) 
         {
-            copper_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) copper_door_block)
-            		.setConfigEntry(Settings.copperDoor.asConfigItem())
-            		.setUnlocalizedName("copper_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-            mythril_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) mythril_door_block)
-            		.setConfigEntry(Settings.mythrilDoor.asConfigItem())
-            		.setUnlocalizedName("mythril_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-            tin_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) tin_door_block)
-            		.setConfigEntry(Settings.tinDoor.asConfigItem())
-            		.setUnlocalizedName("tin_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-            adamantium_door = new SimpleDoorItem(Aesthetics.plugin,(SimpleDoor) adamantium_door_block)
-            		.setConfigEntry(Settings.adamantiumDoor.asConfigItem())
-            		.setUnlocalizedName("adamantium_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-            onyx_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) onyx_door_block)
-            		.setConfigEntry(Settings.onyxDoor.asConfigItem())
-            		.setUnlocalizedName("onyx_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+			copper_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) copper_door_block)
+					.setUnlocalizedName("copper_door")
+					.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+			mythril_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) mythril_door_block)
+					.setUnlocalizedName("mythril_door")
+					.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+			tin_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) tin_door_block).setUnlocalizedName("tin_door")
+					.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+			adamantium_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) adamantium_door_block)
+					.setUnlocalizedName("adamantium_door")
+					.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+			onyx_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) onyx_door_block)
+					.setUnlocalizedName("onyx_door")
+					.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
         } // end-if SODoors
     } // end doItems()
 
 
     public static void doBlocks()
     {
-        if (Settings.SOBricks.asBoolean()) 
+        if (Settings.SOBricks) 
         {
             copper_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.copperBricks)
@@ -73,7 +72,7 @@ public class ContentSimpleOres
                                             .setUnlocalizedName("adamantium_bricks")
                                             .setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
   
-            if (Settings.SOBrickStairs.asBoolean()) 
+            if (Settings.SOBrickStairs) 
             {
                 copper_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 copper_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
@@ -100,7 +99,7 @@ public class ContentSimpleOres
              } // end-if SOBrickStairs
         } // end if SOBricks
 
-        if (Settings.SODoors.asBoolean()) 
+        if (Settings.SODoors) 
         {
             copper_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, "copper_door",
                             ContentCategories.Block.OTHER).setConfigEntry(Settings.copperDoor)
@@ -120,7 +119,7 @@ public class ContentSimpleOres
                             .setUnlocalizedName("onyx_door");
         } // end if SODoors
 
-        if (Settings.SOBars.asBoolean()) 
+        if (Settings.SOBars) 
         {
             copper_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL).setConfigEntry(Settings.copperBars)

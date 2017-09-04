@@ -1,276 +1,52 @@
 package alexndr.plugins.Aesthetics;
 
-import java.io.File;
-
-import alexndr.api.config.Configuration;
+import alexndr.api.config.ConfigHelper;
 import alexndr.api.config.types.ConfigBlock;
 import alexndr.api.config.types.ConfigEntry;
-import alexndr.api.config.types.ConfigValue;
 import alexndr.api.logger.LogHelper;
+import alexndr.plugins.SimpleOres.ModInfo;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 
 public class Settings 
 {
+	public static final String CONFIGURE_BRICKS = "Bricks";
+	public static final String CONFIGURE_SOBLOCKS = "Simple Ores Blocks";
+	public static final String CONFIGURE_FBLOCKS = "Fusion Blocks";
+	public static final String CONFIGURE_NRBLOCKS = "Netherrocks Blocks";
+	
 	private static Configuration settings = new Configuration();
 	
 	public static void createOrLoadSettings(FMLPreInitializationEvent event) 
 	{
-		settings.setModName(ModInfo.NAME);
-		File configDir = new File(event.getModConfigurationDirectory(), "AleXndr");
-		File settingsFile = new File(configDir, "AestheticsSettings.xml");
-		settings.setFile(settingsFile);
-		
-		LogHelper.verbose("Aesthetics: Loading Settings...");
+		settings = ConfigHelper.GetConfig(event, "AleXndr", ModInfo.ID + ".cfg");
+
+		LogHelper.verbose(ModInfo.ID, "loading settings...");
 		try {
 			settings.load();
-			settings.createHelpEntry(ModInfo.URL);
+			ConfigHelper.createHelpEntry(settings, ModInfo.URL);
 			
-			//Toggles
-			ConfigEntry toggles = new ConfigEntry("Aesthetics Toggles", "Toggles");
-			toggles.createNewValue("EnableSimpleOres").setActive().setDataType("@B").setCurrentValue("true")
-					.setDefaultValue("true");
-			toggles.createNewValue("EnableFusion").setActive().setDataType("@B").setCurrentValue("true")
-					.setDefaultValue("true");
-			toggles.createNewValue("EnableNetherrocks").setActive().setDataType("@B").setCurrentValue("true")
-					.setDefaultValue("true");
-			toggles = settings.get(toggles);
-			enableSimpleOres = toggles.getValueByName("EnableSimpleOres");
-			enableFusion = toggles.getValueByName("EnableFusion");
-			enableNetherrocks = toggles.getValueByName("EnableNetherrocks");
-			
-			ConfigEntry contentToggles = new ConfigEntry("Vanilla Content Toggles", "Toggles");
-			contentToggles.createNewValue("EnableVanillaBricks").setActive().setDataType("@B").setCurrentValue("true")
-					.setDefaultValue("true");
-			contentToggles.createNewValue("EnableVanillaBrickStairs").setActive().setDataType("@B")
-					.setCurrentValue("true").setDefaultValue("true");
-			contentToggles = settings.get(contentToggles);
-			MCBricks = contentToggles.getValueByName("EnableVanillaBricks");
-			MCBrickStairs = contentToggles.getValueByName("EnableVanillaBrickStairs");
-			
-			if(Loader.isModLoaded("simpleores") && enableSimpleOres.asBoolean()) 
-			{
-				ConfigEntry SOToggles = new ConfigEntry("SimpleOres Content Toggles", "Toggles");
-				
-				SOToggles.createNewValue("EnableBricks").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				SOToggles.createNewValue("EnableBrickStairs").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				SOToggles.createNewValue("EnableDoors").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				SOToggles.createNewValue("EnableBars").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				SOToggles = settings.get(SOToggles);
-				SOBricks = SOToggles.getValueByName("EnableBricks");
-				SOBrickStairs = SOToggles.getValueByName("EnableBrickStairs");
-				SODoors = SOToggles.getValueByName("EnableDoors");
-				SOBars =  SOToggles.getValueByName("EnableBars");
-			}
-			if(Loader.isModLoaded("fusion") && enableFusion.asBoolean()) 
-			{
-				ConfigEntry FToggles = new ConfigEntry("Fusion Content Toggles", "Toggles");
-				FToggles.createNewValue("EnableBricks").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				FToggles.createNewValue("EnableBrickStairs").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				FToggles.createNewValue("EnableDoors").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				FToggles.createNewValue("EnableBars").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				FToggles = settings.get(FToggles);
-				FBricks = FToggles.getValueByName("EnableBricks");
-				FBrickStairs = FToggles.getValueByName("EnableBrickStairs");
-				FDoors = FToggles.getValueByName("EnableDoors");
-				FBars = FToggles.getValueByName("EnableBars");
-			}
-			if(Loader.isModLoaded("netherrocks") && enableNetherrocks.asBoolean()) 
-			{
-				ConfigEntry NRToggles = new ConfigEntry("Netherrocks Content Toggles", "Toggles");
-				NRToggles.createNewValue("EnableBricks").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				NRToggles.createNewValue("EnableBrickStairs").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				NRToggles.createNewValue("EnableDoors").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				NRToggles.createNewValue("EnableBars").setActive().setDataType("@B").setCurrentValue("true")
-						.setDefaultValue("true");
-				NRToggles = settings.get(NRToggles);
-				NRBricks =  NRToggles.getValueByName("EnableBricks");
-				NRBrickStairs = NRToggles.getValueByName("EnableBrickStairs");
-				NRDoors = NRToggles.getValueByName("EnableDoors");
-				NRBars = NRToggles.getValueByName("EnableBars");
-			}
+			// Toggles
+			configureGeneral();
 			
 			//Blocks
-            ironBricks = settings.get(new ConfigBlock("Iron Bricks", "Bricks").setHardness(15.0F)
-                            .setResistance(20.F).setLightValue(0.0F).setHarvestTool("pickaxe"))
-                            .asConfigBlock();
-            goldBricks = settings.get(new ConfigBlock("Gold Bricks", "Bricks").setHardness(15.0F)
-                            .setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
-                            .asConfigBlock();
-            diamondBricks = settings
-                            .get(new ConfigBlock("Diamond Bricks", "Bricks").setHardness(15.0F)
-                                            .setResistance(20.0F).setLightValue(0.0F)
-                                            .setHarvestTool("pickaxe"))
-                            .asConfigBlock();
+			configureVanilla();
 			
-			if(Loader.isModLoaded("simpleores")) 
+			if(Loader.isModLoaded("simpleores") && enableSimpleOres) 
 			{
-                copperBricks = settings
-                                .get(new ConfigBlock("Copper Bricks", "SimpleOresBlocks")
-                                                .setHardness(15.0F).setResistance(20.0F)
-                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-                tinBricks = settings
-                                .get(new ConfigBlock("Tin Bricks", "SimpleOresBlocks")
-                                                .setHardness(15.0F).setResistance(20.0F)
-                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-                mythrilBricks = settings
-                                .get(new ConfigBlock("Mythril Bricks", "SimpleOresBlocks")
-                                                .setHardness(15.0F).setResistance(20.0F)
-                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-                adamantiumBricks = settings
-                                .get(new ConfigBlock("Adamantium Bricks", "SimpleOresBlocks")
-                                                .setHardness(15.0F).setResistance(20.0F)
-                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-                onyxBricks = settings
-                                .get(new ConfigBlock("Onyx Bricks", "SimpleOresBlocks")
-                                                .setHardness(15.0F).setResistance(20.0F)
-                                                .setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-
-                copperDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
-                                .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                ).asConfigBlock();
-                tinDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
-                                .setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-                                ).asConfigBlock();
-				mythrilDoor = settings.get(new ConfigBlock("Mythril Door", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				adamantiumDoor = settings.get(new ConfigBlock("Adamantium Door", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				onyxDoor = settings.get(new ConfigBlock("Onyx Door", "SimpleOresBlocks").setHardness(20.0F)
-						.setResistance(29.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-
-				copperBars = settings.get(new ConfigBlock("Copper Bars", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				tinBars = settings.get(new ConfigBlock("Tin Bars", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				mythrilBars = settings.get(new ConfigBlock("Mythril Bars", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				adamantiumBars = settings.get(new ConfigBlock("Adamantium Bars", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				onyxBars = settings.get(new ConfigBlock("Onyx Bars", "SimpleOresBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
+				configureSimpleOres();
 			} // end if simple ores
 			
-			if(Loader.isModLoaded("fusion")) 
+			if(Loader.isModLoaded("fusion") && enableFusion) 
 			{
-				steelBricks = settings.get(new ConfigBlock("Steel Bricks", "FusionBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				bronzeBricks = settings.get(new ConfigBlock("Bronze Bricks", "FusionBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				thyriumBricks = settings.get(new ConfigBlock("Thyrium Bricks", "FusionBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
-				                .asConfigBlock();
-				sinisiteBricks = settings.get(new ConfigBlock("Sinisite Bricks", "FusionBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-
-				bronzeDoor = settings.get(new ConfigBlock("Bronze Door", "FusionBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-
-				steelBars = settings.get(new ConfigBlock("Steel Bars", "FusionBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				bronzeBars = settings.get(new ConfigBlock("Bronze Bars", "FusionBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				thyriumBars = settings.get(new ConfigBlock("Thyrium Bars", "FusionBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				sinisiteBars = settings.get(new ConfigBlock("Sinisite Bars", "FusionBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
+				configureFusion();
 			} // end if fusion
 			
-			if(Loader.isModLoaded("netherrocks")) 
+			if(Loader.isModLoaded("netherrocks") && enableNetherrocks) 
 			{
-				fyriteBricks = settings.get(new ConfigBlock("Fyrite Bricks", "NetherrocksBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				malachiteBricks = settings.get(new ConfigBlock("Malachite Bricks", "NetherrocksBlocks")
-						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						)
-						.asConfigBlock();
-				ashstoneBricks = settings.get(new ConfigBlock("Ashstone Bricks", "NetherrocksBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				illumeniteBricks = settings.get(new ConfigBlock("Illumenite Bricks", "NetherrocksBlocks")
-						.setHardness(15.0F).setResistance(20.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-						)
-						.asConfigBlock();
-				dragonstoneBricks = settings.get(new ConfigBlock("Dragonstone Bricks", "NetherrocksBlocks")
-						.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						)
-						.asConfigBlock();
-				argoniteBricks = settings.get(new ConfigBlock("Argonite Bricks", "NetherrocksBlocks").setHardness(15.0F)
-						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-
-				dragonstoneDoor = settings.get(new ConfigBlock("Dragonstone Door", "NetherrocksBlocks")
-						.setHardness(10.0F).setResistance(44.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-                ashstoneDoor = settings.get(new ConfigBlock("Ashstone Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-                argoniteDoor = settings.get(new ConfigBlock("Argonite Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-                fyriteDoor = settings.get(new ConfigBlock("Fyrite Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-                illumeniteDoor = settings.get(new ConfigBlock("Illumenite Door", "NetherrocksBlocks")
-                                .setHardness(7.0F).setResistance(10.0F).setLightValue(1.0F).setHarvestTool("pickaxe"))
-                                .asConfigBlock();
-//                malachiteDoor = settings.get(new ConfigBlock("Malachite Door", "NetherrocksBlocks")
-//                                .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe"))
-//                                .asConfigBlock();
-
-				fyriteBars = settings.get(new ConfigBlock("Fyrite Bars", "NetherrocksBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				malachiteBars = settings.get(new ConfigBlock("Malachite Bars", "NetherrocksBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				ashstoneBars = settings.get(new ConfigBlock("Ashstone Bars", "NetherrocksBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				illumeniteBars = settings.get(new ConfigBlock("Illumenite Bars", "NetherrocksBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(1.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
-				dragonstoneBars = settings.get(new ConfigBlock("Dragonstone Bars", "NetherrocksBlocks")
-						.setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						)
-						.asConfigBlock();
-				argoniteBars = settings.get(new ConfigBlock("Argonite Bars", "NetherrocksBlocks").setHardness(7.0F)
-						.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe")
-						).asConfigBlock();
+				configureNetherrocks();
 			}
 		} // end try
 		catch (Exception e) {
@@ -282,6 +58,267 @@ public class Settings
 			LogHelper.verbose(ModInfo.NAME, "Settings loaded successfully");
 		}
 	} // end createOrLoadSettings()
+
+	public static void configureGeneral()
+	{
+		enableSimpleOres = settings.getBoolean("EnableSimpleOres", Configuration.CATEGORY_GENERAL, 
+				true, "Enable Simple Ores-based blocks");
+		enableFusion = settings.getBoolean("EnableFusion", Configuration.CATEGORY_GENERAL, true,
+				"Enable Fusion-based blocks");
+		enableNetherrocks = settings.getBoolean("EnableNetherrocks", Configuration.CATEGORY_GENERAL, true,
+				"Enable Netherrocks-based blocks");
+		
+		MCBricks = settings.getBoolean("EnableVanillaBricks", Configuration.CATEGORY_GENERAL, true,
+				"Enable vanilla-based bricks");
+		MCBrickStairs = settings.getBoolean("EnableVanillaBrickStairs", Configuration.CATEGORY_GENERAL, true,
+				"Enable vanilla-based brick stairs");
+		
+		if(Loader.isModLoaded("simpleores") && enableSimpleOres) 
+		{
+			ConfigEntry SOToggles = new ConfigEntry("SimpleOres", 
+													Configuration.CATEGORY_GENERAL, true);
+			SOToggles.GetConfig(settings);
+			
+			SOBricks = settings.getBoolean("EnableBricks", SOToggles.getSubCategory(), true, 
+					"Enable Simple Ores-based bricks");
+			SOBrickStairs = settings.getBoolean("EnableBrickStairs", SOToggles.getSubCategory(), true, 
+					"Enable Simple Ores-based brick stairs");
+			SODoors = settings.getBoolean("EnableDoors", SOToggles.getSubCategory(), true, 
+					"Enable Simple Ores-based doors");
+			SOBars = settings.getBoolean("EnableBars", SOToggles.getSubCategory(), true, 
+					"Enable Simple Ores-based bars");
+		} // end-if simpleores
+		
+		if(Loader.isModLoaded("fusion") && enableFusion) 
+		{
+			ConfigEntry FToggles = new ConfigEntry("Fusion", Configuration.CATEGORY_GENERAL, true);
+			FToggles.GetConfig(settings);
+			
+			FBricks = settings.getBoolean("EnableBricks", FToggles.getSubCategory(), true, 
+					"Enable Fusion-based bricks");
+			FBrickStairs = settings.getBoolean("EnableBrickStairs", FToggles.getSubCategory(), true, 
+					"Enable Fusion-based brick stairs");
+			FDoors = settings.getBoolean("EnableDoors", FToggles.getSubCategory(), true, 
+					"Enable Fusion-based doors");
+			FBars = settings.getBoolean("EnableBars", FToggles.getSubCategory(), true, 
+					"Enable Fusion-based bars");
+		}
+		if(Loader.isModLoaded("netherrocks") && enableNetherrocks) 
+		{
+			ConfigEntry NRToggles = new ConfigEntry("Netherrocks", Configuration.CATEGORY_GENERAL, true);
+			NRToggles.GetConfig(settings);
+			NRBricks = settings.getBoolean("EnableBricks", NRToggles.getSubCategory(), true, 
+					"Enable Netherrocks-based bricks");
+			NRBrickStairs = settings.getBoolean("EnableBrickStairs", NRToggles.getSubCategory(), true, 
+					"Enable Netherrocks-based brick stairs");
+			NRDoors = settings.getBoolean("EnableDoors", NRToggles.getSubCategory(), true, 
+					"Enable Netherrocks-based doors");
+			NRBars = settings.getBoolean("EnableBars", NRToggles.getSubCategory(), true, 
+					"Enable Netherrocks-based bars");
+		}
+	} // end configureGeneral()
+	
+	
+	public static void configureVanilla()
+	{
+		ironBricks = new ConfigBlock("Iron Bricks", CONFIGURE_BRICKS).setHardness(15.0F)
+				.setResistance(20.F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		ironBricks.GetConfig(settings);
+		
+		goldBricks = new ConfigBlock("Gold Bricks", CONFIGURE_BRICKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		goldBricks.GetConfig(settings);
+		
+		diamondBricks = new ConfigBlock("Diamond Bricks", CONFIGURE_BRICKS).setHardness(15.0F)
+						.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		diamondBricks.GetConfig(settings);
+	} // end configureVanilla()
+	
+	public static void configureSimpleOres()
+	{
+		copperBricks = new ConfigBlock("Copper Bricks", CONFIGURE_SOBLOCKS)
+						.setHardness(15.0F).setResistance(20.0F)
+						.setLightValue(0.0F).setHarvestTool("pickaxe");
+		copperBricks.GetConfig(settings);
+		
+		tinBricks = new ConfigBlock("Tin Bricks", CONFIGURE_SOBLOCKS)
+						.setHardness(15.0F).setResistance(20.0F)
+						.setLightValue(0.0F).setHarvestTool("pickaxe");
+		tinBricks.GetConfig(settings);
+		
+		mythrilBricks = new ConfigBlock("Mythril Bricks", CONFIGURE_SOBLOCKS)
+						.setHardness(15.0F).setResistance(20.0F)
+						.setLightValue(0.0F).setHarvestTool("pickaxe");
+		mythrilBricks.GetConfig(settings);
+		
+		adamantiumBricks = new ConfigBlock("Adamantium Bricks", CONFIGURE_SOBLOCKS)
+						.setHardness(15.0F).setResistance(20.0F)
+						.setLightValue(0.0F).setHarvestTool("pickaxe");
+		adamantiumBricks.GetConfig(settings);
+		
+		onyxBricks = new ConfigBlock("Onyx Bricks", CONFIGURE_SOBLOCKS)
+						.setHardness(15.0F).setResistance(20.0F)
+						.setLightValue(0.0F).setHarvestTool("pickaxe");
+		onyxBricks.GetConfig(settings);
+		
+		copperDoor = new ConfigBlock("Mythril Door", CONFIGURE_SOBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		copperDoor.GetConfig(settings);
+		
+		tinDoor = new ConfigBlock("Mythril Door", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		tinDoor.GetConfig(settings);
+		
+		mythrilDoor = new ConfigBlock("Mythril Door", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		mythrilDoor.GetConfig(settings);
+		
+		adamantiumDoor = new ConfigBlock("Adamantium Door", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		adamantiumDoor.GetConfig(settings);
+		
+		onyxDoor = new ConfigBlock("Onyx Door", CONFIGURE_SOBLOCKS).setHardness(20.0F).setResistance(29.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		onyxDoor.GetConfig(settings);
+		
+		copperBars = new ConfigBlock("Copper Bars", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		copperBars.GetConfig(settings);
+		
+		tinBars = new ConfigBlock("Tin Bars", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		tinBars.GetConfig(settings);
+		
+		mythrilBars = new ConfigBlock("Mythril Bars", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		mythrilBars.GetConfig(settings);
+		
+		adamantiumBars = new ConfigBlock("Adamantium Bars", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		adamantiumBars.GetConfig(settings);
+		
+		onyxBars = new ConfigBlock("Onyx Bars", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+				.setLightValue(0.0F).setHarvestTool("pickaxe");
+		onyxBars.GetConfig(settings);
+	} // end configureSimpleOres()
+	
+	public static void configureFusion()
+	{
+		steelBricks = new ConfigBlock("Steel Bricks", CONFIGURE_FBLOCKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		steelBricks.GetConfig(settings);
+		
+		bronzeBricks = new ConfigBlock("Bronze Bricks", CONFIGURE_FBLOCKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		bronzeBricks.GetConfig(settings);
+		
+		thyriumBricks = new ConfigBlock("Thyrium Bricks", CONFIGURE_FBLOCKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		thyriumBricks.GetConfig(settings);
+		
+		sinisiteBricks = new ConfigBlock("Sinisite Bricks", CONFIGURE_FBLOCKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		sinisiteBricks.GetConfig(settings);
+
+		bronzeDoor = new ConfigBlock("Bronze Door", CONFIGURE_FBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		bronzeDoor.GetConfig(settings);
+
+		steelBars = new ConfigBlock("Steel Bars", CONFIGURE_FBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		steelBars.GetConfig(settings);
+		
+		bronzeBars = new ConfigBlock("Bronze Bars", CONFIGURE_FBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		bronzeBars.GetConfig(settings);
+		
+		thyriumBars = new ConfigBlock("Thyrium Bars", CONFIGURE_FBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		thyriumBars.GetConfig(settings);
+		
+		sinisiteBars = new ConfigBlock("Sinisite Bars", CONFIGURE_FBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		sinisiteBars.GetConfig(settings);
+	} // end configureFusion()
+	
+	public static void configureNetherrocks()
+	{
+		fyriteBricks = new ConfigBlock("Fyrite Bricks", CONFIGURE_NRBLOCKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		fyriteBricks.GetConfig(settings);
+		
+		malachiteBricks = new ConfigBlock("Malachite Bricks", CONFIGURE_NRBLOCKS)
+				.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		malachiteBricks.GetConfig(settings);
+		
+		ashstoneBricks = new ConfigBlock("Ashstone Bricks", CONFIGURE_NRBLOCKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		ashstoneBricks.GetConfig(settings);
+		
+		illumeniteBricks = new ConfigBlock("Illumenite Bricks", CONFIGURE_NRBLOCKS)
+				.setHardness(15.0F).setResistance(20.0F).setLightValue(1.0F).setHarvestTool("pickaxe");
+		illumeniteBricks.GetConfig(settings);
+		
+		dragonstoneBricks = new ConfigBlock("Dragonstone Bricks", CONFIGURE_NRBLOCKS)
+				.setHardness(15.0F).setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		dragonstoneBricks.GetConfig(settings);
+		
+		argoniteBricks = new ConfigBlock("Argonite Bricks", CONFIGURE_NRBLOCKS).setHardness(15.0F)
+				.setResistance(20.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		argoniteBricks.GetConfig(settings);
+
+		dragonstoneDoor = new ConfigBlock("Dragonstone Door", CONFIGURE_NRBLOCKS)
+				.setHardness(10.0F).setResistance(44.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		dragonstoneDoor.GetConfig(settings);
+		
+        ashstoneDoor = new ConfigBlock("Ashstone Door", CONFIGURE_NRBLOCKS)
+                        .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F)
+                        .setHarvestTool("pickaxe");
+        ashstoneDoor.GetConfig(settings);
+        
+        argoniteDoor = new ConfigBlock("Argonite Door", CONFIGURE_NRBLOCKS)
+                        .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F)
+                        .setHarvestTool("pickaxe");
+        argoniteDoor.GetConfig(settings);
+        
+        fyriteDoor = new ConfigBlock("Fyrite Door", CONFIGURE_NRBLOCKS)
+                        .setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F)
+                        .setHarvestTool("pickaxe");
+        fyriteDoor.GetConfig(settings);
+        
+        illumeniteDoor = new ConfigBlock("Illumenite Door", CONFIGURE_NRBLOCKS)
+                        .setHardness(7.0F).setResistance(10.0F).setLightValue(1.0F)
+                        .setHarvestTool("pickaxe");
+        illumeniteDoor.GetConfig(settings);
+        
+//        malachiteDoor = new ConfigBlock("Malachite Door", CONFIGURE_NRBLOCKS)
+//                        .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe"));
+//		malachiteDoor.GetConfig(settings);
+
+		fyriteBars = new ConfigBlock("Fyrite Bars", CONFIGURE_NRBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		fyriteBars.GetConfig(settings);
+		
+		malachiteBars = new ConfigBlock("Malachite Bars", CONFIGURE_NRBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		malachiteBars.GetConfig(settings);
+		
+		ashstoneBars = new ConfigBlock("Ashstone Bars", CONFIGURE_NRBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		ashstoneBars.GetConfig(settings);
+		
+		illumeniteBars = new ConfigBlock("Illumenite Bars", CONFIGURE_NRBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(1.0F).setHarvestTool("pickaxe");
+		illumeniteBars.GetConfig(settings);
+		
+		dragonstoneBars = new ConfigBlock("Dragonstone Bars", CONFIGURE_NRBLOCKS)
+				.setHardness(7.0F).setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		dragonstoneBars.GetConfig(settings);
+		
+		argoniteBars = new ConfigBlock("Argonite Bars", CONFIGURE_NRBLOCKS).setHardness(7.0F)
+				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
+		argoniteBars.GetConfig(settings);
+	} // end configureNetherrocks()
 	
 	public static ConfigBlock ironBricks, goldBricks, diamondBricks;
 	public static ConfigBlock copperBricks, tinBricks, mythrilBricks, adamantiumBricks, onyxBricks;
@@ -295,10 +332,9 @@ public class Settings
 	                          malachiteDoor;
 	public static ConfigBlock fyriteBars, malachiteBars, ashstoneBars, illumeniteBars, dragonstoneBars, argoniteBars;
 	
-	public static ConfigValue updateChecker;
-	public static ConfigValue enableSimpleOres, enableFusion, enableNetherrocks;
-	public static ConfigValue MCBricks, MCBrickStairs;
-	public static ConfigValue SOBricks, SOBrickStairs, SODoors, SOBars;
-	public static ConfigValue FBricks, FBrickStairs, FDoors, FBars;
-	public static ConfigValue NRBricks, NRBrickStairs, NRDoors, NRBars;
+	public static boolean enableSimpleOres, enableFusion, enableNetherrocks;
+	public static boolean MCBricks, MCBrickStairs;
+	public static boolean SOBricks, SOBrickStairs, SODoors, SOBars;
+	public static boolean FBricks, FBrickStairs, FDoors, FBars;
+	public static boolean NRBricks, NRBrickStairs, NRDoors, NRBars;
 } // end class

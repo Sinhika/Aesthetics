@@ -15,9 +15,9 @@ public class ModSupport
 	
 	public static void preInit() 
 	{
-		use_simple_ores = Loader.isModLoaded("simpleores") && Settings.enableSimpleOres.asBoolean();
-		use_netherrocks = Loader.isModLoaded("netherrocks") && Settings.enableNetherrocks.asBoolean();
-		use_fusion = Loader.isModLoaded("fusion") && Settings.enableFusion.asBoolean();
+		use_simple_ores = Loader.isModLoaded("simpleores") && Settings.enableSimpleOres;
+		use_netherrocks = Loader.isModLoaded("netherrocks") && Settings.enableNetherrocks;
+		use_fusion = Loader.isModLoaded("fusion") && Settings.enableFusion;
 	}
 
 } // end class

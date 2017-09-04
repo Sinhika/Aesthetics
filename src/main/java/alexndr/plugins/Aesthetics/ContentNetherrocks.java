@@ -20,30 +20,22 @@ public class ContentNetherrocks
 {
     public static void doItems()
     {
-        if (Settings.NRDoors.asBoolean()) 
+        if (Settings.NRDoors) 
         {
-            dragonstone_door = new SimpleDoorItem(Aesthetics.plugin,
-                            (SimpleDoor) dragonstone_door_block)
-                                            .setConfigEntry(Settings.dragonstoneDoor.asConfigItem())
+            dragonstone_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) dragonstone_door_block)
                                             .setUnlocalizedName("dragonstone_door")
                                             .setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
             argonite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) argonite_door_block)
-                            .setConfigEntry(Settings.argoniteDoor.asConfigItem())
                             .setUnlocalizedName("argonite_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
             ashstone_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) ashstone_door_block)
-                            .setConfigEntry(Settings.ashstoneDoor.asConfigItem())
                             .setUnlocalizedName("ashstone_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
             fyrite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) fyrite_door_block)
-                            .setConfigEntry(Settings.fyriteDoor.asConfigItem())
                             .setUnlocalizedName("fyrite_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-            illumenite_door = new SimpleDoorItem(Aesthetics.plugin,
-                            (SimpleDoor) illumenite_door_block)
-                                            .setConfigEntry(Settings.illumeniteDoor.asConfigItem())
+            illumenite_door = new SimpleDoorItem(Aesthetics.plugin, (SimpleDoor) illumenite_door_block)
                                             .setUnlocalizedName("illumenite_door")
                                             .setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
             // malachite_door = new SimpleDoorItem(Aesthetics.plugin,
             // (SimpleDoor) malachite_door_block)
-            // .setConfigEntry(Settings.malachiteDoor.asConfigItem())
             // .setUnlocalizedName("malachite_door").setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
         }
     } // end doItems()
@@ -51,7 +43,7 @@ public class ContentNetherrocks
 
     public static void doBlocks()
     {
-        if (Settings.NRBricks.asBoolean()) 
+        if (Settings.NRBricks) 
         {
             fyrite_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON,
                             ContentCategories.Block.GENERAL)
@@ -84,7 +76,7 @@ public class ContentNetherrocks
                             .setStepSound(SoundType.METAL)
                             .setUnlocalizedName("argonite_bricks").setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
 
-            if (Settings.NRBrickStairs.asBoolean()) 
+            if (Settings.NRBrickStairs) 
             {
                 fyrite_brick_stairs = new SimpleStairs(Aesthetics.plugin,
                                 fyrite_bricks.getDefaultState(), ContentCategories.Block.GENERAL)
@@ -114,7 +106,7 @@ public class ContentNetherrocks
             }  // end-if 
         } // end-if NRBrickStairs
 
-        if (Settings.NRDoors.asBoolean()) 
+        if (Settings.NRDoors) 
         {
             dragonstone_door_block = new SimpleDoor(Aesthetics.plugin, Material.IRON, 
                                                    "dragonstone_door",ContentCategories.Block.OTHER)
@@ -142,7 +134,7 @@ public class ContentNetherrocks
 //                                            .setUnlocalizedName("malachite_door");
        } // end-if NRDoors
 
-        if (Settings.NRBars.asBoolean()) 
+        if (Settings.NRBars) 
         {
             fyrite_bars = new SimpleBars(Aesthetics.plugin, Material.IRON, true,
                             ContentCategories.Block.GENERAL)

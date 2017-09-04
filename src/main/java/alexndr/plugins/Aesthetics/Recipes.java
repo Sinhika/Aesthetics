@@ -2,7 +2,6 @@ package alexndr.plugins.Aesthetics;
 
 import alexndr.api.logger.LogHelper;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
@@ -11,40 +10,34 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 public class Recipes 
 {
-    private static boolean simpleores = Loader.isModLoaded("simpleores")
-                                        && Settings.enableSimpleOres.asBoolean();
-    private static boolean fusion = Loader.isModLoaded("fusion")
-                                    && Settings.enableFusion.asBoolean();
-    private static boolean netherrocks = Loader.isModLoaded("netherrocks")
-                                         && Settings.enableNetherrocks.asBoolean();
-
 	
 	public static void initialize()
 	{
         try {
             addRecipes();
-            LogHelper.verbose("Aesthetics", "All recipes were added successfully.");
+            LogHelper.verbose(ModInfo.ID, "All recipes were added successfully.");
         }
         catch (Exception e) {
-            LogHelper.severe("Aesthetics",
+            LogHelper.severe(ModInfo.ID,
                             "Recipes were not added successfully. This is a serious problem!");
             e.printStackTrace();
         }
-	}
+	} // end intialize()
 	
-	public static void addRecipes() {
+	public static void addRecipes() 
+	{
 		doRecipes();
-		if(simpleores)
+		if(ModSupport.use_simple_ores)
 			RecipesSimpleOres.addRecipes();
-		if(netherrocks)
+		if(ModSupport.use_netherrocks)
 			RecipesNetherrocks.addRecipes();
-		if(fusion)
+		if(ModSupport.use_fusion)
 			RecipesFusion.addRecipes();
 	}
 	
 	public static void doRecipes() 
 	{
-        if (Settings.MCBricks.asBoolean()) 
+        if (Settings.MCBricks) 
         {
             // Bricks
             GameRegistry.addRecipe(new ShapedOreRecipe(Content.iron_bricks, true,
@@ -57,7 +50,7 @@ public class Recipes
                             new Object[]
                                             { "XX", "XX", Character.valueOf('X'), "gemDiamond" }));
 
-            if (Settings.MCBrickStairs.asBoolean()) 
+            if (Settings.MCBrickStairs) 
             {
                 // Brick Stairs
                 GameRegistry.addRecipe(new ShapedOreRecipe(

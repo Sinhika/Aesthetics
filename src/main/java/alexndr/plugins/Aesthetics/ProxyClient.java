@@ -16,7 +16,7 @@ public class ProxyClient extends alexndr.plugins.Aesthetics.ProxyCommon
 		super.preInit(event);
 		if(event.getSide() == Side.CLIENT) 
 		{
-			if (ModSupport.use_simple_ores && Settings.SODoors.asBoolean())
+			if (ModSupport.use_simple_ores && Settings.SODoors)
 			{
 				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentSimpleOres.copper_door_block, 
 												  ContentSimpleOres.copper_door);
@@ -30,13 +30,13 @@ public class ProxyClient extends alexndr.plugins.Aesthetics.ProxyCommon
 						  ContentSimpleOres.mythril_door);
 				
 			}
-			if (ModSupport.use_netherrocks && Settings.NRDoors.asBoolean()) 
+			if (ModSupport.use_netherrocks && Settings.NRDoors) 
 			{
 				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentNetherrocks.argonite_door_block, 
 						ContentNetherrocks.argonite_door);
 				
 			}
-			if (ModSupport.use_fusion && Settings.FDoors.asBoolean()) {
+			if (ModSupport.use_fusion && Settings.FDoors) {
 				renderHelper.addDoorRenderDetails(Aesthetics.plugin, ContentFusion.bronze_door_block, 
 						ContentFusion.bronze_door);
 				

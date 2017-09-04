@@ -12,7 +12,7 @@ public class RecipesNetherrocks
 	public static void addRecipes() 
 	{
 		//Bricks
-        if (Settings.NRBricks.asBoolean()) 
+        if (Settings.NRBricks) 
         {
             GameRegistry.addRecipe(new ShapedOreRecipe(ContentNetherrocks.fyrite_bricks, true,
                             new Object[]
@@ -34,7 +34,7 @@ public class RecipesNetherrocks
             { "XX", "XX", Character.valueOf('X'), "ingotArgonite" }));
 
             // Brick Stairs
-            if (Settings.NRBrickStairs.asBoolean()) {
+            if (Settings.NRBrickStairs) {
                 GameRegistry.addRecipe(new ShapedOreRecipe(
                                 new ItemStack(ContentNetherrocks.fyrite_brick_stairs, 4), true,
                                 new Object[]
@@ -69,7 +69,7 @@ public class RecipesNetherrocks
         } // end-if NRBricks
         
 		//Doors
-        if (Settings.NRDoors.asBoolean()) 
+        if (Settings.NRDoors) 
         {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.dragonstone_door, 3), true, new Object[]{
                             "XX", "XX", "XX", Character.valueOf('X'), "gemDragonstone"}));
@@ -86,7 +86,7 @@ public class RecipesNetherrocks
         } // end-if NRDoors
         
 		//Bars
-        if (Settings.NRBars.asBoolean()) 
+        if (Settings.NRBars) 
         {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentNetherrocks.fyrite_bars, 16), true, new Object[]{
                             "XXX", "XXX", Character.valueOf('X'), "ingotFyrite"}));

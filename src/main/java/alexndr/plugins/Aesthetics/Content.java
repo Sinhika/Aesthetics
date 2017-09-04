@@ -24,20 +24,20 @@ public class Content
 	    // doBlocks first, so that door blocks are initialized
 		try {
 			doBlocks();
-			LogHelper.verbose(ModInfo.NAME, "All blocks were added successfully");
+			LogHelper.verbose(ModInfo.ID, "All blocks were added successfully");
 		} 
 		catch (Exception e) {
-			LogHelper.severe(ModInfo.NAME,
+			LogHelper.severe(ModInfo.ID,
 							"Blocks were not added successfully. This is a serious problem!");
 			e.printStackTrace();
 		}
 		// then doItems, so door items have door blocks.
         try {
             doItems();
-            LogHelper.verbose(ModInfo.NAME, "All items were added successfully");
+            LogHelper.verbose(ModInfo.ID, "All items were added successfully");
         } 
         catch (Exception e) {
-            LogHelper.severe(ModInfo.NAME,
+            LogHelper.severe(ModInfo.ID,
                             "Items were not added successfully. This is a serious problem!");
             e.printStackTrace();
         }
@@ -47,10 +47,10 @@ public class Content
 	{
 		try {
 			//setTabs();
-			LogHelper.verbose(ModInfo.NAME, "Successfully set tabs for all blocks/items");
+			LogHelper.verbose(ModInfo.ID, "Successfully set tabs for all blocks/items");
 		} 
 		catch (Exception e) {
-			LogHelper.severe(ModInfo.NAME,
+			LogHelper.severe(ModInfo.ID,
 							"Tabs were not successfully set for blocks/items. This is a serious problem!");
 			e.printStackTrace();
 		}
@@ -70,7 +70,7 @@ public class Content
 	
 	public static void doBlocks() 
 	{
-        if (Settings.MCBricks.asBoolean()) 
+        if (Settings.MCBricks) 
         {
             iron_bricks = new SimpleBlock(Aesthetics.plugin, Material.IRON, ContentCategories.Block.GENERAL)
                             .setConfigEntry(Settings.ironBricks).setStepSound(SoundType.METAL)
@@ -86,7 +86,7 @@ public class Content
                                             .setUnlocalizedName("diamond_bricks")
                                             .setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
 
-            if (Settings.MCBrickStairs.asBoolean()) 
+            if (Settings.MCBrickStairs) 
             {
                 iron_brick_stairs = new SimpleStairs(Aesthetics.plugin, iron_bricks.getDefaultState(),
                                                     ContentCategories.Block.GENERAL)

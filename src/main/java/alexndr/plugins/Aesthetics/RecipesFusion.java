@@ -1,7 +1,6 @@
 package alexndr.plugins.Aesthetics;
 
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
@@ -10,18 +9,15 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
  */
 public class RecipesFusion 
 {
-    private static boolean simpleores = Loader.isModLoaded("simpleores")
-                    && Settings.enableSimpleOres.asBoolean();
-    
 	public static void addRecipes() 
 	{
 		//Bricks
-        if (Settings.FBricks.asBoolean()) 
+        if (Settings.FBricks) 
         {
             GameRegistry.addRecipe(new ShapedOreRecipe(ContentFusion.steel_bricks, true, new Object[]{
                             "XX", "XX", Character.valueOf('X'), "ingotSteel"}));
             
-            if (simpleores) 
+            if (ModSupport.use_simple_ores) 
             {
                 GameRegistry.addRecipe(new ShapedOreRecipe(ContentFusion.bronze_bricks, true,
                                 new Object[]
@@ -35,11 +31,11 @@ public class RecipesFusion
             } // end-if simpleores
             
             //Brick Stairs
-            if (Settings.FBrickStairs.asBoolean()) 
+            if (Settings.FBrickStairs) 
             {
                 GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentFusion.steel_brick_stairs, 4), true, new Object[]{
                                 "X  ", "XX ", "XXX", Character.valueOf('X'), ContentFusion.steel_bricks}));
-                if (simpleores)
+                if (ModSupport.use_simple_ores)
                 {
                     GameRegistry.addRecipe(new ShapedOreRecipe(
                                     new ItemStack(ContentFusion.bronze_brick_stairs, 4), true,
@@ -61,20 +57,20 @@ public class RecipesFusion
         } // end-if FBricks
         
 		//Doors
-		if (Settings.FDoors.asBoolean() && simpleores) 
+		if (Settings.FDoors && ModSupport.use_simple_ores) 
 		{
 		    GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentFusion.bronze_door, 3), true, new Object[]{
 		                    "XX", "XX", "XX", Character.valueOf('X'), "ingotBronze"}));
 		} // end-if FDoors
 	       
 		//Bars
-        if (Settings.FBars.asBoolean()) 
+        if (Settings.FBars) 
         {
             GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ContentFusion.steel_bars, 16),
                             true,
                             new Object[]
                             { "XXX", "XXX", Character.valueOf('X'), "ingotSteel" }));
-            if (simpleores) 
+            if (ModSupport.use_simple_ores) 
             {
                 GameRegistry.addRecipe(new ShapedOreRecipe(
                                 new ItemStack(ContentFusion.bronze_bars, 16), true, new Object[]
