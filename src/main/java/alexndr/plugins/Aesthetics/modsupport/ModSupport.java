@@ -1,5 +1,6 @@
-package alexndr.plugins.Aesthetics;
+package alexndr.plugins.Aesthetics.modsupport;
 
+import alexndr.plugins.Aesthetics.Settings;
 import net.minecraftforge.fml.common.Loader;
 
 /**

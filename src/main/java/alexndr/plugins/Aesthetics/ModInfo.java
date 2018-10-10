@@ -11,8 +11,8 @@ public class ModInfo {
 	public static final String ID = "aesthetics";
 	public static final String NAME = "Aesthetics";
 	public static final String VERSION = "@MODVERSION@";
-	public static final String DEPENDENCIES = "required-after:simplecore@[1.5.2.1,);after:netherrocks;after:fusion;after:simpleores";
-	public static final String ACCEPTED_VERSIONS = "[1.11,1.11.2]";
+	public static final String DEPENDENCIES = "required-after:simplecore@[1.7.2.0,);after:netherrocks;after:fusion;after:simpleores";
+	public static final String ACCEPTED_VERSIONS = "[1.12.2,)";
 	public static final String DESCRIPTION = "A plugin for SimpleCore API that adds new decoration blocks for other plugins.";
 	public static final String URL = "http://minecraft.curseforge.com/projects/aesthetics";
 	public static final List<String> AUTHORS = Lists.newArrayList("AleXndrTheGr8st");
@@ -20,6 +20,6 @@ public class ModInfo {
 	public static final String LOGO = "";
 	public static final String PARENT = "";
 	public static final boolean USEDEPENDENCYINFO = true;
-	public static final String VERSIONURL = "https://raw.githubusercontent.com/Sinhika/Aesthetics/1.11/update.json";
+	public static final String VERSIONURL = "https://raw.githubusercontent.com/Sinhika/Aesthetics/1.12/update.json";
 
 }

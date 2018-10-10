@@ -2,6 +2,7 @@ package alexndr.plugins.Aesthetics;
 
 import alexndr.api.logger.LogHelper;
 import alexndr.api.registry.Plugin;
+import alexndr.plugins.netherrocks.ModInfo;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -18,16 +19,16 @@ public class Aesthetics
 	@Mod.Instance
 	public static Aesthetics INSTANCE;
 
-	public static Plugin plugin = new Plugin(ModInfo.ID, ModInfo.NAME);
-
 	@SidedProxy(clientSide = "alexndr.plugins.Aesthetics.ProxyClient", 
 	    		serverSide = "alexndr.plugins.Aesthetics.ProxyCommon")
 	public static ProxyCommon proxy;
+
+	public static Plugin plugin = new Plugin(ModInfo.ID, ModInfo.NAME);
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) 
 	{
-		LogHelper.info("Loading Aesthetics...");
+		LogHelper.info(ModInfo.ID, "Loading...");
 		proxy.preInit(event);
 	}
 	
@@ -39,6 +40,6 @@ public class Aesthetics
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
-		LogHelper.info("Aesthetics loaded");
+		LogHelper.info(ModInfo.ID, "Loading Complete!");
 	}
 } // end class Aesthetics

@@ -8,6 +8,7 @@ import alexndr.api.content.items.SimpleDoorItem;
 import alexndr.api.core.SimpleCoreAPI;
 import alexndr.api.helpers.game.TabHelper;
 import alexndr.api.registry.ContentCategories;
+import alexndr.plugins.Aesthetics.modsupport.ModSupport;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

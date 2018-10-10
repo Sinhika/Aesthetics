@@ -8,13 +8,20 @@ import alexndr.api.core.SimpleCoreAPI;
 import alexndr.api.helpers.game.TabHelper;
 import alexndr.api.logger.LogHelper;
 import alexndr.api.registry.ContentRegistry;
+import alexndr.api.registry.Plugin;
+import alexndr.plugins.Aesthetics.modsupport.ModSupport;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Mod.EventBusSubscriber
 public class ProxyCommon 
 {
 	public void preInit(FMLPreInitializationEvent event) 
@@ -28,16 +35,15 @@ public class ProxyCommon
 			SimpleCoreAPI.tabPreInit();
 		}
 		ModSupport.preInit();
-
-		Content.preInitialize();
+		ModBlocks.configureBlocks();
 	} // end ()
 	
     public void load(FMLInitializationEvent event)
     {
 		//Content
-		Content.initialize();
-		Recipes.initialize();
 		setTabIcons();
+//		Content.initialize();
+//		Recipes.initialize();
     } // end load()
     
     public void postInit(FMLPostInitializationEvent event) 
@@ -52,6 +58,25 @@ public class ProxyCommon
 								Items.IRON_SWORD, 
 								Item.getItemFromBlock(Blocks.FURNACE));
 		SimpleCoreAPI.setTabIcons(list);
+	}
+
+	@SubscribeEvent
+	public static void registerBlocks(RegistryEvent.Register<Block> event) 
+	{
+   	 	//Registers
+		ModBlocks.register(event.getRegistry());
+	} // end registerBlocks()
+
+	@SubscribeEvent
+	public static void registerItems(RegistryEvent.Register<Item> event) 
+	{
+    	ModItems.register(event.getRegistry());
+    	ModBlocks.registerItemBlocks(event.getRegistry());
+        ModItems.registerOreDictionary();
+        ModBlocks.registerOreDictionary();
+	}
+
+	public void registerItemRenderer(Plugin plugin, Item item, int meta, String id) {
 	}
 
 } // end class
