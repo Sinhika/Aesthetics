@@ -1,15 +1,27 @@
 package alexndr.plugins.Aesthetics.modsupport;
 
+import alexndr.api.content.blocks.SimpleDoor;
+import alexndr.api.content.items.SimpleDoorItem;
+import alexndr.api.core.SimpleCoreAPI;
+import alexndr.api.helpers.game.TabHelper;
+import alexndr.plugins.Aesthetics.Aesthetics;
+import alexndr.plugins.Aesthetics.Settings;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class FusionModItems 
 {
+    public static SimpleDoorItem bronze_door = new SimpleDoorItem("bronze_door", Aesthetics.plugin, 
+    										(SimpleDoor) FusionModBlocks.bronze_door_block);
+    
 	/**
 	 * configure mod items from config settings.
 	 */
 	public static void configureItems() 
 	{
+      if (Settings.FDoors) {
+          bronze_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+      }
 	}
 	
 	/**
@@ -17,19 +29,29 @@ public class FusionModItems
 	 * 
 	 * @param registry Forge item registry interface.
 	 */
-	public static void register(IForgeRegistry<Item> registry) {
+	public static void register(IForgeRegistry<Item> registry) 
+	{
+	      if (Settings.FDoors && ModSupport.use_simple_ores && Settings.bronzeDoor.isEnabled()) 
+	      {
+	    	  registry.register(bronze_door);
+	      }
 	} // end register()
 
 	/**
 	 * register Item models with Forge.
 	 */
-	public static void registerModels() {
+	public static void registerModels() 
+	{
+	      if (Settings.FDoors && ModSupport.use_simple_ores && Settings.bronzeDoor.isEnabled()) 
+	      {
+	    	  bronze_door.registerItemModel();
+	      }
 	} // end registerModels()
 
 	/**
 	 * register ingots and suchlike with the ore dictionary.
 	 */
-	public static void registerOreDictionary() {
-	} // end registerOreDictionary()
+//	public static void registerOreDictionary() {
+//	} // end registerOreDictionary()
 
 } // end class

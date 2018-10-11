@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top_rh",
+    "textures": {
+        "bottom": "aesthetics:blocks/malachite_door_lower",
+        "top": "aesthetics:blocks/malachite_door_upper"
+    }
+}

@@ -35,14 +35,14 @@ public class ProxyCommon
 			SimpleCoreAPI.tabPreInit();
 		}
 		ModSupport.preInit();
-		ModBlocks.configureBlocks();
+		ModBlocks.configureBlocks();  // always precede items so Door blocks get created first.
+		ModItems.configureItems();
 	} // end ()
 	
     public void load(FMLInitializationEvent event)
     {
 		//Content
 		setTabIcons();
-//		Content.initialize();
 //		Recipes.initialize();
     } // end load()
     
@@ -52,7 +52,7 @@ public class ProxyCommon
     
 	private static void setTabIcons() {
 		LogHelper.verbose(ModInfo.NAME, "Setting tab icons");
-		List<Item> list = Lists.newArrayList(Item.getItemFromBlock(Content.iron_bricks), 
+		List<Item> list = Lists.newArrayList(Item.getItemFromBlock(ModBlocks.iron_bricks), 
 								Item.getItemFromBlock(Blocks.IRON_BARS), 
 								Items.IRON_INGOT, Items.IRON_PICKAXE, 
 								Items.IRON_SWORD, 
@@ -72,8 +72,6 @@ public class ProxyCommon
 	{
     	ModItems.register(event.getRegistry());
     	ModBlocks.registerItemBlocks(event.getRegistry());
-        ModItems.registerOreDictionary();
-        ModBlocks.registerOreDictionary();
 	}
 
 	public void registerItemRenderer(Plugin plugin, Item item, int meta, String id) {

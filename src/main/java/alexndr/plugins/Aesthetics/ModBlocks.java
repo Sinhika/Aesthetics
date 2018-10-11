@@ -45,15 +45,26 @@ public class ModBlocks
 	{
         if (Settings.MCBricks) 
         {
-            iron_bricks.setConfigEntry(Settings.ironBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
-            gold_bricks.setConfigEntry(Settings.goldBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
-            diamond_bricks.setConfigEntry(Settings.diamondBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+        	if (Settings.ironBricks.isEnabled())
+				iron_bricks.setConfigEntry(Settings.ironBricks)
+						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+        	if (Settings.goldBricks.isEnabled())
+				gold_bricks.setConfigEntry(Settings.goldBricks)
+						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+        	if (Settings.diamondBricks.isEnabled())
+				diamond_bricks.setConfigEntry(Settings.diamondBricks)
+						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
 
             if (Settings.MCBrickStairs) 
             {
-                iron_brick_stairs.setConfigEntry(Settings.ironBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
-				gold_brick_stairs.setConfigEntry(Settings.goldBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
-                diamond_brick_stairs.setConfigEntry(Settings.diamondBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+            	if (Settings.ironBricks.isEnabled())
+            		iron_brick_stairs.setConfigEntry(Settings.ironBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+            	if (Settings.goldBricks.isEnabled())
+					gold_brick_stairs.setConfigEntry(Settings.goldBricks)
+							.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+            	if (Settings.diamondBricks.isEnabled())
+					diamond_brick_stairs.setConfigEntry(Settings.diamondBricks)
+							.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
             } // end if MCBrickStairs
         } // end-if MCBricks
 		
@@ -72,6 +83,27 @@ public class ModBlocks
 	 */
 	public static void register(IForgeRegistry<Block> registry) 
 	{
+        if (Settings.MCBricks) 
+        {
+        	if (Settings.ironBricks.isEnabled()) registry.register(iron_bricks);
+        	if (Settings.goldBricks.isEnabled()) registry.register(gold_bricks);
+        	if (Settings.diamondBricks.isEnabled()) registry.register(diamond_bricks);
+
+        	if (Settings.MCBrickStairs) 
+            {
+            	if (Settings.ironBricks.isEnabled()) registry.register(iron_brick_stairs);
+            	if (Settings.goldBricks.isEnabled()) registry.register(gold_brick_stairs);
+            	if (Settings.diamondBricks.isEnabled()) registry.register(diamond_brick_stairs);
+            } // end-if
+        } // end-if
+        
+		if(ModSupport.use_simple_ores) 
+			SimpleOresModBlocks.register(registry);
+		if(ModSupport.use_fusion)
+			FusionModBlocks.register(registry);
+		if(ModSupport.use_netherrocks)
+			NetherrocksModBlocks.register(registry);
+
 	} // end register()
 	
 	/**
@@ -81,6 +113,27 @@ public class ModBlocks
 	 */
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) 
 	{
+        if (Settings.MCBricks) 
+        {
+        	if (Settings.ironBricks.isEnabled()) registry.register(iron_bricks.createItemBlock());
+        	if (Settings.goldBricks.isEnabled()) registry.register(gold_bricks.createItemBlock());
+        	if (Settings.diamondBricks.isEnabled()) registry.register(diamond_bricks.createItemBlock());
+
+        	if (Settings.MCBrickStairs) 
+            {
+            	if (Settings.ironBricks.isEnabled()) registry.register(iron_brick_stairs.createItemBlock());
+            	if (Settings.goldBricks.isEnabled()) registry.register(gold_brick_stairs.createItemBlock());
+            	if (Settings.diamondBricks.isEnabled()) registry.register(diamond_brick_stairs.createItemBlock());
+            } // end-if
+        } // end-if
+        
+		if(ModSupport.use_simple_ores) 
+			SimpleOresModBlocks.registerItemBlocks(registry);
+		if(ModSupport.use_fusion)
+			FusionModBlocks.registerItemBlocks(registry);
+		if(ModSupport.use_netherrocks)
+			NetherrocksModBlocks.registerItemBlocks(registry);
+
 	} // end registerItemBlocks()
 
 	/**
@@ -88,14 +141,41 @@ public class ModBlocks
 	 */
 	public static void registerModels() 
 	{
+        if (Settings.MCBricks) 
+        {
+        	if (Settings.ironBricks.isEnabled())
+        		iron_bricks.registerItemModel(Item.getItemFromBlock(iron_bricks));
+        	if (Settings.goldBricks.isEnabled())
+        		gold_bricks.registerItemModel(Item.getItemFromBlock(gold_bricks));
+        	if (Settings.diamondBricks.isEnabled())
+        		diamond_bricks.registerItemModel(Item.getItemFromBlock(diamond_bricks));
+
+        	if (Settings.MCBrickStairs) 
+            {
+            	if (Settings.ironBricks.isEnabled())
+            		iron_brick_stairs.registerItemModel(Item.getItemFromBlock(iron_brick_stairs));
+            	if (Settings.goldBricks.isEnabled())
+            		gold_brick_stairs.registerItemModel(Item.getItemFromBlock(gold_brick_stairs));
+            	if (Settings.diamondBricks.isEnabled())
+            		diamond_brick_stairs.registerItemModel(Item.getItemFromBlock(diamond_brick_stairs));
+            } // end-if
+        } // end-if
+        
+		if(ModSupport.use_simple_ores) 
+			SimpleOresModBlocks.registerModels();
+		if(ModSupport.use_fusion)
+			FusionModBlocks.registerModels();
+		if(ModSupport.use_netherrocks)
+			NetherrocksModBlocks.registerModels();
+
 	} // end registerModels()
 	
 	/**
 	 * ore dictionary registrations for blocks.
 	 */
-	public static void registerOreDictionary()
-	{
-	} // end registerOreDictionary()
+//	public static void registerOreDictionary()
+//	{
+//	} // end registerOreDictionary()
 		
 
 } // end class
