@@ -51,13 +51,33 @@ public class NetherrocksModItems
 	 * 
 	 * @param registry Forge item registry interface.
 	 */
-	public static void register(IForgeRegistry<Item> registry) {
+	public static void register(IForgeRegistry<Item> registry) 
+	{
+		if (Settings.NRDoors) 
+		{
+			if (Settings.dragonstoneDoor.isEnabled()) registry.register(dragonstone_door);
+			if (Settings.argoniteDoor.isEnabled()) registry.register(argonite_door);
+			if (Settings.ashstoneDoor.isEnabled()) registry.register(ashstone_door);
+			if (Settings.fyriteDoor.isEnabled()) registry.register(fyrite_door);
+			if (Settings.illumeniteDoor.isEnabled()) registry.register(illumenite_door);
+			if (Settings.malachiteDoor.isEnabled()) registry.register(malachite_door);
+		} // end-if NRDoors
 	} // end register()
 
 	/**
 	 * register Item models with Forge.
 	 */
-	public static void registerModels() {
+	public static void registerModels() 
+	{
+		if (Settings.NRDoors) 
+		{
+			if (Settings.dragonstoneDoor.isEnabled()) dragonstone_door.registerItemModel();
+			if (Settings.argoniteDoor.isEnabled()) argonite_door.registerItemModel();
+			if (Settings.ashstoneDoor.isEnabled()) ashstone_door.registerItemModel();
+			if (Settings.fyriteDoor.isEnabled()) fyrite_door.registerItemModel();
+			if (Settings.illumeniteDoor.isEnabled()) illumenite_door.registerItemModel();
+			if (Settings.malachiteDoor.isEnabled()) malachite_door.registerItemModel();
+		} // end-if NRDoors
 	} // end registerModels()
 
 } // end class

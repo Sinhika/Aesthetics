@@ -48,10 +48,4 @@ public class FusionModItems
 	      }
 	} // end registerModels()
 
-	/**
-	 * register ingots and suchlike with the ore dictionary.
-	 */
-//	public static void registerOreDictionary() {
-//	} // end registerOreDictionary()
-
 } // end class
