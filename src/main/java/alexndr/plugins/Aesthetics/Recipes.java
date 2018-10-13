@@ -35,9 +35,6 @@ public class Recipes
 //        if (Settings.MCBricks) 
 //        {
 //            // Bricks
-//            GameRegistry.addRecipe(new ShapedOreRecipe(Content.iron_bricks, true,
-//                            new Object[]
-//                                            { "XX", "XX", Character.valueOf('X'), "ingotIron" }));
 //            GameRegistry.addRecipe(new ShapedOreRecipe(Content.gold_bricks, true,
 //                            new Object[]
 //                                            { "XX", "XX", Character.valueOf('X'), "ingotGold" }));
