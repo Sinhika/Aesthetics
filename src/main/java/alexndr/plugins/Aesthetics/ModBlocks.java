@@ -68,12 +68,15 @@ public class ModBlocks
             } // end if MCBrickStairs
         } // end-if MCBricks
 		
-		if(ModSupport.use_simple_ores) 
+		if (ModSupport.use_simple_ores) { 
 			SimpleOresModBlocks.configureBlocks();
-		if(ModSupport.use_fusion)
+		}
+		if (ModSupport.use_fusion) {
 			FusionModBlocks.configureBlocks();
-		if(ModSupport.use_netherrocks)
+		}
+		if (ModSupport.use_netherrocks) {
 			NetherrocksModBlocks.configureBlocks();
+		}
 	} // end configureBlocks()
 
 	/**

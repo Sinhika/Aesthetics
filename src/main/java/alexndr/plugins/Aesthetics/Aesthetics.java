@@ -2,7 +2,6 @@ package alexndr.plugins.Aesthetics;
 
 import alexndr.api.logger.LogHelper;
 import alexndr.api.registry.Plugin;
-import alexndr.plugins.netherrocks.ModInfo;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

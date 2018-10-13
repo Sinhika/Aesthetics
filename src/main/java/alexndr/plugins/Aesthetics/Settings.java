@@ -4,7 +4,6 @@ import alexndr.api.config.ConfigHelper;
 import alexndr.api.config.types.ConfigBlock;
 import alexndr.api.config.types.ConfigEntry;
 import alexndr.api.logger.LogHelper;
-import alexndr.plugins.SimpleOres.ModInfo;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -50,12 +49,12 @@ public class Settings
 			}
 		} // end try
 		catch (Exception e) {
-			LogHelper.severe(ModInfo.NAME, "Failed to load settings");
+			LogHelper.severe(ModInfo.ID, "Failed to load settings");
 			e.printStackTrace();
 		} 
 		finally {
 			settings.save();
-			LogHelper.verbose(ModInfo.NAME, "Settings loaded successfully");
+			LogHelper.verbose(ModInfo.ID, "Settings loaded successfully");
 		}
 	} // end createOrLoadSettings()
 
@@ -291,9 +290,10 @@ public class Settings
                         .setHarvestTool("pickaxe");
         illumeniteDoor.GetConfig(settings);
         
-//        malachiteDoor = new ConfigBlock("Malachite Door", CONFIGURE_NRBLOCKS)
-//                        .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F).setHarvestTool("pickaxe"));
-//		malachiteDoor.GetConfig(settings);
+        malachiteDoor = new ConfigBlock("Malachite Door", CONFIGURE_NRBLOCKS)
+                        .setHardness(7.0F).setResistance(10.0F).setLightValue(0.0F)
+                        .setHarvestTool("pickaxe");
+		malachiteDoor.GetConfig(settings);
 
 		fyriteBars = new ConfigBlock("Fyrite Bars", CONFIGURE_NRBLOCKS).setHardness(7.0F)
 				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
