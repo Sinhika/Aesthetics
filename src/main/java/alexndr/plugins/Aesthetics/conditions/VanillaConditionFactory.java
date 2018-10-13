@@ -20,12 +20,12 @@ public class VanillaConditionFactory implements IConditionFactory
 		String key = JsonUtils.getString(json, "type");
 		
 		// bricks
-		if (key.equals(ModInfo.ID + "vanilla_bricks_enabled")) {
+		if (key.equals(ModInfo.ID + ":vanilla_bricks_enabled")) {
 			return () -> Settings.MCBricks == value;
 		}
 		
 		// stairs
-		if (key.equals(ModInfo.ID + "vanilla_brick_stairs_enabled")) {
+		if (key.equals(ModInfo.ID + ":vanilla_brick_stairs_enabled")) {
 			return () -> Settings.MCBrickStairs == value;
 		}
 		

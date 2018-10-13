@@ -19,23 +19,23 @@ public class FusionConditionFactory implements IConditionFactory {
 		String key = JsonUtils.getString(json, "type");
 		
 		// at all
-		if (key.equals(ModInfo.ID + "fusion_enabled")) {
+		if (key.equals(ModInfo.ID + ":fusion_enabled")) {
 			return () -> Settings.enableFusion == value;
 		}
 		// bricks
-		if (key.equals(ModInfo.ID + "fusion_bricks_enabled")) {
+		if (key.equals(ModInfo.ID + ":fusion_bricks_enabled")) {
 			return () -> Settings.FBricks == value;
 		}
 		// stairs
-		if (key.equals(ModInfo.ID + "fusion_brick_stairs_enabled")) {
+		if (key.equals(ModInfo.ID + ":fusion_brick_stairs_enabled")) {
 			return () -> Settings.FBrickStairs == value;
 		}
 		// doors
-		if (key.equals(ModInfo.ID + "fusion_doors_enabled")) {
+		if (key.equals(ModInfo.ID + ":fusion_doors_enabled")) {
 			return () -> Settings.FDoors == value;
 		}
 		// bars
-		if (key.equals(ModInfo.ID + "fusion_bars_enabled")) {
+		if (key.equals(ModInfo.ID + ":fusion_bars_enabled")) {
 			return () -> Settings.FBars == value;
 		}
 		return null;

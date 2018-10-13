@@ -19,23 +19,23 @@ public class SimpleOresConditionFactory implements IConditionFactory {
 		String key = JsonUtils.getString(json, "type");
 		
 		// at all
-		if (key.equals(ModInfo.ID + "simpleores_enabled")) {
+		if (key.equals(ModInfo.ID + ":simpleores_enabled")) {
 			return () -> Settings.enableSimpleOres == value;
 		}
 		// bricks
-		if (key.equals(ModInfo.ID + "simpleores_bricks_enabled")) {
+		if (key.equals(ModInfo.ID + ":simpleores_bricks_enabled")) {
 			return () -> Settings.SOBricks == value;
 		}
 		// stairs
-		if (key.equals(ModInfo.ID + "simpleores_brick_stairs_enabled")) {
+		if (key.equals(ModInfo.ID + ":simpleores_brick_stairs_enabled")) {
 			return () -> Settings.SOBrickStairs == value;
 		}
 		// doors
-		if (key.equals(ModInfo.ID + "simpleores_doors_enabled")) {
+		if (key.equals(ModInfo.ID + ":simpleores_doors_enabled")) {
 			return () -> Settings.SODoors == value;
 		}
 		// bars
-		if (key.equals(ModInfo.ID + "simpleores_bars_enabled")) {
+		if (key.equals(ModInfo.ID + ":simpleores_bars_enabled")) {
 			return () -> Settings.SOBars == value;
 		}
 		

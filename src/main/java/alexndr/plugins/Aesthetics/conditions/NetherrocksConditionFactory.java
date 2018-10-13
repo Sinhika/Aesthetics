@@ -19,23 +19,23 @@ public class NetherrocksConditionFactory implements IConditionFactory {
 		String key = JsonUtils.getString(json, "type");
 		
 		// at all
-		if (key.equals(ModInfo.ID + "netherrocks_enabled")) {
+		if (key.equals(ModInfo.ID + ":netherrocks_enabled")) {
 			return () -> Settings.enableNetherrocks == value;
 		}
 		// bricks
-		if (key.equals(ModInfo.ID + "netherrocks_bricks_enabled")) {
+		if (key.equals(ModInfo.ID + ":netherrocks_bricks_enabled")) {
 			return () -> Settings.NRBricks == value;
 		}
 		// stairs
-		if (key.equals(ModInfo.ID + "netherrocks_brick_stairs_enabled")) {
+		if (key.equals(ModInfo.ID + ":netherrocks_brick_stairs_enabled")) {
 			return () -> Settings.NRBrickStairs == value;
 		}
 		// doors
-		if (key.equals(ModInfo.ID + "netherrocks_doors_enabled")) {
+		if (key.equals(ModInfo.ID + ":netherrocks_doors_enabled")) {
 			return () -> Settings.NRDoors == value;
 		}
 		// bars
-		if (key.equals(ModInfo.ID + "netherrocks_bars_enabled")) {
+		if (key.equals(ModInfo.ID + ":netherrocks_bars_enabled")) {
 			return () -> Settings.NRBars == value;
 		}
 		return null;

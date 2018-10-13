@@ -13,6 +13,6 @@
 	],
 	"type" : "forge:ore_shaped",
 	"key" : {
-		"X" : { "item" : "minecraft:ingot_iron"}
+		"X" : { "item" : "minecraft:iron_ingot"}
 	}
 }
