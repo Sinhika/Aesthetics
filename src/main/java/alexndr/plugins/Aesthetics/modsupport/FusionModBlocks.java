@@ -253,12 +253,4 @@ public class FusionModBlocks
         } // end-if FBars
 	} // end registerModels()
 	
-	/**
-	 * ore dictionary registrations for blocks.
-	 */
-//	public static void registerOreDictionary()
-//	{
-//	} // end registerOreDictionary()
-		
-
 } // end class

@@ -143,6 +143,42 @@ public class SimpleOresModBlocks
 	 */
 	public static void register(IForgeRegistry<Block> registry) 
 	{
+        if (Settings.SOBricks) 
+        {
+        	if (Settings.copperBricks.isEnabled()) registry.register(copper_bricks);
+        	if (Settings.tinBricks.isEnabled()) registry.register(tin_bricks);
+        	if (Settings.mythrilBricks.isEnabled()) registry.register(mythril_bricks);
+        	if (Settings.onyxBricks.isEnabled()) registry.register(onyx_bricks);
+        	if (Settings.adamantiumBricks.isEnabled()) registry.register(adamantium_bricks);
+        	
+            if (Settings.SOBrickStairs) 
+            {
+            	if (Settings.copperBricks.isEnabled()) registry.register(copper_brick_stairs);
+            	if (Settings.tinBricks.isEnabled()) registry.register(tin_brick_stairs);
+            	if (Settings.mythrilBricks.isEnabled()) registry.register(mythril_brick_stairs);
+            	if (Settings.onyxBricks.isEnabled()) registry.register(onyx_brick_stairs);
+            	if (Settings.adamantiumBricks.isEnabled()) registry.register(adamantium_brick_stairs);
+             } // end-if SOBrickStairs
+        } // end-if SOBricks
+
+        if (Settings.SODoors) 
+        {
+        	if (Settings.copperDoor.isEnabled()) registry.register(copper_door_block);
+        	if (Settings.tinDoor.isEnabled()) registry.register(tin_door_block);
+        	if (Settings.mythrilDoor.isEnabled()) registry.register(mythril_door_block);
+        	if (Settings.adamantiumDoor.isEnabled()) registry.register(adamantium_door_block);
+        	if (Settings.onyxDoor.isEnabled()) registry.register(onyx_door_block);
+        } // end if SODoors
+
+        if (Settings.SOBars) 
+        {
+        	if (Settings.copperBars.isEnabled()) registry.register(copper_bars);
+        	if (Settings.tinBars.isEnabled()) registry.register(tin_bars);
+        	if (Settings.mythrilBars.isEnabled()) registry.register(mythril_bars);
+        	if (Settings.onyxBars.isEnabled()) registry.register(onyx_bars);
+        	if (Settings.adamantiumBars.isEnabled()) registry.register(adamantium_bars);
+        } // end SOBars
+
 	} // end register()
 	
 	/**
@@ -152,6 +188,32 @@ public class SimpleOresModBlocks
 	 */
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) 
 	{
+        if (Settings.SOBricks) 
+        {
+        	if (Settings.copperBricks.isEnabled()) registry.register(copper_bricks.createItemBlock());
+        	if (Settings.tinBricks.isEnabled()) registry.register(tin_bricks.createItemBlock());
+        	if (Settings.mythrilBricks.isEnabled()) registry.register(mythril_bricks.createItemBlock());
+        	if (Settings.onyxBricks.isEnabled()) registry.register(onyx_bricks.createItemBlock());
+        	if (Settings.adamantiumBricks.isEnabled()) registry.register(adamantium_bricks.createItemBlock());
+        	
+            if (Settings.SOBrickStairs) 
+            {
+            	if (Settings.copperBricks.isEnabled()) registry.register(copper_brick_stairs.createItemBlock());
+            	if (Settings.tinBricks.isEnabled()) registry.register(tin_brick_stairs.createItemBlock());
+            	if (Settings.mythrilBricks.isEnabled()) registry.register(mythril_brick_stairs.createItemBlock());
+            	if (Settings.onyxBricks.isEnabled()) registry.register(onyx_brick_stairs.createItemBlock());
+            	if (Settings.adamantiumBricks.isEnabled()) registry.register(adamantium_brick_stairs.createItemBlock());
+             } // end-if SOBrickStairs
+        } // end-if SOBricks
+
+        if (Settings.SOBars) 
+        {
+        	if (Settings.copperBars.isEnabled()) registry.register(copper_bars.createItemBlock());
+        	if (Settings.tinBars.isEnabled()) registry.register(tin_bars.createItemBlock());
+        	if (Settings.mythrilBars.isEnabled()) registry.register(mythril_bars.createItemBlock());
+        	if (Settings.onyxBars.isEnabled()) registry.register(onyx_bars.createItemBlock());
+        	if (Settings.adamantiumBars.isEnabled()) registry.register(adamantium_bars.createItemBlock());
+        }
 	} // end registerItemBlocks()
 
 	/**
@@ -159,6 +221,33 @@ public class SimpleOresModBlocks
 	 */
 	public static void registerModels() 
 	{
+        if (Settings.SOBricks) 
+        {
+        	if (Settings.copperBricks.isEnabled()) copper_bricks.registerItemModel(Item.getItemFromBlock(copper_bricks));
+        	if (Settings.tinBricks.isEnabled()) tin_bricks.registerItemModel(Item.getItemFromBlock(tin_bricks));
+        	if (Settings.mythrilBricks.isEnabled()) mythril_bricks.registerItemModel(Item.getItemFromBlock(mythril_bricks));
+        	if (Settings.onyxBricks.isEnabled()) onyx_bricks.registerItemModel(Item.getItemFromBlock(onyx_bricks));
+        	if (Settings.adamantiumBricks.isEnabled()) adamantium_bricks.registerItemModel(Item.getItemFromBlock(adamantium_bricks));
+        	
+            if (Settings.SOBrickStairs) 
+            {
+            	if (Settings.copperBricks.isEnabled()) copper_brick_stairs.registerItemModel(Item.getItemFromBlock(copper_brick_stairs));
+            	if (Settings.tinBricks.isEnabled()) tin_brick_stairs.registerItemModel(Item.getItemFromBlock(tin_brick_stairs));
+            	if (Settings.mythrilBricks.isEnabled()) mythril_brick_stairs.registerItemModel(Item.getItemFromBlock(mythril_brick_stairs));
+            	if (Settings.onyxBricks.isEnabled()) onyx_brick_stairs.registerItemModel(Item.getItemFromBlock(onyx_brick_stairs));
+            	if (Settings.adamantiumBricks.isEnabled()) adamantium_brick_stairs.registerItemModel(Item.getItemFromBlock(adamantium_brick_stairs));
+             } // end-if SOBrickStairs
+        } // end-if SOBricks
+
+        if (Settings.SOBars) 
+        {
+        	if (Settings.copperBars.isEnabled()) copper_bars.registerItemModel(Item.getItemFromBlock(copper_bars));
+        	if (Settings.tinBars.isEnabled()) tin_bars.registerItemModel(Item.getItemFromBlock(tin_bars));
+        	if (Settings.mythrilBars.isEnabled()) mythril_bars.registerItemModel(Item.getItemFromBlock(mythril_bars));
+        	if (Settings.onyxBars.isEnabled()) onyx_bars.registerItemModel(Item.getItemFromBlock(onyx_bars));
+        	if (Settings.adamantiumBars.isEnabled()) adamantium_bars.registerItemModel(Item.getItemFromBlock(adamantium_bars));
+        } // end SOBars
+
 	} // end registerModels()
 	
 		
