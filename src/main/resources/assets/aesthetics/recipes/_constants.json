@@ -103,5 +103,12 @@
       "ore": "stickWood"
     },
     "name": "STICKWOOD"
+},
+{
+    "ingredient": {
+      "type": "forge:ore_dict",
+      "ore": "gemDiamond"
+    },
+    "name": "GEMDIAMOND"
 }
 ]

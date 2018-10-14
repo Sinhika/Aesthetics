@@ -1,0 +1,18 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:vanilla_bricks_enabled",
+			"value" : true
+		} ],
+	"result" : {
+		"item" : "aesthetics:diamond_bricks"
+	},
+	"pattern" : [
+		"XX", 
+		"XX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#GEMDIAMOND"}
+	}
+}
