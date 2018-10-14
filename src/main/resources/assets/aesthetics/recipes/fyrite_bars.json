@@ -1,0 +1,23 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:netherrocks_enabled",
+			"value" : true
+		},
+		{
+			"type" : "aesthetics:netherrocks_bars_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:fyrite_bars"
+	},
+	"pattern" : [
+		"XXX", 
+		"XXX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#INGOTFYRITE"}
+	}
+}
