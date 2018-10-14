@@ -1,0 +1,23 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:netherrocks_enabled",
+			"value" : true
+		},
+		{
+			"type" : "aesthetics:netherrocks_bricks_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:ashstone_bricks"
+	},
+	"pattern" : [
+		"XX", 
+		"XX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#GEMASHSTONE"}
+	}
+}

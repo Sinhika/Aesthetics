@@ -10,25 +10,6 @@ public class RecipesNetherrocks
 //		//Bricks
 //        if (Settings.NRBricks) 
 //        {
-//            GameRegistry.addRecipe(new ShapedOreRecipe(ContentNetherrocks.fyrite_bricks, true,
-//                            new Object[]
-//            { "XX", "XX", Character.valueOf('X'), "ingotFyrite" }));
-//            GameRegistry.addRecipe(new ShapedOreRecipe(ContentNetherrocks.malachite_bricks, true,
-//                            new Object[]
-//            { "XX", "XX", Character.valueOf('X'), "ingotMalachite" }));
-//            GameRegistry.addRecipe(new ShapedOreRecipe(ContentNetherrocks.ashstone_bricks, true,
-//                            new Object[]
-//            { "XX", "XX", Character.valueOf('X'), "gemAshstone" }));
-//            GameRegistry.addRecipe(new ShapedOreRecipe(ContentNetherrocks.illumenite_bricks, true,
-//                            new Object[]
-//            { "XX", "XX", Character.valueOf('X'), "ingotIllumenite" }));
-//            GameRegistry.addRecipe(new ShapedOreRecipe(ContentNetherrocks.dragonstone_bricks, true,
-//                            new Object[]
-//            { "XX", "XX", Character.valueOf('X'), "gemDragonstone" }));
-//            GameRegistry.addRecipe(new ShapedOreRecipe(ContentNetherrocks.argonite_bricks, true,
-//                            new Object[]
-//            { "XX", "XX", Character.valueOf('X'), "ingotArgonite" }));
-//
 //            // Brick Stairs
 //            if (Settings.NRBrickStairs) {
 //                GameRegistry.addRecipe(new ShapedOreRecipe(
