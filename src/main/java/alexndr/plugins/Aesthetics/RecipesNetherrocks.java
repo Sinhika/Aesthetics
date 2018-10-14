@@ -7,43 +7,6 @@ public class RecipesNetherrocks
 {
 	public static void addRecipes() 
 	{
-//		//Bricks
-//        if (Settings.NRBricks) 
-//        {
-//            // Brick Stairs
-//            if (Settings.NRBrickStairs) {
-//                GameRegistry.addRecipe(new ShapedOreRecipe(
-//                                new ItemStack(ContentNetherrocks.fyrite_brick_stairs, 4), true,
-//                                new Object[]
-//                                { "X  ", "XX ", "XXX", Character.valueOf('X'),
-//                                ContentNetherrocks.fyrite_bricks }));
-//                GameRegistry.addRecipe(new ShapedOreRecipe(
-//                                new ItemStack(ContentNetherrocks.malachite_brick_stairs, 4), true,
-//                                new Object[]
-//                                { "X  ", "XX ", "XXX", Character.valueOf('X'),
-//                                ContentNetherrocks.malachite_bricks }));
-//                GameRegistry.addRecipe(new ShapedOreRecipe(
-//                                new ItemStack(ContentNetherrocks.ashstone_brick_stairs, 4), true,
-//                                new Object[]
-//                                { "X  ", "XX ", "XXX", Character.valueOf('X'),
-//                                ContentNetherrocks.ashstone_bricks }));
-//                GameRegistry.addRecipe(new ShapedOreRecipe(
-//                                new ItemStack(ContentNetherrocks.illumenite_brick_stairs, 4), true,
-//                                new Object[]
-//                                { "X  ", "XX ", "XXX", Character.valueOf('X'),
-//                                ContentNetherrocks.illumenite_bricks }));
-//                GameRegistry.addRecipe(new ShapedOreRecipe(
-//                                new ItemStack(ContentNetherrocks.dragonstone_brick_stairs, 4), true,
-//                                new Object[]
-//                                { "X  ", "XX ", "XXX", Character.valueOf('X'),
-//                                ContentNetherrocks.dragonstone_bricks }));
-//                GameRegistry.addRecipe(new ShapedOreRecipe(
-//                                new ItemStack(ContentNetherrocks.argonite_brick_stairs, 4), true,
-//                                new Object[]
-//                                { "X  ", "XX ", "XXX", Character.valueOf('X'),
-//                                ContentNetherrocks.argonite_bricks }));
-//            } // end-if NRBrickStairs
-//        } // end-if NRBricks
 //        
 //		//Doors
 //        if (Settings.NRDoors) 

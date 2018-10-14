@@ -1,0 +1,28 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:netherrocks_bricks_enabled",
+			"value" : true
+		},
+		{
+			"type" : "aesthetics:netherrocks_brick_stairs_enabled",
+			"value" : true
+		},
+		{
+			"type" : "aesthetics:netherrocks_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:malachite_brick_stairs"
+	},
+	"pattern" : [
+		"X  ", 
+		"XX ", 
+		"XXX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "aesthetics:malachite_bricks"}
+	}
+}
