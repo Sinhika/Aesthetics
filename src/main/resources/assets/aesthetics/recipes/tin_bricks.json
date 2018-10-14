@@ -1,0 +1,19 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:simpleores_bricks_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:tin_bricks"
+	},
+	"pattern" : [
+		"XX", 
+		"XX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#INGOTTIN"}
+	}
+}

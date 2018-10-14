@@ -1,0 +1,24 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:simpleores_enabled",
+			"value" : true
+		},
+		{
+			"type" : "aesthetics:simpleores_doors_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:adamantium_door"
+	},
+	"pattern" : [
+		" XX", 
+		" XX", 
+		" XX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#INGOTADAMANTIUM"}
+	}
+}

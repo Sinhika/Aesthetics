@@ -1,0 +1,24 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:simpleores_bricks_enabled",
+			"value" : true
+		},
+		{
+			"type" : "aesthetics:simpleores_brick_stairs_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:tin_brick_stairs"
+	},
+	"pattern" : [
+		"X  ", 
+		"XX ", 
+		"XXX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "aesthetics:tin_bricks"}
+	}
+}

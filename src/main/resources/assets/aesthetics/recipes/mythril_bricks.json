@@ -1,0 +1,23 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:simpleores_enabled",
+			"value" : true
+		},
+		{
+			"type" : "aesthetics:simpleores_bricks_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:mythril_bricks"
+	},
+	"pattern" : [
+		"XX", 
+		"XX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#INGOTMYTHRIL"}
+	}
+}

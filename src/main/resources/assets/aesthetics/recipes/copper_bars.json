@@ -1,0 +1,19 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:simpleores_bars_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:copper_bars"
+	},
+	"pattern" : [
+		"XXX", 
+		"XXX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#INGOTCOPPER"}
+	}
+}
