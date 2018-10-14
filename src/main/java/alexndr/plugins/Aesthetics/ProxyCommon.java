@@ -72,6 +72,7 @@ public class ProxyCommon
 	{
     	ModItems.register(event.getRegistry());
     	ModBlocks.registerItemBlocks(event.getRegistry());
+        ModItems.registerOreDictionary();
 	}
 
 	public void registerItemRenderer(Plugin plugin, Item item, int meta, String id) {

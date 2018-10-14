@@ -4,7 +4,9 @@ import alexndr.plugins.Aesthetics.modsupport.FusionModItems;
 import alexndr.plugins.Aesthetics.modsupport.ModSupport;
 import alexndr.plugins.Aesthetics.modsupport.NetherrocksModItems;
 import alexndr.plugins.Aesthetics.modsupport.SimpleOresModItems;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModItems 
@@ -58,7 +60,14 @@ public class ModItems
 	/**
 	 * register ingots and suchlike with the ore dictionary.
 	 */
-//	public static void registerOreDictionary() {
-//	} // end registerOreDictionary()
+	public static void registerOreDictionary() 
+	{
+		// if vanilla diamond is not registered as an ore, register it,
+		// because of IC2 diamonds which should also be usable in diamond recipes.
+		if (! OreDictionary.doesOreNameExist("gemDiamond"))
+		{
+			OreDictionary.registerOre("gemDiamond", Items.DIAMOND);
+		}
+	} // end registerOreDictionary()
 
 } // end class
