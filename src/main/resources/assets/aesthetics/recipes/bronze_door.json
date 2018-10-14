@@ -1,0 +1,20 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:fusion_doors_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:bronze_door"
+	},
+	"pattern" : [
+		" XX", 
+		" XX", 
+		" XX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#INGOTBRONZE"}
+	}
+}

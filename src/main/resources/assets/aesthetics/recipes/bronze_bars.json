@@ -1,0 +1,19 @@
+{
+	"conditions" : [
+		{
+			"type" : "aesthetics:fusion_bars_enabled",
+			"value" : true
+		}
+	],
+	"result" : {
+		"item" : "aesthetics:bronze_bars"
+	},
+	"pattern" : [
+		"XXX", 
+		"XXX"
+	],
+	"type" : "forge:ore_shaped",
+	"key" : {
+		"X" : { "item" : "#INGOTBRONZE"}
+	}
+}
