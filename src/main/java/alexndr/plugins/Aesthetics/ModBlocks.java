@@ -68,10 +68,11 @@ public class ModBlocks
             } // end if MCBrickStairs
         } // end-if MCBricks
 		
-		if (ModSupport.use_simple_ores) { 
+		if (ModSupport.use_simple_ores  || ModSupport.hasLimitedSimpleOres()) 
+		{ 
 			SimpleOresModBlocks.configureBlocks();
 		}
-		if (ModSupport.use_fusion) {
+		if (ModSupport.use_fusion || ModSupport.hasLimitedFusion()) {
 			FusionModBlocks.configureBlocks();
 		}
 		if (ModSupport.use_netherrocks) {
@@ -100,9 +101,9 @@ public class ModBlocks
             } // end-if
         } // end-if
         
-		if(ModSupport.use_simple_ores) 
+		if(ModSupport.use_simple_ores  || ModSupport.hasLimitedSimpleOres()) 
 			SimpleOresModBlocks.register(registry);
-		if(ModSupport.use_fusion)
+		if(ModSupport.use_fusion || ModSupport.hasLimitedFusion())
 			FusionModBlocks.register(registry);
 		if(ModSupport.use_netherrocks)
 			NetherrocksModBlocks.register(registry);
@@ -130,9 +131,9 @@ public class ModBlocks
             } // end-if
         } // end-if
         
-		if(ModSupport.use_simple_ores) 
+		if(ModSupport.use_simple_ores  || ModSupport.hasLimitedSimpleOres()) 
 			SimpleOresModBlocks.registerItemBlocks(registry);
-		if(ModSupport.use_fusion)
+		if(ModSupport.use_fusion || ModSupport.hasLimitedFusion())
 			FusionModBlocks.registerItemBlocks(registry);
 		if(ModSupport.use_netherrocks)
 			NetherrocksModBlocks.registerItemBlocks(registry);
@@ -164,9 +165,9 @@ public class ModBlocks
             } // end-if
         } // end-if
         
-		if(ModSupport.use_simple_ores) 
+		if(ModSupport.use_simple_ores || ModSupport.hasLimitedSimpleOres()) 
 			SimpleOresModBlocks.registerModels();
-		if(ModSupport.use_fusion)
+		if(ModSupport.use_fusion || ModSupport.hasLimitedFusion())
 			FusionModBlocks.registerModels();
 		if(ModSupport.use_netherrocks)
 			NetherrocksModBlocks.registerModels();

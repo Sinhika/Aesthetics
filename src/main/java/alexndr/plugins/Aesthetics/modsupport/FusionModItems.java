@@ -19,7 +19,8 @@ public class FusionModItems
 	 */
 	public static void configureItems() 
 	{
-      if (Settings.FDoors) {
+      if (Settings.FDoors && Settings.bronzeDoor.isEnabled()) 
+      {
           bronze_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
       }
 	}
@@ -31,7 +32,7 @@ public class FusionModItems
 	 */
 	public static void register(IForgeRegistry<Item> registry) 
 	{
-	      if (Settings.FDoors && ModSupport.use_simple_ores && Settings.bronzeDoor.isEnabled()) 
+	      if (Settings.FDoors && Settings.bronzeDoor.isEnabled()) 
 	      {
 	    	  registry.register(bronze_door);
 	      }
@@ -42,7 +43,7 @@ public class FusionModItems
 	 */
 	public static void registerModels() 
 	{
-	      if (Settings.FDoors && ModSupport.use_simple_ores && Settings.bronzeDoor.isEnabled()) 
+	      if (Settings.FDoors && Settings.bronzeDoor.isEnabled()) 
 	      {
 	    	  bronze_door.registerItemModel();
 	      }

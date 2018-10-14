@@ -57,30 +57,31 @@ public class FusionModBlocks
         	if (Settings.steelBricks.isEnabled())
         		steel_bricks.setConfigEntry(Settings.steelBricks).setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
 
-            if (ModSupport.use_simple_ores) 
-            {
-            	if (Settings.bronzeBricks.isEnabled())
-            		bronze_bricks.setConfigEntry(Settings.bronzeBricks)
-						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
-            	if (Settings.thyriumBricks.isEnabled())
-            		thyrium_bricks.setConfigEntry(Settings.thyriumBricks)
-						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
-            	if (Settings.sinisiteBricks.isEnabled())
-            		sinisite_bricks.setConfigEntry(Settings.sinisiteBricks)
-						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
-            } // end if simpleores
+        	if (Settings.bronzeBricks.isEnabled())
+        		bronze_bricks.setConfigEntry(Settings.bronzeBricks)
+        		.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+
+        	if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
+        	{
+        		if (Settings.thyriumBricks.isEnabled())
+        			thyrium_bricks.setConfigEntry(Settings.thyriumBricks)
+        			.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+        		if (Settings.sinisiteBricks.isEnabled())
+        			sinisite_bricks.setConfigEntry(Settings.sinisiteBricks)
+        			.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+        	} // end if simpleores
 
             if (Settings.FBrickStairs) 
             {
             	if (Settings.steelBricks.isEnabled())
             		steel_brick_stairs.setConfigEntry(Settings.steelBricks)
 						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
+            	if (Settings.bronzeBricks.isEnabled())
+            		bronze_brick_stairs.setConfigEntry(Settings.bronzeBricks)
+						.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
 
-                if (ModSupport.use_simple_ores) 
+                if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
                 {
-                	if (Settings.bronzeBricks.isEnabled())
-                		bronze_brick_stairs.setConfigEntry(Settings.bronzeBricks)
-							.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
                 	if (Settings.thyriumBricks.isEnabled())
                 		thyrium_brick_stairs.setConfigEntry(Settings.thyriumBricks)
 							.setCreativeTab(TabHelper.blocksTab(SimpleCoreAPI.plugin));
@@ -101,11 +102,11 @@ public class FusionModBlocks
         	if (Settings.steelBars.isEnabled())
         		steel_bars.setConfigEntry(Settings.steelBars)
 					.setCreativeTab(TabHelper.decorationsTab(SimpleCoreAPI.plugin));
-            if (ModSupport.use_simple_ores) 
+        	if (Settings.bronzeBars.isEnabled())
+        		bronze_bars.setConfigEntry(Settings.bronzeBars)
+					.setCreativeTab(TabHelper.decorationsTab(SimpleCoreAPI.plugin));
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
             {
-            	if (Settings.bronzeBars.isEnabled())
-            		bronze_bars.setConfigEntry(Settings.bronzeBars)
-						.setCreativeTab(TabHelper.decorationsTab(SimpleCoreAPI.plugin));
             	if (Settings.thyriumBars.isEnabled())
             		thyrium_bars.setConfigEntry(Settings.thyriumBars)
 						.setCreativeTab(TabHelper.decorationsTab(SimpleCoreAPI.plugin));
@@ -126,9 +127,9 @@ public class FusionModBlocks
         if (Settings.FBricks) 
         {
         	if (Settings.steelBricks.isEnabled()) registry.register(steel_bricks);
-            if (ModSupport.use_simple_ores) 
+        	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_bricks);
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
             {
-            	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_bricks);
             	if (Settings.thyriumBricks.isEnabled()) registry.register(thyrium_bricks);
             	if (Settings.sinisiteBricks.isEnabled()) registry.register(sinisite_bricks);
             }
@@ -136,23 +137,23 @@ public class FusionModBlocks
         if (Settings.FBrickStairs) 
         {
         	if (Settings.steelBricks.isEnabled()) registry.register(steel_brick_stairs);
-            if (ModSupport.use_simple_ores) 
+        	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_brick_stairs);
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
             {
-            	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_brick_stairs);
             	if (Settings.thyriumBricks.isEnabled()) registry.register(thyrium_brick_stairs);
             	if (Settings.sinisiteBricks.isEnabled()) registry.register(sinisite_brick_stairs);
             }
         } // end-if FBrickStairs
-        if (Settings.FDoors && ModSupport.use_simple_ores && Settings.bronzeDoor.isEnabled()) 
+        if (Settings.FDoors && Settings.bronzeDoor.isEnabled()) 
         {
         	registry.register(bronze_door_block);
         } // end-if FDoors
         if (Settings.FBars) 
         {
         	if (Settings.steelBars.isEnabled()) registry.register(steel_bars);
-            if (ModSupport.use_simple_ores) 
+        	if (Settings.bronzeBars.isEnabled()) registry.register(bronze_bars);
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
             {
-            	if (Settings.bronzeBars.isEnabled()) registry.register(bronze_bars);
             	if (Settings.thyriumBars.isEnabled()) registry.register(thyrium_bars);
             	if (Settings.sinisiteBars.isEnabled()) registry.register(sinisite_bars);
             }
@@ -169,9 +170,9 @@ public class FusionModBlocks
         if (Settings.FBricks) 
         {
         	if (Settings.steelBricks.isEnabled()) registry.register(steel_bricks.createItemBlock());
-            if (ModSupport.use_simple_ores) 
+        	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_bricks.createItemBlock());
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
             {
-            	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_bricks.createItemBlock());
             	if (Settings.thyriumBricks.isEnabled()) registry.register(thyrium_bricks.createItemBlock());
             	if (Settings.sinisiteBricks.isEnabled()) registry.register(sinisite_bricks.createItemBlock());
             }
@@ -179,9 +180,9 @@ public class FusionModBlocks
         if (Settings.FBrickStairs) 
         {
         	if (Settings.steelBricks.isEnabled()) registry.register(steel_brick_stairs.createItemBlock());
-            if (ModSupport.use_simple_ores) 
+        	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_brick_stairs.createItemBlock());
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
             {
-            	if (Settings.bronzeBricks.isEnabled()) registry.register(bronze_brick_stairs.createItemBlock());
             	if (Settings.thyriumBricks.isEnabled()) registry.register(thyrium_brick_stairs.createItemBlock());
             	if (Settings.sinisiteBricks.isEnabled()) registry.register(sinisite_brick_stairs.createItemBlock());
             }
@@ -193,9 +194,9 @@ public class FusionModBlocks
         if (Settings.FBars) 
         {
         	if (Settings.steelBars.isEnabled()) registry.register(steel_bars.createItemBlock());
-            if (ModSupport.use_simple_ores) 
+        	if (Settings.bronzeBars.isEnabled()) registry.register(bronze_bars.createItemBlock());
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
             {
-            	if (Settings.bronzeBars.isEnabled()) registry.register(bronze_bars.createItemBlock());
             	if (Settings.thyriumBars.isEnabled()) registry.register(thyrium_bars.createItemBlock());
             	if (Settings.sinisiteBars.isEnabled()) registry.register(sinisite_bars.createItemBlock());
             }
@@ -211,10 +212,10 @@ public class FusionModBlocks
 		{
 			if (Settings.steelBricks.isEnabled()) 
 				steel_bricks.registerItemModel(Item.getItemFromBlock(steel_bricks));
-			if (ModSupport.use_simple_ores) 
+			if (Settings.bronzeBricks.isEnabled()) 
+				bronze_bricks.registerItemModel(Item.getItemFromBlock(bronze_bricks));
+			if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
 			{
-				if (Settings.bronzeBricks.isEnabled()) 
-					bronze_bricks.registerItemModel(Item.getItemFromBlock(bronze_bricks));
 				if (Settings.thyriumBricks.isEnabled())
 					thyrium_bricks.registerItemModel(Item.getItemFromBlock(thyrium_bricks));
 				if (Settings.sinisiteBricks.isEnabled()) 
@@ -225,26 +226,23 @@ public class FusionModBlocks
         {
         	if (Settings.steelBricks.isEnabled())
         		steel_brick_stairs.registerItemModel(Item.getItemFromBlock(steel_brick_stairs));
-        	if (ModSupport.use_simple_ores) 
+    		if (Settings.bronzeBricks.isEnabled()) 
+    			bronze_brick_stairs.registerItemModel(Item.getItemFromBlock(bronze_brick_stairs));
+        	if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
         	{
-        		if (Settings.bronzeBricks.isEnabled()) 
-        			bronze_brick_stairs.registerItemModel(Item.getItemFromBlock(bronze_brick_stairs));
         		if (Settings.thyriumBricks.isEnabled()) 
         			thyrium_brick_stairs.registerItemModel(Item.getItemFromBlock(thyrium_brick_stairs));
         		if (Settings.sinisiteBricks.isEnabled()) 
         			sinisite_brick_stairs.registerItemModel(Item.getItemFromBlock(sinisite_brick_stairs));
         	}
         } // end-if FBrickStairs
-//        if (Settings.FDoors && ModSupport.use_simple_ores && Settings.bronzeDoor.isEnabled()) 
-//        {
-        	// door blocks do not have item models; the associated item does.
-//        } // end-if FDoors
         if (Settings.FBars) {
         	if (Settings.steelBars.isEnabled())
 				steel_bars.registerItemModel(Item.getItemFromBlock(steel_bars));
-            if (ModSupport.use_simple_ores) {
-            	if (Settings.bronzeBars.isEnabled())
-    				bronze_bars.registerItemModel(Item.getItemFromBlock(bronze_bars));
+        	if (Settings.bronzeBars.isEnabled())
+				bronze_bars.registerItemModel(Item.getItemFromBlock(bronze_bars));
+            if (ModSupport.use_simple_ores && ModSupport.use_fusion) 
+            {
             	if (Settings.thyriumBars.isEnabled())
     				thyrium_bars.registerItemModel(Item.getItemFromBlock(thyrium_bars));
             	if (Settings.sinisiteBars.isEnabled())

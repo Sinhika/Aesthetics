@@ -33,12 +33,12 @@ public class Settings
 			//Blocks
 			configureVanilla();
 			
-			if(Loader.isModLoaded("simpleores") && enableSimpleOres) 
+			if(enableSimpleOres) 
 			{
 				configureSimpleOres();
 			} // end if simple ores
 			
-			if(Loader.isModLoaded("fusion") && enableFusion) 
+			if(enableFusion) 
 			{
 				configureFusion();
 			} // end if fusion
@@ -72,34 +72,42 @@ public class Settings
 		MCBrickStairs = settings.getBoolean("EnableVanillaBrickStairs", Configuration.CATEGORY_GENERAL, true,
 				"Enable vanilla-based brick stairs");
 		
-		if(Loader.isModLoaded("simpleores") && enableSimpleOres) 
+		if(enableSimpleOres) 
 		{
 			ConfigEntry SOToggles = new ConfigEntry("SimpleOres", 
 													Configuration.CATEGORY_GENERAL, true);
 			SOToggles.GetConfig(settings);
 			
-			SOBricks = settings.getBoolean("EnableBricks", SOToggles.getSubCategory(), true, 
+			SOBricks = settings.getBoolean("EnableBricks", SOToggles.getSubCategory(), 
+					Loader.isModLoaded("simpleores"), 
 					"Enable Simple Ores-based bricks");
-			SOBrickStairs = settings.getBoolean("EnableBrickStairs", SOToggles.getSubCategory(), true, 
+			SOBrickStairs = settings.getBoolean("EnableBrickStairs", SOToggles.getSubCategory(), 
+					Loader.isModLoaded("simpleores"), 
 					"Enable Simple Ores-based brick stairs");
-			SODoors = settings.getBoolean("EnableDoors", SOToggles.getSubCategory(), true, 
+			SODoors = settings.getBoolean("EnableDoors", SOToggles.getSubCategory(), 
+					Loader.isModLoaded("simpleores"), 
 					"Enable Simple Ores-based doors");
-			SOBars = settings.getBoolean("EnableBars", SOToggles.getSubCategory(), true, 
+			SOBars = settings.getBoolean("EnableBars", SOToggles.getSubCategory(), 
+					Loader.isModLoaded("simpleores"), 
 					"Enable Simple Ores-based bars");
 		} // end-if simpleores
 		
-		if(Loader.isModLoaded("fusion") && enableFusion) 
+		if(enableFusion) 
 		{
 			ConfigEntry FToggles = new ConfigEntry("Fusion", Configuration.CATEGORY_GENERAL, true);
 			FToggles.GetConfig(settings);
 			
-			FBricks = settings.getBoolean("EnableBricks", FToggles.getSubCategory(), true, 
+			FBricks = settings.getBoolean("EnableBricks", FToggles.getSubCategory(), 
+					Loader.isModLoaded("fusion"), 
 					"Enable Fusion-based bricks");
-			FBrickStairs = settings.getBoolean("EnableBrickStairs", FToggles.getSubCategory(), true, 
+			FBrickStairs = settings.getBoolean("EnableBrickStairs", FToggles.getSubCategory(), 
+					Loader.isModLoaded("fusion"), 
 					"Enable Fusion-based brick stairs");
-			FDoors = settings.getBoolean("EnableDoors", FToggles.getSubCategory(), true, 
+			FDoors = settings.getBoolean("EnableDoors", FToggles.getSubCategory(), 
+					Loader.isModLoaded("fusion"), 
 					"Enable Fusion-based doors");
-			FBars = settings.getBoolean("EnableBars", FToggles.getSubCategory(), true, 
+			FBars = settings.getBoolean("EnableBars", FToggles.getSubCategory(), 
+					Loader.isModLoaded("fusion"), 
 					"Enable Fusion-based bars");
 		}
 		if(Loader.isModLoaded("netherrocks") && enableNetherrocks) 

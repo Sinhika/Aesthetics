@@ -16,10 +16,10 @@ public class ModItems
 	 */
 	public static void configureItems() 
 	{
-		if(ModSupport.use_simple_ores) 
+		if(ModSupport.use_simple_ores || ModSupport.hasLimitedSimpleOres()) 
 			SimpleOresModItems.configureItems();
 		
-		if(ModSupport.use_fusion)
+		if(ModSupport.use_fusion || ModSupport.hasLimitedFusion())
 			FusionModItems.configureItems();
 		
 		if(ModSupport.use_netherrocks)
@@ -33,10 +33,10 @@ public class ModItems
 	 * @param registry Forge item registry interface.
 	 */
 	public static void register(IForgeRegistry<Item> registry) {
-		if(ModSupport.use_simple_ores) 
+		if(ModSupport.use_simple_ores || ModSupport.hasLimitedSimpleOres()) 
 			SimpleOresModItems.register(registry);
 		
-		if(ModSupport.use_fusion)
+		if(ModSupport.use_fusion || ModSupport.hasLimitedFusion())
 			FusionModItems.register(registry);
 		
 		if(ModSupport.use_netherrocks)
@@ -47,10 +47,10 @@ public class ModItems
 	 * register Item models with Forge.
 	 */
 	public static void registerModels() {
-		if(ModSupport.use_simple_ores) 
+		if(ModSupport.use_simple_ores || ModSupport.hasLimitedSimpleOres()) 
 			SimpleOresModItems.registerModels();
 		
-		if(ModSupport.use_fusion)
+		if(ModSupport.use_fusion || ModSupport.hasLimitedFusion())
 			FusionModItems.registerModels();
 		
 		if(ModSupport.use_netherrocks)

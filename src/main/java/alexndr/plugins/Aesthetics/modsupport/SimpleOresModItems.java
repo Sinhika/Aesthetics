@@ -30,14 +30,18 @@ public class SimpleOresModItems
 		if (Settings.SODoors) {
 			if (Settings.copperDoor.isEnabled())
 				copper_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-			if (Settings.mythrilDoor.isEnabled())
-				mythril_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
 			if (Settings.tinDoor.isEnabled())
 				tin_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-			if (Settings.adamantiumDoor.isEnabled())
-				adamantium_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
-			if (Settings.onyxDoor.isEnabled())
-				onyx_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+			
+        	if (ModSupport.use_simple_ores) 
+        	{
+        		if (Settings.mythrilDoor.isEnabled())
+        			mythril_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+        		if (Settings.adamantiumDoor.isEnabled())
+        			adamantium_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+        		if (Settings.onyxDoor.isEnabled())
+        			onyx_door.setCreativeTab(TabHelper.redstoneTab(SimpleCoreAPI.plugin));
+        	}
 		} // end-if SODoors
 	}
 	
@@ -50,10 +54,14 @@ public class SimpleOresModItems
 	{
 		if (Settings.SODoors) {
 			if (Settings.copperDoor.isEnabled()) registry.register(copper_door);
-			if (Settings.mythrilDoor.isEnabled()) registry.register(mythril_door);
-			if (Settings.tinDoor.isEnabled()) registry.register(tin_door);
-			if (Settings.adamantiumDoor.isEnabled()) registry.register(adamantium_door);
-			if (Settings.onyxDoor.isEnabled()) registry.register(onyx_door);
+    		if (Settings.tinDoor.isEnabled()) registry.register(tin_door);
+			
+        	if (ModSupport.use_simple_ores) 
+        	{
+    			if (Settings.mythrilDoor.isEnabled()) registry.register(mythril_door);
+        		if (Settings.adamantiumDoor.isEnabled()) registry.register(adamantium_door);
+        		if (Settings.onyxDoor.isEnabled()) registry.register(onyx_door);
+        	}
 		} // end-if SODoors
 	} // end register()
 
@@ -63,11 +71,15 @@ public class SimpleOresModItems
 	public static void registerModels() 
 	{
 		if (Settings.SODoors) {
+    		if (Settings.tinDoor.isEnabled()) tin_door.registerItemModel();
 			if (Settings.copperDoor.isEnabled()) copper_door.registerItemModel();
-			if (Settings.mythrilDoor.isEnabled()) mythril_door.registerItemModel();
-			if (Settings.tinDoor.isEnabled()) tin_door.registerItemModel();
-			if (Settings.adamantiumDoor.isEnabled()) adamantium_door.registerItemModel();
-			if (Settings.onyxDoor.isEnabled()) onyx_door.registerItemModel();
+			
+        	if (ModSupport.use_simple_ores) 
+        	{
+    			if (Settings.mythrilDoor.isEnabled()) mythril_door.registerItemModel();
+        		if (Settings.adamantiumDoor.isEnabled()) adamantium_door.registerItemModel();
+        		if (Settings.onyxDoor.isEnabled()) onyx_door.registerItemModel();
+        	}
 		} // end-if SODoors
 	} // end registerModels()
 
