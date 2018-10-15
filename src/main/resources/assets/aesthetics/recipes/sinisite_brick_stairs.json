@@ -18,7 +18,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:sinisite_brick_stairs"
+		"item" : "aesthetics:sinisite_brick_stairs",
+		"count" : 4
 	},
 	"pattern" : [
 		"X  ", 

@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:dragonstone_door"
+		"item" : "aesthetics:dragonstone_door",
+		"count" : 3
 	},
 	"pattern" : [
 		" XX", 

@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:argonite_bars"
+		"item" : "aesthetics:argonite_bars",
+		"count" : 16
 	},
 	"pattern" : [
 		"XXX", 

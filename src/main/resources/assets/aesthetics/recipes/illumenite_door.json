@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:illumenite_door"
+		"item" : "aesthetics:illumenite_door",
+		"count" : 3
 	},
 	"pattern" : [
 		" XX", 

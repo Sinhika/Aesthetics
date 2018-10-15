@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:ashstone_bars"
+		"item" : "aesthetics:ashstone_bars",
+		"count" : 16
 	},
 	"pattern" : [
 		"XXX", 

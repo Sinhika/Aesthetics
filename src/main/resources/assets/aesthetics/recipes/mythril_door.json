@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:mythril_door"
+		"item" : "aesthetics:mythril_door",
+		"count" : 3
 	},
 	"pattern" : [
 		" XX", 

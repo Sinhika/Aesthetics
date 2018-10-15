@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:ashstone_door"
+		"item" : "aesthetics:ashstone_door",
+		"count" : 3
 	},
 	"pattern" : [
 		" XX", 

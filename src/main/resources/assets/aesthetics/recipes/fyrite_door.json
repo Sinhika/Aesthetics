@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:fyrite_door"
+		"item" : "aesthetics:fyrite_door",
+		"count" : 3
 	},
 	"pattern" : [
 		" XX", 

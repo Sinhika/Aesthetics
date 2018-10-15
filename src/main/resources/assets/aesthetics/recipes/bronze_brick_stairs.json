@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:bronze_brick_stairs"
+		"item" : "aesthetics:bronze_brick_stairs",
+		"count" : 4
 	},
 	"pattern" : [
 		"X  ", 

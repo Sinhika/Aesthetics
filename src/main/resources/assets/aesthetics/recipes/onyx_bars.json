@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:onyx_bars"
+		"item" : "aesthetics:onyx_bars",
+		"count" : 16
 	},
 	"pattern" : [
 		"XXX", 

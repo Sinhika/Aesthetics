@@ -14,7 +14,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:onyx_brick_stairs"
+		"item" : "aesthetics:onyx_brick_stairs",
+		"count" : 4
 	},
 	"pattern" : [
 		"X  ", 

@@ -14,7 +14,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:thyrium_bars"
+		"item" : "aesthetics:thyrium_bars",
+		"count" : 16
 	},
 	"pattern" : [
 		"XXX", 

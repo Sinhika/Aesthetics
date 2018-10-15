@@ -6,7 +6,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:tin_bars"
+		"item" : "aesthetics:tin_bars",
+		"count" : 16
 	},
 	"pattern" : [
 		"XXX", 

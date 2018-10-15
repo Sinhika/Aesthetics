@@ -6,7 +6,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:steel_bars"
+		"item" : "aesthetics:steel_bars",
+		"count" : 16
 	},
 	"pattern" : [
 		"XXX", 

@@ -6,7 +6,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:copper_door"
+		"item" : "aesthetics:copper_door",
+		"count" : 3
 	},
 	"pattern" : [
 		" XX", 

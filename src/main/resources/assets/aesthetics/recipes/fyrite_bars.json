@@ -10,7 +10,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:fyrite_bars"
+		"item" : "aesthetics:fyrite_bars",
+		"count" : 16
 	},
 	"pattern" : [
 		"XXX", 

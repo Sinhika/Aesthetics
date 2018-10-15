@@ -14,7 +14,8 @@
 		}
 	],
 	"result" : {
-		"item" : "aesthetics:malachite_brick_stairs"
+		"item" : "aesthetics:malachite_brick_stairs",
+		"count" : 4
 	},
 	"pattern" : [
 		"X  ", 
