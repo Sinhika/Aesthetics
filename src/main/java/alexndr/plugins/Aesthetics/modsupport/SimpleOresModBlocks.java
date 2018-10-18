@@ -10,8 +10,12 @@ import alexndr.api.registry.ContentCategories;
 import alexndr.plugins.Aesthetics.Aesthetics;
 import alexndr.plugins.Aesthetics.Settings;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.block.statemap.IStateMapper;
+import net.minecraft.client.renderer.block.statemap.StateMap;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -300,6 +304,12 @@ public class SimpleOresModBlocks
         	}
         } // end SOBars
 
+        if (Settings.SODoors)
+        {
+        	// set custom state mappers.
+        	copper_door_block.setCustomStateMapper();
+        	// TODO
+        }
 	} // end registerModels()
 	
 		
