@@ -249,6 +249,9 @@ public class FusionModBlocks
     				sinisite_bars.registerItemModel(Item.getItemFromBlock(sinisite_bars));
             }
         } // end-if FBars
+        if (Settings.FDoors && Settings.bronzeDoor.isEnabled()) {
+        	bronze_door_block.setCustomStateMapper();
+        }
 	} // end registerModels()
 	
 } // end class

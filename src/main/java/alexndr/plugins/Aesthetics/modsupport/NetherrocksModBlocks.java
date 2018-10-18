@@ -295,6 +295,22 @@ public class NetherrocksModBlocks
         	if (Settings.argoniteBars.isEnabled())
 				argonite_bars.registerItemModel(Item.getItemFromBlock(argonite_bars));
         } // end-if NRBars
+        
+        if (Settings.NRDoors) 
+        {
+        	if (Settings.dragonstoneDoor.isEnabled())
+        		dragonstone_door_block.setCustomStateMapper();
+        	if (Settings.argoniteDoor.isEnabled())
+        		argonite_door_block.setCustomStateMapper();
+        	if (Settings.ashstoneDoor.isEnabled())
+        		ashstone_door_block.setCustomStateMapper();
+           	if (Settings.fyriteDoor.isEnabled())
+           		fyrite_door_block.setCustomStateMapper();
+           	if (Settings.illumeniteDoor.isEnabled())
+           		illumenite_door_block.setCustomStateMapper();
+           	if (Settings.malachiteDoor.isEnabled())
+           		malachite_door_block.setCustomStateMapper();
+        }
 	} // end registerModels()
 	
 

@@ -10,12 +10,8 @@ import alexndr.api.registry.ContentCategories;
 import alexndr.plugins.Aesthetics.Aesthetics;
 import alexndr.plugins.Aesthetics.Settings;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.block.statemap.IStateMapper;
-import net.minecraft.client.renderer.block.statemap.StateMap;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -307,8 +303,19 @@ public class SimpleOresModBlocks
         if (Settings.SODoors)
         {
         	// set custom state mappers.
-        	copper_door_block.setCustomStateMapper();
-        	// TODO
+        	if (Settings.copperDoor.isEnabled())
+        		copper_door_block.setCustomStateMapper();
+        	if (Settings.tinDoor.isEnabled())
+        		tin_door_block.setCustomStateMapper();
+        	if (ModSupport.use_simple_ores) 
+        	{
+        		if (Settings.adamantiumDoor.isEnabled())
+        			adamantium_door_block.setCustomStateMapper();
+        		if (Settings.onyxDoor.isEnabled())
+        			onyx_door_block.setCustomStateMapper();
+        		if (Settings.mythrilDoor.isEnabled())
+        			mythril_door_block.setCustomStateMapper();
+        	}
         }
 	} // end registerModels()
 	
