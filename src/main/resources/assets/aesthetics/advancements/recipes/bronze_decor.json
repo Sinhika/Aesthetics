@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:bronze_bars",
+			"aesthetics:bronze_brick_stairs",
+			"aesthetics:bronze_bricks",
+			"aesthetics:bronze_door"
+		]
+	},
+	"criteria": {
+		"has_bronze": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotBronze"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_bronze"
+		]
+	]
+}

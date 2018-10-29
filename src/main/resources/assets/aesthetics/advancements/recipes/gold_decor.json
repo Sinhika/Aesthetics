@@ -1,0 +1,27 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:gold_brick_stairs",
+			"aesthetics:gold_bricks"
+		]
+	},
+	"criteria": {
+		"has_gold": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotGold"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_gold"
+		]
+	]
+}

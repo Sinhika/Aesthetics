@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:malachite_bars",
+			"aesthetics:malachite_brick_stairs",
+			"aesthetics:malachite_bricks",
+			"aesthetics:malachite_door"
+		]
+	},
+	"criteria": {
+		"has_malachite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotMalachite"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_malachite"
+		]
+	]
+}

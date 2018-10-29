@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:illumenite_bars",
+			"aesthetics:illumenite_brick_stairs",
+			"aesthetics:illumenite_bricks",
+			"aesthetics:illumenite_door"
+		]
+	},
+	"criteria": {
+		"has_illumenite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotIllumenite"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_illumenite"
+		]
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:mythril_bars",
+			"aesthetics:mythril_brick_stairs",
+			"aesthetics:mythril_bricks",
+			"aesthetics:mythril_door"
+		]
+	},
+	"criteria": {
+		"has_mythril": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotMythril"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_mythril"
+		]
+	]
+}

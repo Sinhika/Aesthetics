@@ -1,0 +1,28 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:thyrium_bars",
+			"aesthetics:thyrium_brick_stairs",
+			"aesthetics:thyrium_bricks"
+		]
+	},
+	"criteria": {
+		"has_thyrium": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotThyrium"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_thyrium"
+		]
+	]
+}

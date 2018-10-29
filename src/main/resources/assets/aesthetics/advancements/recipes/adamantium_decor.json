@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:adamantium_bars",
+			"aesthetics:adamantium_brick_stairs",
+			"aesthetics:adamantium_bricks",
+			"aesthetics:adamantium_door"
+		]
+	},
+	"criteria": {
+		"has_adamantium": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotAdamantium"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_adamantium"
+		]
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:iron_brick_stairs",
+			"aesthetics:iron_bricks"
+		]
+	},
+	"criteria": {
+		"has_iron": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotIron"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_iron"
+		]
+	]
+}

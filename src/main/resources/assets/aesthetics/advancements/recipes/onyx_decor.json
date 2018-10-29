@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:onyx_bars",
+			"aesthetics:onyx_brick_stairs",
+			"aesthetics:onyx_bricks",
+			"aesthetics:onyx_door"
+		]
+	},
+	"criteria": {
+		"has_onyx": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "gemOnyx"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_onyx"
+		]
+	]
+}

@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:tin_bars",
+			"aesthetics:tin_brick_stairs",
+			"aesthetics:tin_bricks",
+			"aesthetics:tin_door"
+		]
+	},
+	"criteria": {
+		"has_tin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotTin"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_tin"
+		]
+	]
+}

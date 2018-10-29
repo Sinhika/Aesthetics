@@ -1,0 +1,27 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:diamond_brick_stairs",
+			"aesthetics:diamond_bricks"
+		]
+	},
+	"criteria": {
+		"has_diamond": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "gemDiamond"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_diamond"
+		]
+	]
+}

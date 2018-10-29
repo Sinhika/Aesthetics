@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:fyrite_bars",
+			"aesthetics:fyrite_brick_stairs",
+			"aesthetics:fyrite_bricks",
+			"aesthetics:fyrite_door"
+		]
+	},
+	"criteria": {
+		"has_fyrite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotFyrite"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_fyrite"
+		]
+	]
+}

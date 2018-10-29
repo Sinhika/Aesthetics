@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:dragonstone_bars",
+			"aesthetics:dragonstone_brick_stairs",
+			"aesthetics:dragonstone_bricks",
+			"aesthetics:dragonstone_door"
+		]
+	},
+	"criteria": {
+		"has_dragonstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "gemDragonstone"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_dragonstone"
+		]
+	]
+}

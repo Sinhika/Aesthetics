@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:copper_bars",
+			"aesthetics:copper_brick_stairs",
+			"aesthetics:copper_bricks",
+			"aesthetics:copper_door"
+		]
+	},
+	"criteria": {
+		"has_copper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotCopper"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_copper"
+		]
+	]
+}

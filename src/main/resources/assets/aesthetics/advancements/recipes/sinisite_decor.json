@@ -1,0 +1,28 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:sinisite_bars",
+			"aesthetics:sinisite_brick_stairs",
+			"aesthetics:sinisite_bricks"
+		]
+	},
+	"criteria": {
+		"has_sinisite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotSinisite"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_sinisite"
+		]
+	]
+}

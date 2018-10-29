@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:argonite_bars",
+			"aesthetics:argonite_brick_stairs",
+			"aesthetics:argonite_bricks",
+			"aesthetics:argonite_door"
+		]
+	},
+	"criteria": {
+		"has_argonite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "ingotArgonite"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_argonite"
+		]
+	]
+}

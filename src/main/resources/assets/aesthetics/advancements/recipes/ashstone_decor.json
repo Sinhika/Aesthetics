@@ -1,0 +1,29 @@
+{
+	"parent": "aesthetics:recipes/root",
+	"rewards": {
+		"recipes": [
+			"aesthetics:ashstone_bars",
+			"aesthetics:ashstone_brick_stairs",
+			"aesthetics:ashstone_bricks",
+			"aesthetics:ashstone_door"
+		]
+	},
+	"criteria": {
+		"has_ashstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"type": "forge:ore_dict",
+						"ore": "gemAshstone"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_ashstone"
+		]
+	]
+}
