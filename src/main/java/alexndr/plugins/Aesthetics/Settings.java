@@ -33,7 +33,7 @@ public class Settings
 			//Blocks
 			configureVanilla();
 			
-			if(enableSimpleOres) 
+			if (enableSimpleOres) 
 			{
 				configureSimpleOres();
 			} // end if simple ores
@@ -72,7 +72,7 @@ public class Settings
 		MCBrickStairs = settings.getBoolean("EnableVanillaBrickStairs", Configuration.CATEGORY_GENERAL, true,
 				"Enable vanilla-based brick stairs");
 		
-		if(enableSimpleOres) 
+		if (enableSimpleOres) 
 		{
 			ConfigEntry SOToggles = new ConfigEntry("SimpleOres", 
 													Configuration.CATEGORY_GENERAL, true);
@@ -168,11 +168,11 @@ public class Settings
 						.setLightValue(0.0F).setHarvestTool("pickaxe");
 		onyxBricks.GetConfig(settings);
 		
-		copperDoor = new ConfigBlock("Mythril Door", CONFIGURE_SOBLOCKS).setHardness(7.0F)
+		copperDoor = new ConfigBlock("Copper Door", CONFIGURE_SOBLOCKS).setHardness(7.0F)
 				.setResistance(12.0F).setLightValue(0.0F).setHarvestTool("pickaxe");
 		copperDoor.GetConfig(settings);
 		
-		tinDoor = new ConfigBlock("Mythril Door", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
+		tinDoor = new ConfigBlock("Tin Door", CONFIGURE_SOBLOCKS).setHardness(7.0F).setResistance(12.0F)
 				.setLightValue(0.0F).setHarvestTool("pickaxe");
 		tinDoor.GetConfig(settings);
 		
