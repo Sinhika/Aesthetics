@@ -1,0 +1,56 @@
+# The overall format is standard TOML format, v0.5.0.
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader="javafml" #mandatory
+
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="[31,)" #mandatory
+issueTrackerURL="https://github.com/Sinhika/Aesthetics/issues"
+logoFile="aesthetics.png"
+
+[[mods]]
+modId="aesthetics"
+version="${version}"
+displayName="Simple Ores: Aesthetics"
+updateJSONURL="https://raw.githubusercontent.com/Sinhika/Aesthetics/1.15/update.json"
+displayURL="http://minecraft.curseforge.com/projects/aesthetics"
+credits="Created by AleXndrTheGr8st, maintained by Sinhika"
+authors="AleXndrTheGr8st, Sinhika"
+description='''An add-on for SimpleOres2 that adds decorative blocks such as bricks, doors, stairs.
+Also supports Netherrocks and Fusion metals.
+'''
+
+[[dependencies.aesthetics]] #optional
+    modId="forge"
+    mandatory=true
+    versionRange="[31.1.34,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.aesthetics]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2,]"
+    ordering="NONE"
+    side="BOTH"
+    
+[[dependencies.aesthetics]]
+    modId="simpleores"
+    mandatory=true
+    versionRange="[1.15.2,]"
+    ordering="NONE"
+    side="BOTH"
+    
+[[dependencies.aesthetics]]
+    modId="netherrocks"
+    mandatory=false
+    versionRange="[1.15.2,]"
+    ordering="BEFORE"
+    side="BOTH"
+
+[[dependencies.aesthetics]]
+    modId="fusion"
+    mandatory=false
+    versionRange="[1.15.2,]"
+    ordering="BEFORE"
+    side="BOTH"
+    
