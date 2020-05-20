@@ -1,0 +1,85 @@
+{
+    "_comment": "Minecraft Blocks",
+    "block.aesthetics.iron_bricks": "Brique en Fer",
+    "block.aesthetics.gold_bricks": "Brique en Or",
+    "block.aesthetics.diamond_bricks": "Brique en Diamant",
+
+    "block.aesthetics.iron_brick_stairs": "Escalier en Brique de Fer",
+    "block.aesthetics.gold_brick_stairs": "Escalier en Brique d'Or",
+    "block.aesthetics.diamond_brick_stairs": "Escalier en Brique de Diamant",
+
+    "_comment": "SimpleOres Blocks",
+    "block.aesthetics.copper_bricks": "Brique en Cuivre",
+    "block.aesthetics.tin_bricks": "Brique en Étain",
+    "block.aesthetics.mythril_bricks": "Brique en Mythril",
+    "block.aesthetics.adamantium_bricks": "Brique en Adamantium",
+    "block.aesthetics.onyx_bricks": "Brique en Onyx",
+
+    "block.aesthetics.copper_brick_stairs": "Escalier en Brique de Cuivre",
+    "block.aesthetics.tin_brick_stairs": "Escalier en Brique d'Étain",
+    "block.aesthetics.mythril_brick_stairs": "Escalier en Brique de Mythril",
+    "block.aesthetics.adamantium_brick_stairs": "Escalier en Brique d'Adamantium",
+    "block.aesthetics.onyx_brick_stairs": "Escalier en Brique d'Onyx",
+
+    "block.aesthetics.copper_bars": "Barreaux de Cuivre",
+    "block.aesthetics.tin_bars": "Barreaux d'Étain",
+    "block.aesthetics.mythril_bars": "Barreaux de Mythril",
+    "block.aesthetics.adamantium_bars": "Barreaux d'Adamantium",
+    "block.aesthetics.onyx_bars": "Barreaux d'Onyx",
+
+    "_comment": "SimpleOres Items",
+    "item.aesthetics.adamantium_door": "Porte en Adamantium",
+    "item.aesthetics.copper_door": "Porte en Cuivre",
+    "item.aesthetics.mythril_door": "Porte en Mythril",
+    "item.aesthetics.onyx_door": "Porte en Onyx",
+    "item.aesthetics.tin_door": "Porte en Étain",
+
+    "_comment": "Fusion Blocks",
+    "block.aesthetics.steel_bricks": "Brique en Acier",
+    "block.aesthetics.bronze_bricks": "Brique en Bronze",
+    "block.aesthetics.thyrium_bricks": "Brique en Thyrium",
+    "block.aesthetics.sinisite_bricks": "Brique en Sinisite",
+
+    "block.aesthetics.steel_brick_stairs": "Escalier en Brique d'Acier",
+    "block.aesthetics.bronze_brick_stairs": "Escalier en Brique de Bronze",
+    "block.aesthetics.thyrium_brick_stairs": "Escalier en Brique de Thyrium",
+    "block.aesthetics.sinisite_brick_stairs": "Escalier en Brique de Sinisite",
+
+    "block.aesthetics.steel_bars": "Barreaux d'Acier",
+    "block.aesthetics.bronze_bars": "Barreaux de Bronze",
+    "block.aesthetics.thyrium_bars": "Barreaux de Thyrium",
+    "block.aesthetics.sinisite_bars": "Barreaux de Sinisite",
+
+    "_comment": "Fusion Items",
+    "item.aesthetics.bronze_door": "Porte en Bronze",
+
+    "_comment": "Netherrocks Blocks",
+    "block.aesthetics.fyrite_bricks": "Brique de Fyrite",
+    "block.aesthetics.malachite_bricks": "Brique de Malachite",
+    "block.aesthetics.ashstone_bricks": "Brique d'Ashstone",
+    "block.aesthetics.illumenite_bricks": "Brique d'Illumenite",
+    "block.aesthetics.dragonstone_bricks": "Brique de Dragonstone",
+    "block.aesthetics.argonite_bricks": "Brique d'Argonite",
+
+    "block.aesthetics.fyrite_brick_stairs": "Escalier en Brique de Fyrite",
+    "block.aesthetics.malachite_brick_stairs": "Escalier en Brique de Malachite",
+    "block.aesthetics.ashstone_brick_stairs": "Escalier en Brique d'Ashstone",
+    "block.aesthetics.illumenite_brick_stairs": "Escalier en Brique d'Illumenite",
+    "block.aesthetics.dragonstone_brick_stairs": "Escalier en Brique de Dragonstone",
+    "block.aesthetics.argonite_brick_stairs": "Escalier en Brique d'Argonite",
+
+    "block.aesthetics.fyrite_bars": "Barreaux de Fyrite",
+    "block.aesthetics.malachite_bars": "Barreaux de Malachite",
+    "block.aesthetics.ashstone_bars": "Barreaux d'Ashstone",
+    "block.aesthetics.illumenite_bars": "Barreaux d'Illumenite",
+    "block.aesthetics.dragonstone_bars": "Barreaux de Dragonstone",
+    "block.aesthetics.argonite_bars": "Barreaux d'Argonite",
+
+    "_comment": "Netherrocks Items",
+    "item.aesthetics.argonite_door": "Porte en Argonite",
+    "item.aesthetics.ashstone_door": "Porte en Ashstone",
+    "item.aesthetics.dragonstone_door": "Porte en Dragonstone",
+    "item.aesthetics.fyrite_door": "Porte en Fyrite",
+    "item.aesthetics.illumenite_door": "Porte en Illumenite",
+    "item.aesthetics.malachite_door": "Porte en Malachite"
+}
