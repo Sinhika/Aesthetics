@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/onyx_bars",
-        "bars": "aesthetics:blocks/onyx_bars",
-        "edge": "aesthetics:blocks/onyx_bars"
+        "particle": "aesthetics:block/onyx_bars",
+        "bars": "aesthetics:block/onyx_bars",
+        "edge": "aesthetics:block/onyx_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

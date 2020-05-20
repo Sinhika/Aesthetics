@@ -1,7 +1,7 @@
 {
     "parent": "block/door_bottom_rh",
     "textures": {
-        "bottom": "aesthetics:blocks/fyrite_door_lower",
-        "top": "aesthetics:blocks/fyrite_door_upper"
+        "bottom": "aesthetics:block/fyrite_door_lower",
+        "top": "aesthetics:block/fyrite_door_upper"
     }
 }

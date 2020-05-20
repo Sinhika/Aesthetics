@@ -1,7 +1,7 @@
 {
     "parent": "block/door_bottom",
     "textures": {
-        "bottom": "aesthetics:blocks/bronze_door_lower",
-        "top": "aesthetics:blocks/bronze_door_upper"
+        "bottom": "aesthetics:block/bronze_door_lower",
+        "top": "aesthetics:block/bronze_door_upper"
     }
 }

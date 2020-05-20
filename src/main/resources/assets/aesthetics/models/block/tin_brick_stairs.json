@@ -1,8 +1,8 @@
 {
     "parent": "block/stairs",
     "textures": {
-        "bottom": "aesthetics:blocks/tin_bricks",
-        "top": "aesthetics:blocks/tin_bricks",
-        "side": "aesthetics:blocks/tin_bricks"
+        "bottom": "aesthetics:block/tin_bricks",
+        "top": "aesthetics:block/tin_bricks",
+        "side": "aesthetics:block/tin_bricks"
     }
 }

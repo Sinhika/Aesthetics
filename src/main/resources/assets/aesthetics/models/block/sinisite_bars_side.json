@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/sinisite_bars",
-        "bars": "aesthetics:blocks/sinisite_bars",
-        "edge": "aesthetics:blocks/sinisite_bars"
+        "particle": "aesthetics:block/sinisite_bars",
+        "bars": "aesthetics:block/sinisite_bars",
+        "edge": "aesthetics:block/sinisite_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],

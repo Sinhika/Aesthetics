@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/tin_bars",
-        "bars": "aesthetics:blocks/tin_bars"
+        "particle": "aesthetics:block/tin_bars",
+        "bars": "aesthetics:block/tin_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

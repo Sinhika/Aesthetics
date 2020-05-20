@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/thyrium_bars",
-        "bars": "aesthetics:blocks/thyrium_bars",
-        "edge": "aesthetics:blocks/thyrium_bars"
+        "particle": "aesthetics:block/thyrium_bars",
+        "bars": "aesthetics:block/thyrium_bars",
+        "edge": "aesthetics:block/thyrium_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

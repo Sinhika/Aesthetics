@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/mythril_bars",
-        "edge": "aesthetics:blocks/mythril_bars"
+        "particle": "aesthetics:block/mythril_bars",
+        "edge": "aesthetics:block/mythril_bars"
     },
     "elements": [
         {   "from": [ 7, 0.001, 7 ],

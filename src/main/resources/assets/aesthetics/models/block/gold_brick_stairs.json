@@ -1,8 +1,8 @@
 {
     "parent": "block/stairs",
     "textures": {
-        "bottom": "aesthetics:blocks/gold_bricks",
-        "top": "aesthetics:blocks/gold_bricks",
-        "side": "aesthetics:blocks/gold_bricks"
+        "bottom": "aesthetics:block/gold_bricks",
+        "top": "aesthetics:block/gold_bricks",
+        "side": "aesthetics:block/gold_bricks"
     }
 }

@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/steel_bars",
-        "bars": "aesthetics:blocks/steel_bars",
-        "edge": "aesthetics:blocks/steel_bars"
+        "particle": "aesthetics:block/steel_bars",
+        "bars": "aesthetics:block/steel_bars",
+        "edge": "aesthetics:block/steel_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 0 ],

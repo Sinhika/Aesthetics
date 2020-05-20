@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/ashstone_bars",
-        "bars": "aesthetics:blocks/ashstone_bars",
-        "edge": "aesthetics:blocks/ashstone_bars"
+        "particle": "aesthetics:block/ashstone_bars",
+        "bars": "aesthetics:block/ashstone_bars",
+        "edge": "aesthetics:block/ashstone_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

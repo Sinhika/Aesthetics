@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/fyrite_bars",
-        "bars": "aesthetics:blocks/fyrite_bars"
+        "particle": "aesthetics:block/fyrite_bars",
+        "bars": "aesthetics:block/fyrite_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

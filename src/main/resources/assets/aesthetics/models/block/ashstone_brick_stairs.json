@@ -1,8 +1,8 @@
 {
     "parent": "block/stairs",
     "textures": {
-        "bottom": "aesthetics:blocks/ashstone_bricks",
-        "top": "aesthetics:blocks/ashstone_bricks",
-        "side": "aesthetics:blocks/ashstone_bricks"
+        "bottom": "aesthetics:block/ashstone_bricks",
+        "top": "aesthetics:block/ashstone_bricks",
+        "side": "aesthetics:block/ashstone_bricks"
     }
 }

@@ -1,7 +1,7 @@
 {
     "parent": "block/door_bottom",
     "textures": {
-        "bottom": "aesthetics:blocks/dragonstone_door_lower",
-        "top": "aesthetics:blocks/dragonstone_door_upper"
+        "bottom": "aesthetics:block/dragonstone_door_lower",
+        "top": "aesthetics:block/dragonstone_door_upper"
     }
 }

@@ -1,8 +1,8 @@
 {
     "parent": "block/outer_stairs",
     "textures": {
-        "bottom": "aesthetics:blocks/sinisite_bricks",
-        "top": "aesthetics:blocks/sinisite_bricks",
-        "side": "aesthetics:blocks/sinisite_bricks"
+        "bottom": "aesthetics:block/sinisite_bricks",
+        "top": "aesthetics:block/sinisite_bricks",
+        "side": "aesthetics:block/sinisite_bricks"
     }
 }

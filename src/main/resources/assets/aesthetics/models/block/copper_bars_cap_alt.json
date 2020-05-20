@@ -1,9 +1,9 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/copper_bars",
-        "bars": "aesthetics:blocks/copper_bars",
-        "edge": "aesthetics:blocks/copper_bars"
+        "particle": "aesthetics:block/copper_bars",
+        "bars": "aesthetics:block/copper_bars",
+        "edge": "aesthetics:block/copper_bars"
     },
     "elements": [
         {   "from": [ 8, 0, 7 ],

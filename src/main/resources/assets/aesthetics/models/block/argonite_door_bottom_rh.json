@@ -1,7 +1,7 @@
 {
     "parent": "block/door_bottom_rh",
     "textures": {
-        "bottom": "aesthetics:blocks/argonite_door_lower",
-        "top": "aesthetics:blocks/argonite_door_upper"
+        "bottom": "aesthetics:block/argonite_door_lower",
+        "top": "aesthetics:block/argonite_door_upper"
     }
 }

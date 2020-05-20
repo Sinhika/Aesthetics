@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "aesthetics:blocks/illumenite_bars",
-        "edge": "aesthetics:blocks/illumenite_bars"
+        "particle": "aesthetics:block/illumenite_bars",
+        "edge": "aesthetics:block/illumenite_bars"
     },
     "elements": [
         {   "from": [ 7, 0.001, 7 ],

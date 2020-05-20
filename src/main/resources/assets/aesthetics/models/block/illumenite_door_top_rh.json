@@ -1,7 +1,7 @@
 {
     "parent": "block/door_top_rh",
     "textures": {
-        "bottom": "aesthetics:blocks/illumenite_door_lower",
-        "top": "aesthetics:blocks/illumenite_door_upper"
+        "bottom": "aesthetics:block/illumenite_door_lower",
+        "top": "aesthetics:block/illumenite_door_upper"
     }
 }
