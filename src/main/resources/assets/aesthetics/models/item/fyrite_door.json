@@ -1,6 +1,3 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "aesthetics:items/fyrite_door"
-    }
+	"parent": "block/aesthetics:fyrite_door"
 }

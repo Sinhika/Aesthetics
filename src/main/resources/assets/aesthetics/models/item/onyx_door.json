@@ -1,6 +1,3 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "aesthetics:items/onyx_door"
-    }
+	"parent": "block/aesthetics:onyx_door"
 }
