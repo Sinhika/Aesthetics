@@ -1,8 +1,8 @@
 {
 	"conditions" : [
 		{
-			"type" : "aesthetics:simpleores_bars_enabled",
-			"value" : true
+			"type" : "aesthetics:flag",
+			"flag" : "simpleores_enabled"		
 		}
 	],
 	"result" : {
@@ -13,8 +13,8 @@
 		"XXX", 
 		"XXX"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"X" : { "item" : "#INGOTCOPPER"}
+		"X" : { "tag" : "forge:ingots/copper"}
 	}
 }

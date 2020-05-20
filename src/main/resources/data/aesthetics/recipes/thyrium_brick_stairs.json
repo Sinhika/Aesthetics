@@ -1,20 +1,8 @@
 {
 	"conditions" : [
 		{
-			"type" : "aesthetics:fusion_bricks_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:fusion_brick_stairs_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:fusion_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:simpleores_enabled",
-			"value" : true
+			"type" : "aesthetics:flag",
+			"flag" : "fusion_enabled"		
 		}
 	],
 	"result" : {
@@ -26,7 +14,7 @@
 		"XX ", 
 		"XXX"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
 		"X" : { "item" : "aesthetics:thyrium_bricks"}
 	}

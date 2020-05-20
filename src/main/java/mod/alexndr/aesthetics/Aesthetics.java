@@ -3,8 +3,12 @@ package mod.alexndr.aesthetics;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.alexndr.aesthetics.config.AestheticsConfig;
 import mod.alexndr.aesthetics.config.ConfigHolder;
 import mod.alexndr.aesthetics.init.ModBlocks;
+import mod.alexndr.simpleores.api.config.FlagCondition;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +33,8 @@ public class Aesthetics
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);
         modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
+        CraftingHelper.register(new FlagCondition.Serializer(AestheticsConfig.INSTANCE, 
+                                                new ResourceLocation(Aesthetics.MODID, "flag")));
     } // end ctor()
 
     

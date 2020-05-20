@@ -1,8 +1,8 @@
 {
 	"conditions" : [
 		{
-			"type" : "aesthetics:fusion_bars_enabled",
-			"value" : true
+			"type" : "aesthetics:flag",
+			"flag" : "fusion_enabled"		
 		}
 	],
 	"result" : {
@@ -13,8 +13,8 @@
 		"XXX", 
 		"XXX"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"X" : { "item" : "#INGOTSTEEL"}
+		"X" : { "tag" : "forge:ingots/steel"}
 	}
 }

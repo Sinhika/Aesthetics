@@ -1,16 +1,8 @@
 {
 	"conditions" : [
 		{
-			"type" : "aesthetics:netherrocks_bricks_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:netherrocks_brick_stairs_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:netherrocks_enabled",
-			"value" : true
+			"type" : "aesthetics:flag",
+			"flag" : "netherrocks_enabled"		
 		}
 	],
 	"result" : {
@@ -22,7 +14,7 @@
 		"XX ", 
 		"XXX"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
 		"X" : { "item" : "aesthetics:illumenite_bricks"}
 	}

@@ -1,12 +1,8 @@
 {
 	"conditions" : [
 		{
-			"type" : "aesthetics:simpleores_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:simpleores_doors_enabled",
-			"value" : true
+			"type" : "aesthetics:flag",
+			"flag" : "simpleores_enabled"		
 		}
 	],
 	"result" : {
@@ -18,8 +14,8 @@
 		" XX", 
 		" XX"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"X" : { "item" : "#INGOTMYTHRIL"}
+		"X" : { "tag" : "forge:ingots/mythril"}
 	}
 }

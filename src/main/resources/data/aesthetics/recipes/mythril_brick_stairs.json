@@ -1,16 +1,8 @@
 {
 	"conditions" : [
 		{
-			"type" : "aesthetics:simpleores_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:simpleores_bricks_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:simpleores_brick_stairs_enabled",
-			"value" : true
+			"type" : "aesthetics:flag",
+			"flag" : "simpleores_enabled"		
 		}
 	],
 	"result" : {
@@ -22,7 +14,7 @@
 		"XX ", 
 		"XXX"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
 		"X" : { "item" : "aesthetics:mythril_bricks"}
 	}

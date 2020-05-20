@@ -1,12 +1,8 @@
 {
 	"conditions" : [
 		{
-			"type" : "aesthetics:netherrocks_enabled",
-			"value" : true
-		},
-		{
-			"type" : "aesthetics:netherrocks_bars_enabled",
-			"value" : true
+			"type" : "aesthetics:flag",
+			"flag" : "netherrocks_enabled"		
 		}
 	],
 	"result" : {
@@ -16,8 +12,8 @@
 		"XXX", 
 		"XXX"
 	],
-	"type" : "forge:ore_shaped",
+	"type" : "minecraft:crafting_shaped",
 	"key" : {
-		"X" : { "item" : "#INGOTMALACHITE"}
+		"X" : { "tag" : "forge:ingots/malachite"}
 	}
 }
