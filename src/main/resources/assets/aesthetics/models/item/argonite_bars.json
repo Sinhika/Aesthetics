@@ -1,3 +1,6 @@
 {
-	"parent": "aesthetics:block/argonite_bars"
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "aesthetics:block/argonite_bars"
+    }
 }

@@ -1,3 +1,6 @@
 {
-	"parent": "aesthetics:block/illumenite_bars"
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "aesthetics:block/illumenite_bars"
+    }
 }

@@ -1,3 +1,6 @@
 {
-	"parent": "aesthetics:block/mythril_bars"
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "aesthetics:block/mythril_bars"
+    }
 }

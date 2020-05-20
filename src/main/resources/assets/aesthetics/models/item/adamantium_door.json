@@ -1,3 +1,7 @@
 {
-	"parent": "aesthetics:block/adamantium_door"
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "aesthetics:item/adamantium_door"
+    }
 }
+
