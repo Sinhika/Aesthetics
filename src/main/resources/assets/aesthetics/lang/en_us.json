@@ -29,12 +29,11 @@
     "block.aesthetics.adamantium_bars": "Adamantium Bars",
     "block.aesthetics.onyx_bars": "Onyx Bars",
 
-    "_comment": "SimpleOres Items",
-    "item.aesthetics.adamantium_door": "Adamantium Door",
-    "item.aesthetics.copper_door": "Copper Door",
-    "item.aesthetics.mythril_door": "Mythril Door",
-    "item.aesthetics.onyx_door": "Onyx Door",
-    "item.aesthetics.tin_door": "Tin Door",
+    "block.aesthetics.adamantium_door": "Adamantium Door",
+    "block.aesthetics.copper_door": "Copper Door",
+    "block.aesthetics.mythril_door": "Mythril Door",
+    "block.aesthetics.onyx_door": "Onyx Door",
+    "block.aesthetics.tin_door": "Tin Door",
 
     "_comment": "Fusion Blocks",
     "block.aesthetics.steel_bricks": "Steel Bricks",
@@ -52,8 +51,7 @@
     "block.aesthetics.thyrium_bars": "Thyrium Bars",
     "block.aesthetics.sinisite_bars": "Sinisite Bars",
 
-    "_comment": "Fusion Items",
-    "item.aesthetics.bronze_door": "Bronze Door",
+    "block.aesthetics.bronze_door": "Bronze Door",
 
     "_comment": "Netherrocks Blocks",
     "block.aesthetics.fyrite_bricks": "Fyrite Bricks",
@@ -77,11 +75,10 @@
     "block.aesthetics.dragonstone_bars": "Dragonstone Bars",
     "block.aesthetics.argonite_bars": "Argonite Bars",
 
-    "_comment": "Netherrocks Items",
-    "item.aesthetics.argonite_door": "Argonite Door",
-    "item.aesthetics.ashstone_door": "Ashstone Door",
-    "item.aesthetics.dragonstone_door": "Dragonstone Door",
-    "item.aesthetics.fyrite_door": "Fyrite Door",
-    "item.aesthetics.illumenite_door": "Illumenite Door",
-    "item.aesthetics.malachite_door": "Malachite Door"
+    "block.aesthetics.argonite_door": "Argonite Door",
+    "block.aesthetics.ashstone_door": "Ashstone Door",
+    "block.aesthetics.dragonstone_door": "Dragonstone Door",
+    "block.aesthetics.fyrite_door": "Fyrite Door",
+    "block.aesthetics.illumenite_door": "Illumenite Door",
+    "block.aesthetics.malachite_door": "Malachite Door"
 }

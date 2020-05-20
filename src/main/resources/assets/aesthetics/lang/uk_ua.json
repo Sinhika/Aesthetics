@@ -27,12 +27,11 @@
     "block.aesthetics.adamantium_bars": "Адамантові грати",
     "block.aesthetics.onyx_bars": "Оніксові грати",
 
-    "_comment": "SimpleOres Items",
-    "item.aesthetics.adamantium_door": "Адамантові двері",
-    "item.aesthetics.copper_door": "Мідні двері",
-    "item.aesthetics.mythril_door": "Міфрилові двері",
-    "item.aesthetics.onyx_door": "Оніксові двері",
-    "item.aesthetics.tin_door": "Олов'яні двері",
+    "block.aesthetics.adamantium_door": "Адамантові двері",
+    "block.aesthetics.copper_door": "Мідні двері",
+    "block.aesthetics.mythril_door": "Міфрилові двері",
+    "block.aesthetics.onyx_door": "Оніксові двері",
+    "block.aesthetics.tin_door": "Олов'яні двері",
 
     "_comment": "Fusion Blocks",
     "block.aesthetics.steel_bricks": "Сталева цегла",
@@ -50,8 +49,7 @@
     "block.aesthetics.thyrium_bars": "Туріомові грати",
     "block.aesthetics.sinisite_bars": "Синіситові грати",
 
-    "_comment": "Fusion Items",
-    "item.aesthetics.bronze_door": "Бронзові двері",
+    "block.aesthetics.bronze_door": "Бронзові двері",
 
     "_comment": "Netherrocks Blocks",
     "block.aesthetics.fyrite_bricks": "Фейритова цегла Bricks",
@@ -75,11 +73,10 @@
     "block.aesthetics.dragonstone_bars": "Драконітові грати",
     "block.aesthetics.argonite_bars": "Аргонітові грати",
 
-    "_comment": "Netherrocks Items",
-    "item.aesthetics.argonite_door": "Аргонітові двері",
-    "item.aesthetics.ashstone_door": "вулканічні двері",
-    "item.aesthetics.dragonstone_door": "Драконітові двері",
-    "item.aesthetics.fyrite_door": "Фейрітові двері",
-    "item.aesthetics.illumenite_door": "Ілюменітові двері",
-    "item.aesthetics.malachite_door": "Малахітові двері"
+    "block.aesthetics.argonite_door": "Аргонітові двері",
+    "block.aesthetics.ashstone_door": "вулканічні двері",
+    "block.aesthetics.dragonstone_door": "Драконітові двері",
+    "block.aesthetics.fyrite_door": "Фейрітові двері",
+    "block.aesthetics.illumenite_door": "Ілюменітові двері",
+    "block.aesthetics.malachite_door": "Малахітові двері"
 }

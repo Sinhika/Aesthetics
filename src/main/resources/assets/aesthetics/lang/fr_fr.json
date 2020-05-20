@@ -27,12 +27,11 @@
     "block.aesthetics.adamantium_bars": "Barreaux d'Adamantium",
     "block.aesthetics.onyx_bars": "Barreaux d'Onyx",
 
-    "_comment": "SimpleOres Items",
-    "item.aesthetics.adamantium_door": "Porte en Adamantium",
-    "item.aesthetics.copper_door": "Porte en Cuivre",
-    "item.aesthetics.mythril_door": "Porte en Mythril",
-    "item.aesthetics.onyx_door": "Porte en Onyx",
-    "item.aesthetics.tin_door": "Porte en Étain",
+    "block.aesthetics.adamantium_door": "Porte en Adamantium",
+    "block.aesthetics.copper_door": "Porte en Cuivre",
+    "block.aesthetics.mythril_door": "Porte en Mythril",
+    "block.aesthetics.onyx_door": "Porte en Onyx",
+    "block.aesthetics.tin_door": "Porte en Étain",
 
     "_comment": "Fusion Blocks",
     "block.aesthetics.steel_bricks": "Brique en Acier",
@@ -50,8 +49,7 @@
     "block.aesthetics.thyrium_bars": "Barreaux de Thyrium",
     "block.aesthetics.sinisite_bars": "Barreaux de Sinisite",
 
-    "_comment": "Fusion Items",
-    "item.aesthetics.bronze_door": "Porte en Bronze",
+    "block.aesthetics.bronze_door": "Porte en Bronze",
 
     "_comment": "Netherrocks Blocks",
     "block.aesthetics.fyrite_bricks": "Brique de Fyrite",
@@ -75,11 +73,10 @@
     "block.aesthetics.dragonstone_bars": "Barreaux de Dragonstone",
     "block.aesthetics.argonite_bars": "Barreaux d'Argonite",
 
-    "_comment": "Netherrocks Items",
-    "item.aesthetics.argonite_door": "Porte en Argonite",
-    "item.aesthetics.ashstone_door": "Porte en Ashstone",
-    "item.aesthetics.dragonstone_door": "Porte en Dragonstone",
-    "item.aesthetics.fyrite_door": "Porte en Fyrite",
-    "item.aesthetics.illumenite_door": "Porte en Illumenite",
-    "item.aesthetics.malachite_door": "Porte en Malachite"
+    "block.aesthetics.argonite_door": "Porte en Argonite",
+    "block.aesthetics.ashstone_door": "Porte en Ashstone",
+    "block.aesthetics.dragonstone_door": "Porte en Dragonstone",
+    "block.aesthetics.fyrite_door": "Porte en Fyrite",
+    "block.aesthetics.illumenite_door": "Porte en Illumenite",
+    "block.aesthetics.malachite_door": "Porte en Malachite"
 }
