@@ -14,8 +14,7 @@
 			"conditions": {
 				"items": [
 					{
-						"type": "forge:ore_dict",
-						"ore": "gemAshstone"
+					"tag": "forge:gems/ashstone"
 					}
 				]
 			}

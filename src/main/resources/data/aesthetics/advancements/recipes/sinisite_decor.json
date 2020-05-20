@@ -13,8 +13,7 @@
 			"conditions": {
 				"items": [
 					{
-						"type": "forge:ore_dict",
-						"ore": "ingotSinisite"
+						"tag": "forge:ingots/sinisite"
 					}
 				]
 			}

@@ -13,8 +13,7 @@
 			"conditions": {
 				"items": [
 					{
-						"type": "forge:ore_dict",
-						"ore": "ingotThyrium"
+						"tag": "forge:ingots/thyrium"
 					}
 				]
 			}
