@@ -2,15 +2,22 @@ package mod.alexndr.aesthetics;
 
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
+import javax.annotation.Nonnull;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.alexndr.aesthetics.config.AestheticsConfig;
 import mod.alexndr.aesthetics.config.ConfigHelper;
 import mod.alexndr.aesthetics.config.ConfigHolder;
 import mod.alexndr.aesthetics.init.ModBlocks;
 import mod.alexndr.aesthetics.init.ModItemGroups;
+import mod.alexndr.simpleores.api.config.FlagCondition;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -78,5 +85,13 @@ public final class ModEventSubscriber
             ConfigHelper.bakeServer(config);
         }
 	} // onModConfigEvent
-	
+
+    @SubscribeEvent
+    public static void onRegisterRecipeSerializers(
+            @Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
+    {
+        CraftingHelper.register(new FlagCondition.Serializer(AestheticsConfig.INSTANCE, 
+                new ResourceLocation(Aesthetics.MODID, "flag")));
+    } // end registerRecipeSerializers
+
 } // end class ModEventSubscriber
