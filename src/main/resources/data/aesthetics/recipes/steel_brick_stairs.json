@@ -2,7 +2,7 @@
 	"conditions" : [
 		{
 			"type" : "aesthetics:flag",
-			"flag" : "fusion_enabled"		
+			"flag" : "steel_enabled"		
 		}
 	],
 	"result" : {

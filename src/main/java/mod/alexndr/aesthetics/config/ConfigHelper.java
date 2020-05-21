@@ -23,6 +23,13 @@ public final class ConfigHelper
         val = ConfigHolder.SERVER.serverEnableFusionBlocks.get() 
                 && ModList.get().isLoaded("fusion");
         AestheticsConfig.INSTANCE.putFlag("fusion_enabled", val);
+        
+        /* Note: allows Steel & Bronze if some other mod provides the ingredients */
+        AestheticsConfig.INSTANCE.putFlag("bronze_enabled", 
+                                          ConfigHolder.SERVER.serverEnableBronzeBlocks.get());
+        AestheticsConfig.INSTANCE.putFlag("steel_enabled", 
+                                           ConfigHolder.SERVER.serverEnableSteelBlocks.get());
+
     } // end bakeServer()
 
 } // end class

@@ -9,6 +9,8 @@ public final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnableSimpleOresBlocks;
     final ForgeConfigSpec.BooleanValue serverEnableNetherrocksBlocks;
     final ForgeConfigSpec.BooleanValue serverEnableFusionBlocks;
+    final ForgeConfigSpec.BooleanValue serverEnableSteelBlocks;
+    final ForgeConfigSpec.BooleanValue serverEnableBronzeBlocks;
 
     ServerConfig(final ForgeConfigSpec.Builder builder)
     {
@@ -25,6 +27,16 @@ public final class ServerConfig
         serverEnableFusionBlocks = builder.comment("Enable Fusion aesthetic blocks?")
                 .translation(Aesthetics.MODID + "config.EnableFusionBlocks")
                 .define("EnableFusionBlocks", true);
+        builder.pop();
+        builder.push("Blocks whose ingredients may come from other mods");
+        serverEnableSteelBlocks = 
+                builder.comment("Enable/disable steel blocks regardless of Fusion setting?")
+                .translation(Aesthetics.MODID + "config.EnableSteelBlocks")
+                .define("EnableSteelBlocks", true);
+        serverEnableBronzeBlocks = 
+                builder.comment("Enable/disable bronze blocks regardless of Fusion setting?")
+                .translation(Aesthetics.MODID + "config.EnableBronzeBlocks")
+                .define("EnableBronzeBlocks", true);
         builder.pop();
     } // end ctor
     
