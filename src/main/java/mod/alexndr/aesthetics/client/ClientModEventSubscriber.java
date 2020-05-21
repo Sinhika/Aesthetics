@@ -1,9 +1,6 @@
 package mod.alexndr.aesthetics.client;
 
 import mod.alexndr.aesthetics.Aesthetics;
-import mod.alexndr.aesthetics.init.ModBlocks;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -29,63 +26,64 @@ public final class ClientModEventSubscriber
     public static void onFMLClientSetupEvent(final FMLClientSetupEvent event) 
     {
         // doors with see-through windows.
-        RenderTypeLookup.setRenderLayer(ModBlocks.adamantium_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.copper_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.tin_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.onyx_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.mythril_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.argonite_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.ashstone_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.dragonstone_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.fyrite_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.illumenite_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.malachite_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.bronze_door.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        
-        // bars, which are see-through between the bars, obviously.
-        RenderTypeLookup.setRenderLayer(ModBlocks.copper_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.tin_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.onyx_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.adamantium_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.mythril_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.argonite_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.ashstone_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.dragonstone_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.fyrite_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.illumenite_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.malachite_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.bronze_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.sinisite_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.steel_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.thyrium_bars.get(), (layer) -> layer 
-                == RenderType.getCutout());
-    
+		/*
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.adamantium_door.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.copper_door.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.tin_door.get(), (layer) -> layer ==
+		 * RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.onyx_door.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.mythril_door.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.argonite_door.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.ashstone_door.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.dragonstone_door.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.fyrite_door.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.illumenite_door.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.malachite_door.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.bronze_door.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * 
+		 * // bars, which are see-through between the bars, obviously.
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.copper_bars.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.tin_bars.get(), (layer) -> layer ==
+		 * RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.onyx_bars.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.adamantium_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.mythril_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.argonite_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.ashstone_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.dragonstone_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.fyrite_bars.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.illumenite_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.malachite_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.bronze_bars.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.sinisite_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.steel_bars.get(), (layer) -> layer
+		 * == RenderType.getCutout());
+		 * RenderTypeLookup.setRenderLayer(ModBlocks.thyrium_bars.get(), (layer) ->
+		 * layer == RenderType.getCutout());
+		 */    
     } // end onFMLClientSetupEvent
 
 } // end class

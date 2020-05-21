@@ -169,83 +169,83 @@ public final class ModBlocks
     // Blocks - doors - simpleores
     // NB: using the shortcut that the bricks have the same properties as the metal blocks.
     public static RegistryObject<SimpleDoor> copper_door = BLOCKS.register("copper_door",
-            () -> new SimpleDoor(Block.Properties.from(copper_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(copper_bricks.get())));
     public static RegistryObject<SimpleDoor> tin_door = BLOCKS.register("tin_door",
-            () -> new SimpleDoor(Block.Properties.from(tin_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(tin_bricks.get())));
     public static RegistryObject<SimpleDoor> adamantium_door = BLOCKS.register("adamantium_door",
-            () -> new SimpleDoor(Block.Properties.from(adamantium_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(adamantium_bricks.get())));
     public static RegistryObject<SimpleDoor> onyx_door = BLOCKS.register("onyx_door",
-            () -> new SimpleDoor(Block.Properties.from(onyx_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(onyx_bricks.get())));
     public static RegistryObject<SimpleDoor> mythril_door = BLOCKS.register("mythril_door",
-            () -> new SimpleDoor(Block.Properties.from(mythril_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(mythril_bricks.get())));
    
     // Blocks - doors - netherrocks
     public static RegistryObject<SimpleDoor> argonite_door = BLOCKS.register("argonite_door",
-            () -> new SimpleDoor(Block.Properties.from(argonite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(argonite_bricks.get())));
     public static RegistryObject<SimpleDoor> ashstone_door = BLOCKS.register("ashstone_door",
-            () -> new SimpleDoor(Block.Properties.from(ashstone_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(ashstone_bricks.get())));
     public static RegistryObject<SimpleDoor> dragonstone_door = BLOCKS.register("dragonstone_door",
-            () -> new SimpleDoor(Block.Properties.from(dragonstone_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(dragonstone_bricks.get())));
     public static RegistryObject<SimpleDoor> fyrite_door = BLOCKS.register("fyrite_door",
-            () -> new SimpleDoor(Block.Properties.from(fyrite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(fyrite_bricks.get())));
     public static RegistryObject<SimpleDoor> illumenite_door = BLOCKS.register("illumenite_door",
-            () -> new SimpleDoor(Block.Properties.from(illumenite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(illumenite_bricks.get())));
     public static RegistryObject<SimpleDoor> malachite_door = BLOCKS.register("malachite_door",
-            () -> new SimpleDoor(Block.Properties.from(malachite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(malachite_bricks.get())));
    
     // Blocks - doors - fusion
     public static RegistryObject<SimpleDoor> bronze_door = BLOCKS.register("bronze_door",
-            () -> new SimpleDoor(Block.Properties.from(bronze_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.from(bronze_bricks.get())));
     
     // Blocks - bars - simpleores
     public static RegistryObject<SimpleBars> copper_bars = BLOCKS.register("copper_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(3.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(3.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> tin_bars = BLOCKS.register("tin_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(4.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(4.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> onyx_bars = BLOCKS.register("onyx_bars",
             () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(20.0F).sound(SoundType.STONE).notSolid()));
+                    .hardnessAndResistance(20.0F).sound(SoundType.STONE)));
     public static RegistryObject<SimpleBars> adamantium_bars = BLOCKS.register("adamantium_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> mythril_bars = BLOCKS.register("mythril_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL)));
     
     // Blocks - bars - netherrocks
     public static RegistryObject<SimpleBars> argonite_bars = BLOCKS.register("argonite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> ashstone_bars = BLOCKS.register("ashstone_bars",
             () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.STONE).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.STONE)));
     public static RegistryObject<SimpleBars> dragonstone_bars = BLOCKS.register("dragonstone_bars",
             () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(10.0F).sound(SoundType.STONE).notSolid()));
+                    .hardnessAndResistance(10.0F).sound(SoundType.STONE)));
     public static RegistryObject<SimpleBars> fyrite_bars = BLOCKS.register("fyrite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> illumenite_bars = BLOCKS.register("illumenite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid().lightValue(14)));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).lightValue(14)));
     public static RegistryObject<SimpleBars> malachite_bars = BLOCKS.register("malachite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL)));
    
     // Blocks - bars - fusion
     public static RegistryObject<SimpleBars> bronze_bars = BLOCKS.register("bronze_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(5.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(5.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> sinisite_bars = BLOCKS.register("sinisite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(10.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(10.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> steel_bars = BLOCKS.register("steel_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL)));
     public static RegistryObject<SimpleBars> thyrium_bars = BLOCKS.register("thyrium_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).sound(SoundType.METAL)));
 
 } // end-class
