@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name" : "fusion:droppool",
+      "name" : "aesthetics:droppool",
       "rolls": 1,
       "entries": [
         {
