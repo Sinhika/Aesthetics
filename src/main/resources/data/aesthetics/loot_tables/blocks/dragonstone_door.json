@@ -1,20 +1,29 @@
 {
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "name" : "aesthetics:droppool",
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "aesthetics:copper_door"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"name": "aesthetics:droppool",
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"conditions": [
+						{
+							"condition": "minecraft:block_state_property",
+							"block": "aesthetics:dragonstone_door",
+							"properties": {
+								"half": "lower"
+							}
+						}
+					],
+					"name": "aesthetics:dragonstone_door"
+				}
+			],
+			"conditions": [
+				{
+					"condition": "minecraft:survives_explosion"
+				}
+			]
+		}
+	]
 }
