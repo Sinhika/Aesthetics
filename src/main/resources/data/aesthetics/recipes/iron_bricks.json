@@ -9,8 +9,9 @@
 		"item" : "aesthetics:iron_bricks"
 	},
 	"pattern" : [
-		"XX", 
-		"XX"
+		"X X", 
+		"   ",
+		"X X"
 	],
 	"type" : "minecraft:crafting_shaped",
 	"key" : {
