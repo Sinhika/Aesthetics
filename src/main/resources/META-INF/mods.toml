@@ -15,8 +15,10 @@ updateJSONURL="https://raw.githubusercontent.com/Sinhika/Aesthetics/1.15/update.
 displayURL="http://minecraft.curseforge.com/projects/aesthetics"
 credits="Created by AleXndrTheGr8st, maintained by Sinhika"
 authors="AleXndrTheGr8st, Sinhika"
-description='''An add-on for SimpleOres2 that adds decorative blocks such as bricks, doors, stairs.
+description='''An add-on for SimpleOres2 that adds decorative blocks such as bars, bricks, doors, stairs.
 Also supports Netherrocks and Fusion metals.
+
+Additional Credits: burunduk (Ukranian translation), Unknown (French)
 '''
 
 [[dependencies.aesthetics]] #optional
