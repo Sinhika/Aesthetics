@@ -2,6 +2,11 @@
 
 Repository for Aesthetics plugin for Simple Ores, by AlexndrGr8st and Sinhika
 
+TODO List
+---------
+* add trapdoors
+* add pressure plates (are any of them 'special'?)
+
 License
 -------
 
