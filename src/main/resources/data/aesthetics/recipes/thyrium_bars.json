@@ -3,7 +3,11 @@
 		{
 			"type" : "aesthetics:flag",
 			"flag" : "fusion_enabled"		
-		}
+		},
+        {
+        	"type" : "forge:mod_loaded",
+        	"modid" : "fusion"
+        }
 	],
 	"result" : {
 		"item" : "aesthetics:thyrium_bars",

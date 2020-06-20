@@ -3,7 +3,11 @@
 		{
 			"type" : "aesthetics:flag",
 			"flag" : "netherrocks_enabled"		
-		}
+		},
+        {
+        	"type" : "forge:mod_loaded",
+        	"modid" : "netherrocks"
+        }
 	],
 	"result" : {
 		"item" : "aesthetics:fyrite_bars",
