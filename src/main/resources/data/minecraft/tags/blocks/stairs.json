@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+	"aesthetics:iron_brick_stairs",
+	"aesthetics:gold_brick_stairs",
+	"aesthetics:diamond_brick_stairs",
+	"aesthetics:copper_brick_stairs",
+	"aesthetics:tin_brick_stairs",
+	"aesthetics:onyx_brick_stairs",
+	"aesthetics:adamantium_brick_stairs",
+	"aesthetics:argonite_brick_stairs",
+	"aesthetics:ashstone_brick_stairs",
+	"aesthetics:dragonstone_brick_stairs",
+	"aesthetics:fyrite_brick_stairs",
+	"aesthetics:illumenite_brick_stairs",
+	"aesthetics:malachite_brick_stairs",
+	"aesthetics:bronze_brick_stairs",
+	"aesthetics:steel_brick_stairs",
+	"aesthetics:sinisite_brick_stairs",
+	"aesthetics:thyrium_brick_stairs"
+  ]
+}
