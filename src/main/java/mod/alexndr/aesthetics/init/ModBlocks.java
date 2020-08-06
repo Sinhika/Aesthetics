@@ -44,67 +44,67 @@ public final class ModBlocks
     // Blocks - bricks - Simple Ores
     public static RegistryObject<Block> copper_bricks = BLOCKS.register("copper_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA)
-                    .hardnessAndResistance(3.0F, 6.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(3.0F, 6.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> tin_bricks = BLOCKS.register("tin_bricks",
             () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(4.0F, 6.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(4.0F, 6.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> onyx_bricks = BLOCKS.register("onyx_bricks",
             () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.OBSIDIAN)
-                    .hardnessAndResistance(20.0F, 100.0F)
+                    .hardnessAndResistance(20.0F, 100.0F).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> adamantium_bricks = BLOCKS.register("adamantium_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
-                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> mythril_bricks = BLOCKS.register("mythril_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-                    .hardnessAndResistance(7.0F, 6.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(7.0F, 6.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
 
     // Blocks - bricks - Netherrocks
     public static RegistryObject<Block> argonite_bricks = BLOCKS.register("argonite_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> ashstone_bricks = BLOCKS.register("ashstone_bricks",
             () -> new Block(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance(7.0F, 72.0F)
+                    .hardnessAndResistance(7.0F, 72.0F).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> dragonstone_bricks = BLOCKS.register("dragonstone_bricks",
             () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
-                    .hardnessAndResistance(10.0F, 72.0F)
+                    .hardnessAndResistance(10.0F, 72.0F).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> fyrite_bricks = BLOCKS.register("fyrite_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.TNT)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> illumenite_bricks = BLOCKS.register("illumenite_bricks",
             () -> new Block(Block.Properties.create(Material.GLASS, MaterialColor.YELLOW)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.GLASS)
+                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.GLASS).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1).setLightLevel(it_glows(15))));
     public static RegistryObject<Block> malachite_bricks = BLOCKS.register("malachite_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.EMERALD)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
 
     // Blocks - bricks - Fusion
     public static RegistryObject<Block> bronze_bricks = BLOCKS.register("bronze_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.YELLOW_TERRACOTTA)
-                    .hardnessAndResistance(5.0F, 10.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(5.0F, 10.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> steel_bricks = BLOCKS.register("steel_bricks",
             () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> sinisite_bricks = BLOCKS.register("sinisite_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-                    .hardnessAndResistance(10.0F, 24.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(10.0F, 24.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> thyrium_bricks = BLOCKS.register("thyrium_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.CYAN)
-                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL)
+                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
    
     // Blocks - stairs - vanilla
@@ -203,53 +203,53 @@ public final class ModBlocks
     // Blocks - bars - simpleores
     public static RegistryObject<SimpleBars> copper_bars = BLOCKS.register("copper_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(3.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(3.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> tin_bars = BLOCKS.register("tin_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(4.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(4.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> onyx_bars = BLOCKS.register("onyx_bars",
             () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(20.0F).sound(SoundType.STONE).notSolid()));
+                    .hardnessAndResistance(20.0F).setRequiresTool().sound(SoundType.STONE).notSolid()));
     public static RegistryObject<SimpleBars> adamantium_bars = BLOCKS.register("adamantium_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> mythril_bars = BLOCKS.register("mythril_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     
     // Blocks - bars - netherrocks
     public static RegistryObject<SimpleBars> argonite_bars = BLOCKS.register("argonite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> ashstone_bars = BLOCKS.register("ashstone_bars",
             () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.STONE).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.STONE).notSolid()));
     public static RegistryObject<SimpleBars> dragonstone_bars = BLOCKS.register("dragonstone_bars",
             () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(10.0F).sound(SoundType.STONE).notSolid()));
+                    .hardnessAndResistance(10.0F).setRequiresTool().sound(SoundType.STONE).notSolid()));
     public static RegistryObject<SimpleBars> fyrite_bars = BLOCKS.register("fyrite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> illumenite_bars = BLOCKS.register("illumenite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid().setLightLevel(it_glows(14))));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid().setLightLevel(it_glows(14))));
     public static RegistryObject<SimpleBars> malachite_bars = BLOCKS.register("malachite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
    
     // Blocks - bars - fusion
     public static RegistryObject<SimpleBars> bronze_bars = BLOCKS.register("bronze_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(5.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(5.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> sinisite_bars = BLOCKS.register("sinisite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(10.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(10.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> steel_bars = BLOCKS.register("steel_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> thyrium_bars = BLOCKS.register("thyrium_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).sound(SoundType.METAL).notSolid()));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
 
     private static ToIntFunction<BlockState> it_glows(int foo)
     {
