@@ -1,12 +1,10 @@
 package mod.alexndr.aesthetics.init;
 
-import java.util.function.ToIntFunction;
-
 import mod.alexndr.aesthetics.Aesthetics;
 import mod.alexndr.aesthetics.api.content.SimpleBars;
 import mod.alexndr.aesthetics.api.content.SimpleDoor;
+import mod.alexndr.simplecorelib.helpers.LightUtils;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
@@ -83,7 +81,8 @@ public final class ModBlocks
     public static RegistryObject<Block> illumenite_bricks = BLOCKS.register("illumenite_bricks",
             () -> new Block(Block.Properties.create(Material.GLASS, MaterialColor.YELLOW)
                     .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.GLASS).setRequiresTool()
-                    .harvestTool(ToolType.PICKAXE).harvestLevel(1).setLightLevel(it_glows(15))));
+                    .harvestTool(ToolType.PICKAXE).harvestLevel(1)
+                    .setLightLevel(LightUtils.setFixedLight(15))));
     public static RegistryObject<Block> malachite_bricks = BLOCKS.register("malachite_bricks",
             () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.EMERALD)
                     .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL).setRequiresTool()
@@ -232,7 +231,8 @@ public final class ModBlocks
                     .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
     public static RegistryObject<SimpleBars> illumenite_bars = BLOCKS.register("illumenite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid().setLightLevel(it_glows(14))));
+                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()
+                    .setLightLevel(LightUtils.setFixedLight(14))));
     public static RegistryObject<SimpleBars> malachite_bars = BLOCKS.register("malachite_bars",
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
                     .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
@@ -251,8 +251,5 @@ public final class ModBlocks
             () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
                     .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
 
-    private static ToIntFunction<BlockState> it_glows(int foo)
-    {
-        return (bar) -> { return foo; };
-    }    
+
 } // end-class

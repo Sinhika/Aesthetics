@@ -12,7 +12,7 @@ import mod.alexndr.aesthetics.config.ConfigHelper;
 import mod.alexndr.aesthetics.config.ConfigHolder;
 import mod.alexndr.aesthetics.init.ModBlocks;
 import mod.alexndr.aesthetics.init.ModItemGroups;
-import mod.alexndr.simpleores.api.config.FlagCondition;
+import mod.alexndr.simplecorelib.config.FlagCondition;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;

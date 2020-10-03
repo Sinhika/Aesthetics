@@ -3,7 +3,7 @@ package mod.alexndr.aesthetics.config;
 import java.util.HashMap;
 import java.util.Map;
 
-import mod.alexndr.simpleores.api.config.ISimpleConfig;
+import mod.alexndr.simplecorelib.config.ISimpleConfig;
 
 public class AestheticsConfig implements ISimpleConfig
 {
