@@ -6,7 +6,9 @@ import net.minecraft.block.PaneBlock;
  * This class only exists because some idiot made the constructor of PaneBlock *protected*.
  * @author Sinhika
  *
- */public class SimpleBars extends PaneBlock
+ */
+@Deprecated
+public class SimpleBars extends PaneBlock
 {
 
     public SimpleBars(Properties builder)

@@ -7,6 +7,7 @@ import net.minecraft.block.DoorBlock;
  * @author Sinhika
  *
  */
+@Deprecated
 public class SimpleDoor extends DoorBlock
 {
 
