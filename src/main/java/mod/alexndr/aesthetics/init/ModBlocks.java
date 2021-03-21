@@ -1,11 +1,11 @@
 package mod.alexndr.aesthetics.init;
 
 import mod.alexndr.aesthetics.Aesthetics;
-import mod.alexndr.aesthetics.api.content.SimpleBars;
-import mod.alexndr.aesthetics.api.content.SimpleDoor;
+import net.minecraft.block.PaneBlock;
 import mod.alexndr.simplecorelib.helpers.LightUtils;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.material.Material;
@@ -170,85 +170,85 @@ public final class ModBlocks
   
     // Blocks - doors - simpleores
     // NB: using the shortcut that the bricks have the same properties as the metal blocks.
-    public static RegistryObject<SimpleDoor> copper_door = BLOCKS.register("copper_door",
-            () -> new SimpleDoor(Block.Properties.copy(copper_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> tin_door = BLOCKS.register("tin_door",
-            () -> new SimpleDoor(Block.Properties.copy(tin_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> adamantium_door = BLOCKS.register("adamantium_door",
-            () -> new SimpleDoor(Block.Properties.copy(adamantium_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> onyx_door = BLOCKS.register("onyx_door",
-            () -> new SimpleDoor(Block.Properties.copy(onyx_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> mythril_door = BLOCKS.register("mythril_door",
-            () -> new SimpleDoor(Block.Properties.copy(mythril_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> copper_door = BLOCKS.register("copper_door",
+            () -> new DoorBlock(Block.Properties.copy(copper_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> tin_door = BLOCKS.register("tin_door",
+            () -> new DoorBlock(Block.Properties.copy(tin_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> adamantium_door = BLOCKS.register("adamantium_door",
+            () -> new DoorBlock(Block.Properties.copy(adamantium_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> onyx_door = BLOCKS.register("onyx_door",
+            () -> new DoorBlock(Block.Properties.copy(onyx_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> mythril_door = BLOCKS.register("mythril_door",
+            () -> new DoorBlock(Block.Properties.copy(mythril_bricks.get()).noOcclusion()));
    
     // Blocks - doors - netherrocks
-    public static RegistryObject<SimpleDoor> argonite_door = BLOCKS.register("argonite_door",
-            () -> new SimpleDoor(Block.Properties.copy(argonite_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> ashstone_door = BLOCKS.register("ashstone_door",
-            () -> new SimpleDoor(Block.Properties.copy(ashstone_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> dragonstone_door = BLOCKS.register("dragonstone_door",
-            () -> new SimpleDoor(Block.Properties.copy(dragonstone_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> fyrite_door = BLOCKS.register("fyrite_door",
-            () -> new SimpleDoor(Block.Properties.copy(fyrite_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> illumenite_door = BLOCKS.register("illumenite_door",
-            () -> new SimpleDoor(Block.Properties.copy(illumenite_bricks.get()).noOcclusion()));
-    public static RegistryObject<SimpleDoor> malachite_door = BLOCKS.register("malachite_door",
-            () -> new SimpleDoor(Block.Properties.copy(malachite_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> argonite_door = BLOCKS.register("argonite_door",
+            () -> new DoorBlock(Block.Properties.copy(argonite_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> ashstone_door = BLOCKS.register("ashstone_door",
+            () -> new DoorBlock(Block.Properties.copy(ashstone_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> dragonstone_door = BLOCKS.register("dragonstone_door",
+            () -> new DoorBlock(Block.Properties.copy(dragonstone_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> fyrite_door = BLOCKS.register("fyrite_door",
+            () -> new DoorBlock(Block.Properties.copy(fyrite_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> illumenite_door = BLOCKS.register("illumenite_door",
+            () -> new DoorBlock(Block.Properties.copy(illumenite_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> malachite_door = BLOCKS.register("malachite_door",
+            () -> new DoorBlock(Block.Properties.copy(malachite_bricks.get()).noOcclusion()));
    
     // Blocks - doors - fusion
-    public static RegistryObject<SimpleDoor> bronze_door = BLOCKS.register("bronze_door",
-            () -> new SimpleDoor(Block.Properties.copy(bronze_bricks.get()).noOcclusion()));
+    public static RegistryObject<DoorBlock> bronze_door = BLOCKS.register("bronze_door",
+            () -> new DoorBlock(Block.Properties.copy(bronze_bricks.get()).noOcclusion()));
     
     // Blocks - bars - simpleores
-    public static RegistryObject<SimpleBars> copper_bars = BLOCKS.register("copper_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> copper_bars = BLOCKS.register("copper_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> tin_bars = BLOCKS.register("tin_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> tin_bars = BLOCKS.register("tin_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(4.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> onyx_bars = BLOCKS.register("onyx_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.STONE, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> onyx_bars = BLOCKS.register("onyx_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.STONE, MaterialColor.NONE)
                     .strength(20.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static RegistryObject<SimpleBars> adamantium_bars = BLOCKS.register("adamantium_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> adamantium_bars = BLOCKS.register("adamantium_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> mythril_bars = BLOCKS.register("mythril_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> mythril_bars = BLOCKS.register("mythril_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     
     // Blocks - bars - netherrocks
-    public static RegistryObject<SimpleBars> argonite_bars = BLOCKS.register("argonite_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> argonite_bars = BLOCKS.register("argonite_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> ashstone_bars = BLOCKS.register("ashstone_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.STONE, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> ashstone_bars = BLOCKS.register("ashstone_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.STONE, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static RegistryObject<SimpleBars> dragonstone_bars = BLOCKS.register("dragonstone_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.STONE, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> dragonstone_bars = BLOCKS.register("dragonstone_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.STONE, MaterialColor.NONE)
                     .strength(10.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static RegistryObject<SimpleBars> fyrite_bars = BLOCKS.register("fyrite_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> fyrite_bars = BLOCKS.register("fyrite_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> illumenite_bars = BLOCKS.register("illumenite_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> illumenite_bars = BLOCKS.register("illumenite_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()
                     .lightLevel(LightUtils.setFixedLight(14))));
-    public static RegistryObject<SimpleBars> malachite_bars = BLOCKS.register("malachite_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> malachite_bars = BLOCKS.register("malachite_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
    
     // Blocks - bars - fusion
-    public static RegistryObject<SimpleBars> bronze_bars = BLOCKS.register("bronze_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> bronze_bars = BLOCKS.register("bronze_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(5.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> sinisite_bars = BLOCKS.register("sinisite_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> sinisite_bars = BLOCKS.register("sinisite_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(10.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> steel_bars = BLOCKS.register("steel_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> steel_bars = BLOCKS.register("steel_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
-    public static RegistryObject<SimpleBars> thyrium_bars = BLOCKS.register("thyrium_bars",
-            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+    public static RegistryObject<PaneBlock> thyrium_bars = BLOCKS.register("thyrium_bars",
+            () -> new PaneBlock(Block.Properties.of(Material.METAL, MaterialColor.NONE)
                     .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
 
 
