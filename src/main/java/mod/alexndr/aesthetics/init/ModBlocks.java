@@ -33,223 +33,223 @@ public final class ModBlocks
 
     // Blocks - bricks - vanilla
     public static RegistryObject<Block> iron_bricks = BLOCKS.register("iron_bricks",
-            () -> new Block(Block.Properties.from(Blocks.IRON_BLOCK)));
+            () -> new Block(Block.Properties.copy(Blocks.IRON_BLOCK)));
     public static RegistryObject<Block> gold_bricks = BLOCKS.register("gold_bricks",
-            () -> new Block(Block.Properties.from(Blocks.GOLD_BLOCK)));
+            () -> new Block(Block.Properties.copy(Blocks.GOLD_BLOCK)));
     public static RegistryObject<Block> diamond_bricks = BLOCKS.register("diamond_bricks",
-            () -> new Block(Block.Properties.from(Blocks.DIAMOND_BLOCK)));
+            () -> new Block(Block.Properties.copy(Blocks.DIAMOND_BLOCK)));
     
     // Blocks - bricks - Simple Ores
     public static RegistryObject<Block> copper_bricks = BLOCKS.register("copper_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.ORANGE_TERRACOTTA)
-                    .hardnessAndResistance(3.0F, 6.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_ORANGE)
+                    .strength(3.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> tin_bricks = BLOCKS.register("tin_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(4.0F, 6.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(4.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> onyx_bricks = BLOCKS.register("onyx_bricks",
-            () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.OBSIDIAN)
-                    .hardnessAndResistance(20.0F, 100.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.PODZOL)
+                    .strength(20.0F, 100.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> adamantium_bricks = BLOCKS.register("adamantium_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.GREEN)
-                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN)
+                    .strength(7.0F, 12.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> mythril_bricks = BLOCKS.register("mythril_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-                    .hardnessAndResistance(7.0F, 6.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+                    .strength(7.0F, 6.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
 
     // Blocks - bricks - Netherrocks
     public static RegistryObject<Block> argonite_bricks = BLOCKS.register("argonite_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+                    .strength(7.0F, 72.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> ashstone_bricks = BLOCKS.register("ashstone_bricks",
-            () -> new Block(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance(7.0F, 72.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.STONE)
+                    .strength(7.0F, 72.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> dragonstone_bricks = BLOCKS.register("dragonstone_bricks",
-            () -> new Block(Block.Properties.create(Material.ROCK, MaterialColor.NETHERRACK)
-                    .hardnessAndResistance(10.0F, 72.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.STONE, MaterialColor.NETHER)
+                    .strength(10.0F, 72.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> fyrite_bricks = BLOCKS.register("fyrite_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.TNT)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.FIRE)
+                    .strength(7.0F, 72.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
     public static RegistryObject<Block> illumenite_bricks = BLOCKS.register("illumenite_bricks",
-            () -> new Block(Block.Properties.create(Material.GLASS, MaterialColor.YELLOW)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.GLASS).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW)
+                    .strength(7.0F, 72.0F).sound(SoundType.GLASS).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)
-                    .setLightLevel(LightUtils.setFixedLight(15))));
+                    .lightLevel(LightUtils.setFixedLight(15))));
     public static RegistryObject<Block> malachite_bricks = BLOCKS.register("malachite_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.EMERALD)
-                    .hardnessAndResistance(7.0F, 72.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.EMERALD)
+                    .strength(7.0F, 72.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(1)));
 
     // Blocks - bricks - Fusion
     public static RegistryObject<Block> bronze_bricks = BLOCKS.register("bronze_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.YELLOW_TERRACOTTA)
-                    .hardnessAndResistance(5.0F, 10.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_YELLOW)
+                    .strength(5.0F, 10.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> steel_bricks = BLOCKS.register("steel_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON)
-                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL)
+                    .strength(7.0F, 12.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> sinisite_bricks = BLOCKS.register("sinisite_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.BLUE)
-                    .hardnessAndResistance(10.0F, 24.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+                    .strength(10.0F, 24.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     public static RegistryObject<Block> thyrium_bricks = BLOCKS.register("thyrium_bricks",
-            () -> new Block(Block.Properties.create(Material.IRON, MaterialColor.CYAN)
-                    .hardnessAndResistance(7.0F, 12.0F).sound(SoundType.METAL).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.COLOR_CYAN)
+                    .strength(7.0F, 12.0F).sound(SoundType.METAL).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
    
     // Blocks - stairs - vanilla
     public static RegistryObject<StairsBlock> iron_brick_stairs = BLOCKS.register("iron_brick_stairs", 
-            () -> new StairsBlock( () -> iron_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(iron_bricks.get())));
+            () -> new StairsBlock( () -> iron_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(iron_bricks.get())));
     public static RegistryObject<StairsBlock> gold_brick_stairs = BLOCKS.register("gold_brick_stairs", 
-            () -> new StairsBlock( () -> gold_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(gold_bricks.get())));
+            () -> new StairsBlock( () -> gold_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(gold_bricks.get())));
     public static RegistryObject<StairsBlock> diamond_brick_stairs = BLOCKS.register("diamond_brick_stairs", 
-            () -> new StairsBlock( () -> diamond_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(diamond_bricks.get())));
+            () -> new StairsBlock( () -> diamond_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(diamond_bricks.get())));
 
     // Blocks - stairs - simpleores
     public static RegistryObject<StairsBlock> copper_brick_stairs = BLOCKS.register("copper_brick_stairs", 
-            () -> new StairsBlock( () -> copper_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(copper_bricks.get())));
+            () -> new StairsBlock( () -> copper_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(copper_bricks.get())));
     public static RegistryObject<StairsBlock> tin_brick_stairs = BLOCKS.register("tin_brick_stairs", 
-            () -> new StairsBlock( () -> tin_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(tin_bricks.get())));
+            () -> new StairsBlock( () -> tin_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(tin_bricks.get())));
     public static RegistryObject<StairsBlock> onyx_brick_stairs = BLOCKS.register("onyx_brick_stairs", 
-            () -> new StairsBlock( () -> onyx_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(onyx_bricks.get())));
+            () -> new StairsBlock( () -> onyx_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(onyx_bricks.get())));
     public static RegistryObject<StairsBlock> adamantium_brick_stairs = BLOCKS.register("adamantium_brick_stairs", 
-            () -> new StairsBlock( () -> adamantium_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(adamantium_bricks.get())));
+            () -> new StairsBlock( () -> adamantium_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(adamantium_bricks.get())));
     public static RegistryObject<StairsBlock> mythril_brick_stairs = BLOCKS.register("mythril_brick_stairs", 
-            () -> new StairsBlock( () -> mythril_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(mythril_bricks.get())));
+            () -> new StairsBlock( () -> mythril_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(mythril_bricks.get())));
 
     // Blocks - stairs - netherrocks
     public static RegistryObject<StairsBlock> argonite_brick_stairs = BLOCKS.register("argonite_brick_stairs", 
-            () -> new StairsBlock( () -> argonite_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(argonite_bricks.get())));
+            () -> new StairsBlock( () -> argonite_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(argonite_bricks.get())));
     public static RegistryObject<StairsBlock> ashstone_brick_stairs = BLOCKS.register("ashstone_brick_stairs", 
-            () -> new StairsBlock( () -> ashstone_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(ashstone_bricks.get())));
+            () -> new StairsBlock( () -> ashstone_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(ashstone_bricks.get())));
     public static RegistryObject<StairsBlock> dragonstone_brick_stairs = BLOCKS.register("dragonstone_brick_stairs", 
-            () -> new StairsBlock( () -> dragonstone_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(dragonstone_bricks.get())));
+            () -> new StairsBlock( () -> dragonstone_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(dragonstone_bricks.get())));
     public static RegistryObject<StairsBlock> fyrite_brick_stairs = BLOCKS.register("fyrite_brick_stairs", 
-            () -> new StairsBlock( () -> fyrite_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(fyrite_bricks.get())));
+            () -> new StairsBlock( () -> fyrite_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(fyrite_bricks.get())));
     public static RegistryObject<StairsBlock> illumenite_brick_stairs = BLOCKS.register("illumenite_brick_stairs", 
-            () -> new StairsBlock( () -> illumenite_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(illumenite_bricks.get())));
+            () -> new StairsBlock( () -> illumenite_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(illumenite_bricks.get())));
     public static RegistryObject<StairsBlock> malachite_brick_stairs = BLOCKS.register("malachite_brick_stairs", 
-            () -> new StairsBlock( () -> malachite_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(malachite_bricks.get())));
+            () -> new StairsBlock( () -> malachite_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(malachite_bricks.get())));
    
     // Blocks - stairs - fusion
     public static RegistryObject<StairsBlock> bronze_brick_stairs = BLOCKS.register("bronze_brick_stairs", 
-            () -> new StairsBlock( () -> bronze_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(bronze_bricks.get())));
+            () -> new StairsBlock( () -> bronze_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(bronze_bricks.get())));
     public static RegistryObject<StairsBlock> steel_brick_stairs = BLOCKS.register("steel_brick_stairs", 
-            () -> new StairsBlock( () -> steel_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(steel_bricks.get())));
+            () -> new StairsBlock( () -> steel_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(steel_bricks.get())));
     public static RegistryObject<StairsBlock> sinisite_brick_stairs = BLOCKS.register("sinisite_brick_stairs", 
-            () -> new StairsBlock( () -> sinisite_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(sinisite_bricks.get())));
+            () -> new StairsBlock( () -> sinisite_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(sinisite_bricks.get())));
     public static RegistryObject<StairsBlock> thyrium_brick_stairs = BLOCKS.register("thyrium_brick_stairs", 
-            () -> new StairsBlock( () -> thyrium_bricks.get().getDefaultState(), 
-                                   Block.Properties.from(thyrium_bricks.get())));
+            () -> new StairsBlock( () -> thyrium_bricks.get().defaultBlockState(), 
+                                   Block.Properties.copy(thyrium_bricks.get())));
   
     // Blocks - doors - simpleores
     // NB: using the shortcut that the bricks have the same properties as the metal blocks.
     public static RegistryObject<SimpleDoor> copper_door = BLOCKS.register("copper_door",
-            () -> new SimpleDoor(Block.Properties.from(copper_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(copper_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> tin_door = BLOCKS.register("tin_door",
-            () -> new SimpleDoor(Block.Properties.from(tin_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(tin_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> adamantium_door = BLOCKS.register("adamantium_door",
-            () -> new SimpleDoor(Block.Properties.from(adamantium_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(adamantium_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> onyx_door = BLOCKS.register("onyx_door",
-            () -> new SimpleDoor(Block.Properties.from(onyx_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(onyx_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> mythril_door = BLOCKS.register("mythril_door",
-            () -> new SimpleDoor(Block.Properties.from(mythril_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(mythril_bricks.get()).noOcclusion()));
    
     // Blocks - doors - netherrocks
     public static RegistryObject<SimpleDoor> argonite_door = BLOCKS.register("argonite_door",
-            () -> new SimpleDoor(Block.Properties.from(argonite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(argonite_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> ashstone_door = BLOCKS.register("ashstone_door",
-            () -> new SimpleDoor(Block.Properties.from(ashstone_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(ashstone_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> dragonstone_door = BLOCKS.register("dragonstone_door",
-            () -> new SimpleDoor(Block.Properties.from(dragonstone_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(dragonstone_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> fyrite_door = BLOCKS.register("fyrite_door",
-            () -> new SimpleDoor(Block.Properties.from(fyrite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(fyrite_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> illumenite_door = BLOCKS.register("illumenite_door",
-            () -> new SimpleDoor(Block.Properties.from(illumenite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(illumenite_bricks.get()).noOcclusion()));
     public static RegistryObject<SimpleDoor> malachite_door = BLOCKS.register("malachite_door",
-            () -> new SimpleDoor(Block.Properties.from(malachite_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(malachite_bricks.get()).noOcclusion()));
    
     // Blocks - doors - fusion
     public static RegistryObject<SimpleDoor> bronze_door = BLOCKS.register("bronze_door",
-            () -> new SimpleDoor(Block.Properties.from(bronze_bricks.get()).notSolid()));
+            () -> new SimpleDoor(Block.Properties.copy(bronze_bricks.get()).noOcclusion()));
     
     // Blocks - bars - simpleores
     public static RegistryObject<SimpleBars> copper_bars = BLOCKS.register("copper_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(3.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> tin_bars = BLOCKS.register("tin_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(4.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(4.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> onyx_bars = BLOCKS.register("onyx_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(20.0F).setRequiresTool().sound(SoundType.STONE).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.STONE, MaterialColor.NONE)
+                    .strength(20.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
     public static RegistryObject<SimpleBars> adamantium_bars = BLOCKS.register("adamantium_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> mythril_bars = BLOCKS.register("mythril_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     
     // Blocks - bars - netherrocks
     public static RegistryObject<SimpleBars> argonite_bars = BLOCKS.register("argonite_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> ashstone_bars = BLOCKS.register("ashstone_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.STONE).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.STONE, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
     public static RegistryObject<SimpleBars> dragonstone_bars = BLOCKS.register("dragonstone_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.ROCK, MaterialColor.AIR)
-                    .hardnessAndResistance(10.0F).setRequiresTool().sound(SoundType.STONE).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.STONE, MaterialColor.NONE)
+                    .strength(10.0F).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
     public static RegistryObject<SimpleBars> fyrite_bars = BLOCKS.register("fyrite_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> illumenite_bars = BLOCKS.register("illumenite_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()
-                    .setLightLevel(LightUtils.setFixedLight(14))));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()
+                    .lightLevel(LightUtils.setFixedLight(14))));
     public static RegistryObject<SimpleBars> malachite_bars = BLOCKS.register("malachite_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
    
     // Blocks - bars - fusion
     public static RegistryObject<SimpleBars> bronze_bars = BLOCKS.register("bronze_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(5.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(5.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> sinisite_bars = BLOCKS.register("sinisite_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(10.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(10.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> steel_bars = BLOCKS.register("steel_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static RegistryObject<SimpleBars> thyrium_bars = BLOCKS.register("thyrium_bars",
-            () -> new SimpleBars(Block.Properties.create(Material.IRON, MaterialColor.AIR)
-                    .hardnessAndResistance(7.0F).setRequiresTool().sound(SoundType.METAL).notSolid()));
+            () -> new SimpleBars(Block.Properties.of(Material.METAL, MaterialColor.NONE)
+                    .strength(7.0F).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
 
 
 } // end-class
