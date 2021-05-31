@@ -6,7 +6,9 @@ TODO List
 ---------
 * add trapdoors
 * add pressure plates (are any of them 'special'?)
-
+* for 1.17: move all the things into their respective mods. Copper bars, doors,
+    etc should be moved to SimpleOres, etc.
+    
 License
 -------
 
