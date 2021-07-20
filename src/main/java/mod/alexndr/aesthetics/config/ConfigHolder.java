@@ -28,4 +28,4 @@ public final class ConfigHolder
 			SERVER_SPEC = specPair.getRight();
 		}
 	}
-}
+} // end class
