@@ -11,8 +11,6 @@ public final class ConfigHelper
     {
         AestheticsConfig.INSTANCE.putFlag("vanilla_enabled", 
                                           ConfigHolder.SERVER.serverEnableVanillaBlocks.get());
-        AestheticsConfig.INSTANCE.putFlag("simpleores_enabled", 
-                                          ConfigHolder.SERVER.serverEnableSimpleOresBlocks.get());
         
         /* disable Netherrocks recipes if Netherrocks is not loaded */
         boolean val = ConfigHolder.SERVER.serverEnableNetherrocksBlocks.get() 

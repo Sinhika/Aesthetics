@@ -13,17 +13,18 @@ import mod.alexndr.aesthetics.config.ConfigHolder;
 import mod.alexndr.aesthetics.init.ModBlocks;
 import mod.alexndr.aesthetics.init.ModItemGroups;
 import mod.alexndr.simplecorelib.config.FlagCondition;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @EventBusSubscriber(modid = Aesthetics.MODID, bus = MOD)
@@ -71,7 +72,7 @@ public final class ModEventSubscriber
 	}  // end onRegisterItems()
 
 	@SubscribeEvent
-	public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
+	public static void onModConfigEvent(final ModConfigEvent event)
 	{
 		final ModConfig config = event.getConfig();
 

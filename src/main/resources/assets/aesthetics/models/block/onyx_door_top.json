@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_top",
-    "textures": {
-        "bottom": "aesthetics:block/onyx_door_lower",
-        "top": "aesthetics:block/onyx_door_upper"
-    }
-}

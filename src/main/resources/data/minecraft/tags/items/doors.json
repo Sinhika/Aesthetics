@@ -1,11 +1,6 @@
 {
   "replace": false,
   "values": [
-  	"aesthetics:copper_door",
-  	"aesthetics:tin_door",
-  	"aesthetics:adamantium_door",
-  	"aesthetics:onyx_door",
-  	"aesthetics:mythril_door",
   	"aesthetics:argonite_door",
   	"aesthetics:ashstone_door",
   	"aesthetics:dragonstone_door",

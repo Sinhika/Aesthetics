@@ -29,16 +29,6 @@ public final class ClientModEventSubscriber
     public static void onFMLClientSetupEvent(final FMLClientSetupEvent event) 
     {
         // doors with see-through windows.
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.adamantium_door.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.copper_door.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.tin_door.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.onyx_door.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.mythril_door.get(), (layer) -> layer 
-                == RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.argonite_door.get(), (layer) -> layer 
                 == RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ashstone_door.get(), (layer) -> layer 
@@ -55,16 +45,6 @@ public final class ClientModEventSubscriber
                 == RenderType.cutout());
         
         // bars, which are see-through between the bars, obviously.
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.copper_bars.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.tin_bars.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.onyx_bars.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.adamantium_bars.get(), (layer) -> layer 
-                == RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.mythril_bars.get(), (layer) -> layer 
-                == RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.argonite_bars.get(), (layer) -> layer 
                 == RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ashstone_bars.get(), (layer) -> layer 

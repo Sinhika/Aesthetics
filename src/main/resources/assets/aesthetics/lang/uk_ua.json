@@ -8,31 +8,6 @@
     "block.aesthetics.gold_brick_stairs": "Сходи з золотої цегли",
     "block.aesthetics.diamond_brick_stairs": "Сходи з діамантової цегли",
 
-    "_comment": "SimpleOres Blocks",
-    "block.aesthetics.copper_bricks": "Мідна цегла",
-    "block.aesthetics.tin_bricks": "Олов'яна цегла",
-    "block.aesthetics.mythril_bricks": "Міфрилова цегла",
-    "block.aesthetics.adamantium_bricks": "Адамантова цегла",
-    "block.aesthetics.onyx_bricks": "Оніксова цегла",
-
-    "block.aesthetics.copper_brick_stairs": "Сходи з мідної цегли",
-    "block.aesthetics.tin_brick_stairs": "Сходи з олов'яної цегли",
-    "block.aesthetics.mythril_brick_stairs": "Сходи з міфрилової цегли",
-    "block.aesthetics.adamantium_brick_stairs": "Сходи з адамантової цегли",
-    "block.aesthetics.onyx_brick_stairs": "Сходи з оніксової цегли",
-
-    "block.aesthetics.copper_bars": "Мідні грати",
-    "block.aesthetics.tin_bars": "Олов'яні грати",
-    "block.aesthetics.mythril_bars": "Міфрилові грати",
-    "block.aesthetics.adamantium_bars": "Адамантові грати",
-    "block.aesthetics.onyx_bars": "Оніксові грати",
-
-    "block.aesthetics.adamantium_door": "Адамантові двері",
-    "block.aesthetics.copper_door": "Мідні двері",
-    "block.aesthetics.mythril_door": "Міфрилові двері",
-    "block.aesthetics.onyx_door": "Оніксові двері",
-    "block.aesthetics.tin_door": "Олов'яні двері",
-
     "_comment": "Fusion Blocks",
     "block.aesthetics.steel_bricks": "Сталева цегла",
     "block.aesthetics.bronze_bricks": "Бронзова цегла",

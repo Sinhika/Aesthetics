@@ -10,31 +10,6 @@
     "block.aesthetics.gold_brick_stairs": "Gold Brick Stairs",
     "block.aesthetics.diamond_brick_stairs": "Diamond Brick Stairs",
 
-    "_comment": "SimpleOres Blocks",
-    "block.aesthetics.copper_bricks": "Copper Bricks",
-    "block.aesthetics.tin_bricks": "Tin Bricks",
-    "block.aesthetics.mythril_bricks": "Mythril Bricks",
-    "block.aesthetics.adamantium_bricks": "Adamantium Bricks",
-    "block.aesthetics.onyx_bricks": "Onyx Bricks",
-
-    "block.aesthetics.copper_brick_stairs": "Copper Brick Stairs",
-    "block.aesthetics.tin_brick_stairs": "Tin Brick Stairs",
-    "block.aesthetics.mythril_brick_stairs": "Mythril Brick Stairs",
-    "block.aesthetics.adamantium_brick_stairs": "Adamantium Brick Stairs",
-    "block.aesthetics.onyx_brick_stairs": "Onyx Brick Stairs",
-
-    "block.aesthetics.copper_bars": "Copper Bars",
-    "block.aesthetics.tin_bars": "Tin Bars",
-    "block.aesthetics.mythril_bars": "Mythril Bars",
-    "block.aesthetics.adamantium_bars": "Adamantium Bars",
-    "block.aesthetics.onyx_bars": "Onyx Bars",
-
-    "block.aesthetics.adamantium_door": "Adamantium Door",
-    "block.aesthetics.copper_door": "Copper Door",
-    "block.aesthetics.mythril_door": "Mythril Door",
-    "block.aesthetics.onyx_door": "Onyx Door",
-    "block.aesthetics.tin_door": "Tin Door",
-
     "_comment": "Fusion Blocks",
     "block.aesthetics.steel_bricks": "Steel Bricks",
     "block.aesthetics.bronze_bricks": "Bronze Bricks",

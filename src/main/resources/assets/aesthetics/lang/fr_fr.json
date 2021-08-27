@@ -8,32 +8,7 @@
     "block.aesthetics.gold_brick_stairs": "Escalier en Brique d'Or",
     "block.aesthetics.diamond_brick_stairs": "Escalier en Brique de Diamant",
 
-    "_comment": "SimpleOres Blocks",
-    "block.aesthetics.copper_bricks": "Brique en Cuivre",
-    "block.aesthetics.tin_bricks": "Brique en Étain",
-    "block.aesthetics.mythril_bricks": "Brique en Mythril",
-    "block.aesthetics.adamantium_bricks": "Brique en Adamantium",
-    "block.aesthetics.onyx_bricks": "Brique en Onyx",
-
-    "block.aesthetics.copper_brick_stairs": "Escalier en Brique de Cuivre",
-    "block.aesthetics.tin_brick_stairs": "Escalier en Brique d'Étain",
-    "block.aesthetics.mythril_brick_stairs": "Escalier en Brique de Mythril",
-    "block.aesthetics.adamantium_brick_stairs": "Escalier en Brique d'Adamantium",
-    "block.aesthetics.onyx_brick_stairs": "Escalier en Brique d'Onyx",
-
-    "block.aesthetics.copper_bars": "Barreaux de Cuivre",
-    "block.aesthetics.tin_bars": "Barreaux d'Étain",
-    "block.aesthetics.mythril_bars": "Barreaux de Mythril",
-    "block.aesthetics.adamantium_bars": "Barreaux d'Adamantium",
-    "block.aesthetics.onyx_bars": "Barreaux d'Onyx",
-
-    "block.aesthetics.adamantium_door": "Porte en Adamantium",
-    "block.aesthetics.copper_door": "Porte en Cuivre",
-    "block.aesthetics.mythril_door": "Porte en Mythril",
-    "block.aesthetics.onyx_door": "Porte en Onyx",
-    "block.aesthetics.tin_door": "Porte en Étain",
-
-    "_comment": "Fusion Blocks",
+     "_comment": "Fusion Blocks",
     "block.aesthetics.steel_bricks": "Brique en Acier",
     "block.aesthetics.bronze_bricks": "Brique en Bronze",
     "block.aesthetics.thyrium_bricks": "Brique en Thyrium",
