@@ -6,52 +6,5 @@
 
     "block.aesthetics.iron_brick_stairs": "Escalier en Brique de Fer",
     "block.aesthetics.gold_brick_stairs": "Escalier en Brique d'Or",
-    "block.aesthetics.diamond_brick_stairs": "Escalier en Brique de Diamant",
-
-     "_comment": "Fusion Blocks",
-    "block.aesthetics.steel_bricks": "Brique en Acier",
-    "block.aesthetics.bronze_bricks": "Brique en Bronze",
-    "block.aesthetics.thyrium_bricks": "Brique en Thyrium",
-    "block.aesthetics.sinisite_bricks": "Brique en Sinisite",
-
-    "block.aesthetics.steel_brick_stairs": "Escalier en Brique d'Acier",
-    "block.aesthetics.bronze_brick_stairs": "Escalier en Brique de Bronze",
-    "block.aesthetics.thyrium_brick_stairs": "Escalier en Brique de Thyrium",
-    "block.aesthetics.sinisite_brick_stairs": "Escalier en Brique de Sinisite",
-
-    "block.aesthetics.steel_bars": "Barreaux d'Acier",
-    "block.aesthetics.bronze_bars": "Barreaux de Bronze",
-    "block.aesthetics.thyrium_bars": "Barreaux de Thyrium",
-    "block.aesthetics.sinisite_bars": "Barreaux de Sinisite",
-
-    "block.aesthetics.bronze_door": "Porte en Bronze",
-
-    "_comment": "Netherrocks Blocks",
-    "block.aesthetics.fyrite_bricks": "Brique de Fyrite",
-    "block.aesthetics.malachite_bricks": "Brique de Malachite",
-    "block.aesthetics.ashstone_bricks": "Brique d'Ashstone",
-    "block.aesthetics.illumenite_bricks": "Brique d'Illumenite",
-    "block.aesthetics.dragonstone_bricks": "Brique de Dragonstone",
-    "block.aesthetics.argonite_bricks": "Brique d'Argonite",
-
-    "block.aesthetics.fyrite_brick_stairs": "Escalier en Brique de Fyrite",
-    "block.aesthetics.malachite_brick_stairs": "Escalier en Brique de Malachite",
-    "block.aesthetics.ashstone_brick_stairs": "Escalier en Brique d'Ashstone",
-    "block.aesthetics.illumenite_brick_stairs": "Escalier en Brique d'Illumenite",
-    "block.aesthetics.dragonstone_brick_stairs": "Escalier en Brique de Dragonstone",
-    "block.aesthetics.argonite_brick_stairs": "Escalier en Brique d'Argonite",
-
-    "block.aesthetics.fyrite_bars": "Barreaux de Fyrite",
-    "block.aesthetics.malachite_bars": "Barreaux de Malachite",
-    "block.aesthetics.ashstone_bars": "Barreaux d'Ashstone",
-    "block.aesthetics.illumenite_bars": "Barreaux d'Illumenite",
-    "block.aesthetics.dragonstone_bars": "Barreaux de Dragonstone",
-    "block.aesthetics.argonite_bars": "Barreaux d'Argonite",
-
-    "block.aesthetics.argonite_door": "Porte en Argonite",
-    "block.aesthetics.ashstone_door": "Porte en Ashstone",
-    "block.aesthetics.dragonstone_door": "Porte en Dragonstone",
-    "block.aesthetics.fyrite_door": "Porte en Fyrite",
-    "block.aesthetics.illumenite_door": "Porte en Illumenite",
-    "block.aesthetics.malachite_door": "Porte en Malachite"
+    "block.aesthetics.diamond_brick_stairs": "Escalier en Brique de Diamant"
 }

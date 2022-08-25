@@ -1,8 +1,0 @@
-{
-    "parent": "block/stairs",
-    "textures": {
-        "bottom": "aesthetics:block/argonite_bricks",
-        "top": "aesthetics:block/argonite_bricks",
-        "side": "aesthetics:block/argonite_bricks"
-    }
-}

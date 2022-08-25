@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_bottom",
-    "textures": {
-        "bottom": "aesthetics:block/ashstone_door_lower",
-        "top": "aesthetics:block/ashstone_door_upper"
-    }
-}

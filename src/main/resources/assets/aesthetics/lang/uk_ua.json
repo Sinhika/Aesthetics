@@ -6,52 +6,5 @@
 
     "block.aesthetics.iron_brick_stairs": "Сходи з залізної цегли",
     "block.aesthetics.gold_brick_stairs": "Сходи з золотої цегли",
-    "block.aesthetics.diamond_brick_stairs": "Сходи з діамантової цегли",
-
-    "_comment": "Fusion Blocks",
-    "block.aesthetics.steel_bricks": "Сталева цегла",
-    "block.aesthetics.bronze_bricks": "Бронзова цегла",
-    "block.aesthetics.thyrium_bricks": "Туріумова цегла",
-    "block.aesthetics.sinisite_bricks": "Синіситова цегла",
-
-    "block.aesthetics.steel_brick_stairs": "Сходи з сталевої цегли",
-    "block.aesthetics.bronze_brick_stairs": "Сходи з бронзової цегли",
-    "block.aesthetics.thyrium_brick_stairs": "Сходи з туріомової цегли",
-    "block.aesthetics.sinisite_brick_stairs": "Сходи з синіситової цегли",
-
-    "block.aesthetics.steel_bars": "Сталеві грати",
-    "block.aesthetics.bronze_bars": "Бронзові грати",
-    "block.aesthetics.thyrium_bars": "Туріомові грати",
-    "block.aesthetics.sinisite_bars": "Синіситові грати",
-
-    "block.aesthetics.bronze_door": "Бронзові двері",
-
-    "_comment": "Netherrocks Blocks",
-    "block.aesthetics.fyrite_bricks": "Фейритова цегла Bricks",
-    "block.aesthetics.malachite_bricks": "Малахітова цегла",
-    "block.aesthetics.ashstone_bricks": "Вулканічна цегла",
-    "block.aesthetics.illumenite_bricks": "Ілюменітова цегла",
-    "block.aesthetics.dragonstone_bricks": "Драконітова цегла",
-    "block.aesthetics.argonite_bricks": "Аргонітова цегла",
-
-    "block.aesthetics.fyrite_brick_stairs": "Сходи з фейритової цегли",
-    "block.aesthetics.malachite_brick_stairs": "Сходи з малахітової цегли",
-    "block.aesthetics.ashstone_brick_stairs": "Сходи з вулканічної цегли",
-    "block.aesthetics.illumenite_brick_stairs": "Сходи з ілюменітової цегли",
-    "block.aesthetics.dragonstone_brick_stairs": "Сходи з драконіту цегли",
-    "block.aesthetics.argonite_brick_stairs": "Сходи з аргонітової цегли",
-
-    "block.aesthetics.fyrite_bars": "Фейритові грати",
-    "block.aesthetics.malachite_bars": "Малахітові грати",
-    "block.aesthetics.ashstone_bars": "вулканічні грати",
-    "block.aesthetics.illumenite_bars": "Ілюменітові грати",
-    "block.aesthetics.dragonstone_bars": "Драконітові грати",
-    "block.aesthetics.argonite_bars": "Аргонітові грати",
-
-    "block.aesthetics.argonite_door": "Аргонітові двері",
-    "block.aesthetics.ashstone_door": "вулканічні двері",
-    "block.aesthetics.dragonstone_door": "Драконітові двері",
-    "block.aesthetics.fyrite_door": "Фейрітові двері",
-    "block.aesthetics.illumenite_door": "Ілюменітові двері",
-    "block.aesthetics.malachite_door": "Малахітові двері"
+    "block.aesthetics.diamond_brick_stairs": "Сходи з діамантової цегли"
 }

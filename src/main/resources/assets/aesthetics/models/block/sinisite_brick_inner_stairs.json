@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "aesthetics:block/sinisite_bricks",
-        "top": "aesthetics:block/sinisite_bricks",
-        "side": "aesthetics:block/sinisite_bricks"
-    }
-}
